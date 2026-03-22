@@ -1,250 +1,221 @@
 
-<link rel="stylesheet" href="chapters/chapter_common.css">
+<link rel="stylesheet" href="chapter_common.css">
 <div class="chapter-detail">
 
-  <h3>Chapter 8：不一致性（Inconsistency）</h3>
+  <h3>Chapter 13：非ランダム化試験の統合（Integrating NRSI with RCTs）</h3>
 
   <div class="concept-card">
-    <div class="card-label"><span class="icon">📖</span> Core Concept</div>
-    <p>不一致性（Inconsistency）は、<strong>研究間での効果推定値の説明できない異質性（heterogeneity）</strong>を指します。Core GRADEは、不一致性の評価において、従来のI²統計量だけでなく、<strong>予測区間（prediction interval）</strong>を中心的な指標として位置づけ、臨床的に意味のある異質性の判断を重視しています。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
+    <div class="card-label"><span class="icon">&#x1f4d6;</span> コアコンセプト</div>
+    <p>非ランダム化介入研究（Non-Randomized Studies of Interventions, NRSI）は、RCTが実施困難な場合や、RCTのエビデンスが不十分な場合に重要な役割を果たします。しかし、NRSIには<strong>交絡（confounding）</strong>という根本的な問題があり、その統合には特別な注意が必要です。<a class="source-inline-ref" href="#ref-1">[1]</a> GRADE Guidance 44は、NRSIとRCTのエビデンスを統合するための4ステップフレームワークを提供しています。</p>
   </div>
 
   <hr class="section-divider">
 
-  <h4>不一致性の評価指標</h4>
-  <p>不一致性を評価するために、複数の指標が用いられます。Core GRADEでは、これらの指標を総合的に解釈することが推奨されます。</p>
+  <h4>NRSIの根本的な問題：交絡（Confounding）</h4>
 
-  <table class="styled-table">
-    <thead>
-      <tr><th>指標</th><th>定義</th><th>Core GRADEでの位置づけ</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>I²統計量</strong></td>
-        <td>全変動のうち、偶然ではなく真の異質性に起因する割合（%）</td>
-        <td><span class="badge badge-orange">参考指標</span>。単独では不十分。<br>0-40%：低い、30-60%：中程度、50-90%：実質的、75-100%：かなり大きい</td>
-      </tr>
-      <tr>
-        <td><strong>τ²（タウ二乗）</strong></td>
-        <td>研究間分散の推定値</td>
-        <td>異質性の絶対的な大きさを示す</td>
-      </tr>
-      <tr>
-        <td><strong>予測区間（PI）</strong></td>
-        <td>将来の新しい研究の効果推定値が含まれると予想される範囲</td>
-        <td><span class="badge badge-blue">中心的指標</span>。臨床的に意味のある異質性の判断に最適</td>
-      </tr>
-      <tr>
-        <td><strong>フォレストプロット</strong></td>
-        <td>各研究の効果推定値と信頼区間の視覚的表示</td>
-        <td>視覚的な異質性の評価に不可欠</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <hr class="section-divider">
-
-  <h4>予測区間（Prediction Interval）の重要性</h4>
+  <div class="danger-card">
+    <div class="card-label">&#x274c; なぜNRSIは問題なのか</div>
+    <p>ランダム化試験では、ランダム割付により<strong>既知・未知の交絡因子が群間で均等に分布</strong>します。一方、NRSIではランダム割付がないため、治療群と対照群の間に<strong>系統的な差異</strong>が存在する可能性があります。この差異が効果推定値を歪め、介入の真の効果を正確に推定することを困難にします。</p>
+  </div>
 
   <div class="key-message">
-    <div class="key-title">なぜ予測区間が重要なのか</div>
-    <p>信頼区間（CI）は<strong>平均効果の不確実性</strong>を示しますが、予測区間（PI）は<strong>個々の研究（または将来の新しい研究）における効果の変動範囲</strong>を示します。臨床的な意思決定において重要なのは、「平均的にどの程度の効果があるか」だけでなく、「次の患者集団でどの程度の効果が期待できるか」です。予測区間はこの問いに直接答える、より臨床的に適切な指標です。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
+    <p>NRSIの結果をメタアナリシスに統合する際、<strong>未調整のイベント数と症例数をそのまま使用することは極めて危険</strong>です。これは、NRSIの最も深刻な問題である交絡の影響を完全に無視することを意味します。</p>
   </div>
 
+  <h4>未調整データでメタアナリシスを行うことの弊害</h4>
+
   <div class="grid-2">
-    <div class="grid-item green">
-      <h5>信頼区間（CI）が狭い場合でも...</h5>
-      <p>予測区間が広く、臨床的に重要な閾値をまたぐ場合は、不一致性のためにグレードダウンすべきです。大規模な研究が多い場合、CIは狭くなりますが、研究間の真の異質性は残ります。</p>
+    <div class="grid-item red">
+      <h5><span class="icon">&#x1f500;</span> 交絡因子の混入</h5>
+      <p>未調整データには、介入の効果だけでなく、<strong>年齢、重症度、併存疾患などの交絡因子の影響</strong>が含まれています。例えば、より重症の患者が特定の治療を受ける傾向がある場合、未調整データではその治療の効果が過小評価されます。</p>
     </div>
-    <div class="grid-item orange">
-      <h5>I²が高い場合でも...</h5>
-      <p>予測区間が臨床的に重要な閾値をまたがない場合は、不一致性のためにグレードダウンする必要がない場合があります。I²は研究の精度に依存するため、大規模研究では小さな異質性でもI²が高くなります。</p>
+    <div class="grid-item red">
+      <h5><span class="icon">&#x1f4a5;</span> 見かけ上の精度の高さ</h5>
+      <p>NRSIは一般的にRCTよりも<strong>大きなサンプルサイズ</strong>を持つため、未調整データを使用すると信頼区間が狭くなり、<strong>見かけ上の精度が高く</strong>なります。しかし、この「精度」は交絡の影響を含んだ偽りの精度です。</p>
+    </div>
+    <div class="grid-item red">
+      <h5><span class="icon">&#x1f6a8;</span> RCTの結果を圧倒</h5>
+      <p>メタアナリシスでは、サンプルサイズが大きい研究により大きな重みが与えられます。NRSIの未調整データを含めると、<strong>大規模NRSIの交絡を含んだ結果がRCTの結果を圧倒</strong>し、全体の効果推定値を歪めます。</p>
+    </div>
+    <div class="grid-item red">
+      <h5><span class="icon">&#x1f4ab;</span> 誤った確実性の印象</h5>
+      <p>狭い信頼区間は高い確実性の印象を与えますが、実際には<strong>系統的な偏りにより効果推定値自体が歪んでいる</strong>可能性があります。これは「精度は高いが正確ではない」状態です。</p>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <div class="card-label"><span class="icon">&#x1f4a1;</span> 具体例で理解する：新しい降圧薬Aの効果</div>
+    <p>観察研究で、薬Aを服用した群（n=5,000）と服用しなかった群（n=5,000）を比較。薬Aを服用した群では、より重症の高血圧患者が多く含まれていた（交絡因子）。</p>
+    <div class="figure-container">
+        <div class="figure-title">Fig 13.1: 交絡の調整による効果推定値の変化</div>
+        <table class="styled-table">
+            <thead><tr><th>指標</th><th>未調整データ</th><th>交絡因子調整後</th></tr></thead>
+            <tbody>
+              <tr><td><strong>心血管イベント発生率（薬A群）</strong></td><td>12%</td><td>8%</td></tr>
+              <tr><td><strong>心血管イベント発生率（対照群）</strong></td><td>10%</td><td>10%</td></tr>
+              <tr><td><strong>リスク比（RR）</strong></td><td><span class="badge badge-red">1.20（有害に見える）</span></td><td><span class="badge badge-green">0.80（有益に見える）</span></td></tr>
+              <tr><td><strong>解釈</strong></td><td>交絡により効果が逆転</td><td>交絡を調整すると真の効果が見える</td></tr>
+            </tbody>
+        </table>
+        <div class="figure-caption">この例では、未調整データを使用すると薬Aが有害であるという<strong>完全に誤った結論</strong>に至ります。</div>
     </div>
   </div>
 
   <hr class="section-divider">
 
-  <h4>不一致性の評価プロセス</h4>
-  <p>不一致性の評価は、単一の統計量に頼るのではなく、体系的なプロセスを通じて行われます。</p>
+  <h4>調整済み効果推定値の使用 ― 正しいアプローチ</h4>
+
+  <div class="success-card">
+    <div class="card-label"><span class="icon">&#x2705;</span> 推奨されるアプローチ</div>
+    <p>NRSIをメタアナリシスに統合する際は、<strong>各研究で交絡因子を調整した効果推定値（adjusted effect estimates）</strong>を使用すべきです。これにより、交絡の影響を可能な限り除去した上で、研究間の効果を比較・統合できます。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
+  </div>
+
+  <h4>調整方法の違いがもたらす困難</h4>
+
+  <div class="warning-card">
+    <div class="card-label">&#x26a0;&#xfe0f; 実践上の課題</div>
+    <p>しかし、調整済み効果推定値の使用にも重要な課題があります。<strong>各研究で交絡因子の調整方法が異なる</strong>ため、統合の妥当性に疑問が生じます。</p>
+  </div>
+
+  <div class="figure-container">
+    <div class="figure-title">Table 13.1: 主な交絡調整方法とその限界</div>
+    <table class="styled-table">
+      <thead>
+        <tr><th>調整方法</th><th>特徴</th><th>限界</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>多変量回帰分析</strong></td>
+          <td>複数の交絡因子を同時に調整</td>
+          <td>モデルの仮定に依存、残余交絡の可能性</td>
+        </tr>
+        <tr>
+          <td><strong>傾向スコアマッチング</strong></td>
+          <td>治療を受ける確率に基づいてマッチング</td>
+          <td>未測定の交絡因子は調整不可</td>
+        </tr>
+        <tr>
+          <td><strong>傾向スコアの重み付け（IPTW）</strong></td>
+          <td>逆確率重み付けにより擬似ランダム化</td>
+          <td>極端な重みが結果を不安定にする可能性</td>
+        </tr>
+        <tr>
+          <td><strong>操作変数法</strong></td>
+          <td>自然実験的な変動を利用</td>
+          <td>適切な操作変数の特定が困難</td>
+        </tr>
+        <tr>
+          <td><strong>回帰不連続デザイン</strong></td>
+          <td>閾値前後の比較により因果効果を推定</td>
+          <td>適用可能な状況が限定的</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="figure-caption">各研究が異なる交絡因子のセットを調整し、異なる統計手法を使用している場合、<strong>これらの研究を単純に統合することの妥当性</strong>は慎重に検討する必要があります。</div>
+  </div>
+
+  <hr class="section-divider">
+
+  <h3>GRADE Guidance 44の4ステップフレームワーク</h3>
+
   <div class="process-diagram">
     <div class="process-step">
       <div class="highlight-num">1</div>
       <div class="process-body">
-        <h5>フォレストプロットの視覚的検査</h5>
-        <p>各研究の効果推定値と信頼区間を視覚的に確認します。効果の方向性、信頼区間の重なり、外れ値の有無を評価します。</p>
+        <h5>個別評価（Individual Assessment）</h5>
+        <p>RCTとNRSIのエビデンスを<strong>それぞれ独立に</strong>評価します。各デザインの強みと限界を考慮し、効果推定値の確実性を個別に判断します。NRSIの場合、交絡の調整方法と残余交絡の可能性を特に注意深く評価します。</p>
       </div>
     </div>
-    <div class="process-arrow">↓</div>
+    <div class="process-arrow
+">&darr;</div>
     <div class="process-step">
       <div class="highlight-num">2</div>
       <div class="process-body">
-        <h5>統計的指標の確認</h5>
-        <p>I²統計量、τ²、Q検定のp値を確認します。ただし、これらは参考情報であり、単独で判断の根拠とすべきではありません。</p>
+        <h5>一致性の評価（Coherence Assessment）</h5>
+        <p>RCTとNRSIの効果推定値が<strong>一致しているかどうか</strong>を評価します。効果の方向性と大きさの一致性を確認し、不一致がある場合はその原因を探索します。</p>
+        <div class="comparison-flow">
+          <div class="comparison-item green"><h6>一致</h6><p>NRSIがRCTの結果を支持 &rarr; 統合の根拠が強まる</p></div>
+          <div class="comparison-arrow
+">&harr;</div>
+          <div class="comparison-item red"><h6>不一致</h6><p>交絡、集団の違い、介入の違いなどの原因を探索</p></div>
+        </div>
       </div>
     </div>
-    <div class="process-arrow">↓</div>
+    <div class="process-arrow
+">&darr;</div>
     <div class="process-step">
       <div class="highlight-num">3</div>
       <div class="process-body">
-        <h5>予測区間の評価</h5>
-        <p>予測区間が<strong>MID（最小重要差）の閾値</strong>をまたぐかを確認します。予測区間が利益と害の両方の閾値をまたぐ場合、不一致性は深刻です。</p>
+        <h5>統合の判断（Integration Decision）</h5>
+        <p>RCTとNRSIを<strong>統合するかどうか</strong>を判断します。統合の選択肢は以下の通りです：</p>
+        <ul class="icon-list">
+          <li><span class="li-icon">&#x1f4c8;</span><strong>統計的統合（メタアナリシス）</strong>：効果推定値が一致し、調整方法が類似している場合</li>
+          <li><span class="li-icon">&#x1f4dd;</span><strong>ナラティブ統合</strong>：統計的統合が不適切な場合、定性的に統合</li>
+          <li><span class="li-icon">&#x1f500;</span><strong>別々に提示</strong>：不一致が大きい場合、それぞれのエビデンスを独立に提示</li>
+        </ul>
       </div>
     </div>
-    <div class="process-arrow">↓</div>
+    <div class="process-arrow
+">&darr;</div>
     <div class="process-step">
       <div class="highlight-num">4</div>
       <div class="process-body">
-        <h5>異質性の原因の探索</h5>
-        <p>事前に仮説を立てたサブグループ分析やメタ回帰を用いて、異質性の原因を探索します。説明可能な異質性は、グレードダウンを軽減する可能性があります。</p>
-      </div>
-    </div>
-    <div class="process-arrow">↓</div>
-    <div class="process-step">
-      <div class="highlight-num">5</div>
-      <div class="process-body">
-        <h5>総合的な判断</h5>
-        <p>上記の情報を統合し、不一致性のためにグレードダウンするか、するとすれば何段階かを判断します。ここでも<strong>「教育された直感」</strong>が重要です。</p>
+        <h5>確実性の評価（Certainty Assessment）</h5>
+        <p>統合されたエビデンス全体の確実性を評価します。NRSIを含む場合、<strong>交絡による残余バイアス</strong>を考慮して、通常はRCTのみの場合よりも確実性が低くなります。</p>
       </div>
     </div>
   </div>
 
   <hr class="section-divider">
 
-  <h4>研究が少ない場合の不一致性評価</h4>
-  <div class="danger-card">
-    <div class="card-label">⚠️ 注意点</div>
-    <p>研究数が少ない場合（特に2-3研究）、I²統計量やQ検定の検出力は非常に低く、統計的に有意な異質性が検出されないことがあります。しかし、これは異質性が存在しないことを意味しません。Core GRADEは、<strong>少数の研究では予測区間が非常に広くなる</strong>ことを認識し、この場合は不精確さのドメインで対処することを推奨しています。</p>
+  <h4>NRSIが特に有用な状況</h4>
+
+  <div class="grid-3">
+    <div class="grid-item blue">
+      <h5><span class="icon">&#x1f6ab;</span> RCTが実施困難</h5>
+      <p>倫理的な理由（例：喫煙の害）、実施上の理由（例：まれな疾患）、または費用の理由でRCTが実施困難な場合。</p>
+    </div>
+    <div class="grid-item blue">
+      <h5><span class="icon">&#x1f4c5;</span> 長期的なアウトカム</h5>
+      <p>RCTの追跡期間では捕捉できない長期的な効果や害（例：薬剤の長期副作用）を評価する場合。</p>
+    </div>
+    <div class="grid-item blue">
+      <h5><span class="icon">&#x1f30d;</span> 実世界での有効性</h5>
+      <p>RCTの厳格な条件下ではなく、実際の臨床実践における介入の有効性（effectiveness）を評価する場合。</p>
+    </div>
   </div>
 
-  <hr class="section-divider">
-
-  <h4>サブグループ分析の信頼性基準</h4>
-  <p>Core GRADEは、サブグループ効果の信頼性を評価するための7つの基準を提供しています。これらの基準を満たすほど、サブグループ効果の信頼性は高まります。</p>
-  <div class="icon-list">
-    <ul>
-      <li><span class="icon">🎯</span> <strong>事前の仮説:</strong> サブグループ効果の仮説は、データを見る前に立てられていたか？</li>
-      <li><span class="icon">🔢</span> <strong>仮説の数:</strong> 検討されたサブグループ仮説の数は少ないか？（理想的には3以下）</li>
-      <li><span class="icon">🧭</span> <strong>効果の方向性:</strong> サブグループ効果の方向性は事前に特定されていたか？</li>
-      <li><span class="icon">📊</span> <strong>統計的有意性:</strong> サブグループ間の交互作用検定は統計的に有意か？</li>
-      <li><span class="icon">🔄</span> <strong>一貫性:</strong> サブグループ効果は複数の研究やアウトカムで一貫しているか？</li>
-      <li><span class="icon">🧬</span> <strong>生物学的妥当性:</strong> サブグループ効果には生物学的な妥当性があるか？</li>
-      <li><span class="icon">📈</span> <strong>大きな効果:</strong> サブグループ間の効果の差は大きいか？</li>
-    </ul>
-  </div>
-
-  <hr class="section-divider">
-
-  <div class="success-card">
-    <div class="card-label">✅ Chapter 8のまとめ</div>
-    <ul>
-      <li>不一致性は<strong>研究間の説明できない異質性</strong>を評価するドメインです。</li>
-      <li>Core GRADEは<strong>予測区間</strong>を不一致性評価の中心的な指標として位置づけています。</li>
-      <li>I²統計量は参考指標であり、<strong>単独で判断の根拠とすべきではありません</strong>。</li>
-      <li>予測区間がMID閾値をまたぐかどうかが臨床的に最も重要です。</li>
-      <li>研究数が少ない場合は予測区間が広くなるため、<strong>不精確さのドメインで対処</strong>します。</li>
-      <li>サブグループ分析は<strong>事前の仮説に基づき、数を制限</strong>して実施すべきです。</li>
+  <div class="summary-box">
+    <div class="summary-title">&#x2705; Chapter 13のまとめ</div>
+    <ul class="icon-list">
+      <li><span class="li-icon">&#x26a0;&#xfe0f;</span>NRSIの最大の問題は<strong>交絡（confounding）</strong>であり、ランダム化の欠如により群間に系統的な差異が生じる。</li>
+      <li><span class="li-icon">&#x274c;</span><strong>未調整のイベント数・症例数でメタアナリシスを行うことは極めて危険</strong> ― 交絡の影響が混入し、見かけ上の精度が高い偽りの結果を生む。</li>
+      <li><span class="li-icon">&#x1f504;</span>NRSIの統合には<strong>調整済み効果推定値</strong>を使用すべきだが、各研究の調整方法が異なるため統合の妥当性に課題がある。</li>
+      <li><span class="li-icon">&#x1f4d0;</span>GRADE Guidance 44の<strong>4ステップフレームワーク</strong>（個別評価→一致性評価→統合判断→確実性評価）に従う。</li>
+      <li><span class="li-icon">&#x1f4a1;</span>NRSIはRCTが実施困難な場合、長期アウトカム、実世界での有効性評価に特に有用。</li>
     </ul>
   </div>
 
   <div class="source-references">
-    <h4><span class="icon">📚</span> 英文ソース</h4>
+    <h4><span class="icon">&#x1f4da;</span> 英語原文出典</h4>
     <div class="source-ref-item" id="ref-1">
       <div class="ref-label">[1]</div>
-      <div class="ref-body">Core GRADE places prediction intervals at the center of inconsistency assessment, moving beyond reliance on I² statistics alone.</div>
+      <div class="ref-body">NRSI are subject to confounding — the fundamental problem that treatment groups may differ systematically in ways that affect outcomes, making it difficult to attribute observed effects to the intervention itself.</div>
     </div>
     <div class="source-ref-item" id="ref-2">
       <div class="ref-label">[2]</div>
-      <div class="ref-body">The prediction interval captures the range of effects expected in future studies, providing a more clinically relevant measure of heterogeneity than I² alone.</div>
+      <div class="ref-body">When incorporating NRSI into meta-analyses, one should use adjusted effect estimates from each study rather than crude event counts. This ensures that confounding is addressed to the extent possible.</div>
     </div>
   </div>
 
   <div class="ref-box">
     <h4>参考文献</h4>
     <ol>
-      <li>Guyatt GH, et al. Core GRADE 3: Inconsistency. BMJ. 2025.</li>
-      <li>Guyatt GH, et al. Core GRADE 3: Inconsistency Appendix. BMJ. 2025.</li>
+      <li>Schünemann HJ, et al. GRADE Guidance 44: Integrating evidence from non-randomized intervention studies with randomized trials for health and social interventions. J Clin Epidemiol. 2025.</li>
       <li>Guyatt GH, et al. Core GRADE 1: Overview. BMJ. 2025.</li>
-      <li>Guyatt GH, et al. Core GRADE 2: Imprecision. BMJ. 2025.</li>
+      <li>Guyatt GH, et al. Core GRADE 4: Risk of Bias. BMJ. 2025.</li>
       <li>Guyatt GH, et al. Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
     </ol>
   </div>
-
-
-
-<hr class="section-divider">
-<div class="pdf-reference-section" style="margin-top:30px;">
-<h3 style="color:#1a56db;border-bottom:2px solid #1a56db;padding-bottom:8px;">&#x1F4C4; 原文PDF参照</h3>
-<p style="color:#666;font-size:0.9em;margin-bottom:20px;">以下は本チャプターの元となったCore GRADE論文の原文ページです。フローチャートや図表を原文のまま確認できます。</p>
-<details style="margin:15px 0;">
-<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG4 ROB (12 pages)</summary>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 12</div>
-<img src="images/cg4_rob_p01.png" alt="cg4_rob page 1" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 12</div>
-<img src="images/cg4_rob_p02.png" alt="cg4_rob page 2" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 12</div>
-<img src="images/cg4_rob_p03.png" alt="cg4_rob page 3" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 12</div>
-<img src="images/cg4_rob_p04.png" alt="cg4_rob page 4" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 12</div>
-<img src="images/cg4_rob_p05.png" alt="cg4_rob page 5" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 12</div>
-<img src="images/cg4_rob_p06.png" alt="cg4_rob page 6" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 12</div>
-<img src="images/cg4_rob_p07.png" alt="cg4_rob page 7" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 8 / 12</div>
-<img src="images/cg4_rob_p08.png" alt="cg4_rob page 8" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 9 / 12</div>
-<img src="images/cg4_rob_p09.png" alt="cg4_rob page 9" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 10 / 12</div>
-<img src="images/cg4_rob_p10.png" alt="cg4_rob page 10" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 11 / 12</div>
-<img src="images/cg4_rob_p11.png" alt="cg4_rob page 11" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 12 / 12</div>
-<img src="images/cg4_rob_p12.png" alt="cg4_rob page 12" style="width:100%;display:block;" loading="lazy">
-</div>
-</details>
-<details style="margin:15px 0;">
-<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG4 ROB APPENDIX (4 pages)</summary>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 4</div>
-<img src="images/cg4_rob_appendix_p01.png" alt="cg4_rob_appendix page 1" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 4</div>
-<img src="images/cg4_rob_appendix_p02.png" alt="cg4_rob_appendix page 2" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 4</div>
-<img src="images/cg4_rob_appendix_p03.png" alt="cg4_rob_appendix page 3" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 4</div>
-<img src="images/cg4_rob_appendix_p04.png" alt="cg4_rob_appendix page 4" style="width:100%;display:block;" loading="lazy">
-</div>
-</details>
-</div>
 
 </div>

@@ -1,188 +1,321 @@
-
+<link rel="stylesheet" href="chapters/chapter_common.css">
 <div class="chapter-detail">
 
-  <h3>Chapter 11：Evidence-to-Decision（EtD）フレームワーク入門</h3>
+<h3>Chapter 3：GRADEの使用を主張するための要件</h3>
 
-  <div class="concept-card">
-    <div class="card-label"><span class="icon">📖</span> Core Concept</div>
-    <p>Evidence-to-Decision（EtD）フレームワークは、<strong>エビデンスの確実性評価から推奨の策定へと移行するための構造化されたプロセス</strong>です。Core GRADEは、EtDフレームワークを大幅に簡素化し、<strong>5つの基準</strong>に基づく意思決定プロセスを提示しています。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
-  </div>
-
-  <hr class="section-divider">
-
-  <h4>Core GRADE EtDフレームワークの5つの基準</h4>
-  <p>Core GRADEアプローチでは、以下の5つの主要な基準を考慮して、エビデンスから推奨へと進みます。このプロセスは、システマティックかつ透明性の高い意思決定を促します。</p>
-
-  <div class="process-diagram">
-    <div class="process-step">
-      <div class="highlight-num">1</div>
-      <h5>効果の大きさ</h5>
-      <p>介入の望ましい効果と望ましくない効果の大きさを評価します。絶対効果で表現し、臨床的に意味のある最小差（MID）と比較します。効果は「大きい」「中程度」「小さい」「ほとんどなし」の4段階で評価されます。</p>
-    </div>
-    <div class="process-arrow">→</div>
-    <div class="process-step">
-      <div class="highlight-num">2</div>
-      <h5>効果のバランス</h5>
-      <p>利益と害の正味のバランスを評価します。利益が害を大きく上回るか、その逆かを判断します。バランスが微妙な場合は、患者の価値観がより重要になります。</p>
-    </div>
-    <div class="process-arrow">→</div>
-    <div class="process-step">
-      <div class="highlight-num">3</div>
-      <h5>エビデンスの確実性</h5>
-      <p>エビデンスの確実性が高いほど、推奨は強固になります。確実性が低い場合は、多くの場合、条件付き推奨が適切となります。</p>
-    </div>
-    <div class="process-arrow">→</div>
-    <div class="process-step">
-      <div class="highlight-num">4</div>
-      <h5>価値観と選好</h5>
-      <p>患者が各アウトカムに置く価値と、その価値観のばらつきを評価します。価値観の変動性が大きい場合、画一的な推奨は難しく、条件付き推奨が妥当です。</p>
-    </div>
-    <div class="process-arrow">→</div>
-    <div class="process-step">
-      <div class="highlight-num">5</div>
-      <h5>資源の利用</h5>
-      <p>介入のコスト、費用対効果、および実行可能性を評価します。資源が限られている状況では、コストが高い、または費用対効果が低い介入は推奨されにくくなります。</p>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <h4>推奨の方向性と強さ</h4>
-  <p>EtDフレームワークの評価に基づき、推奨は「方向性（賛成または反対）」と「強さ（強いまたは条件付き）」で決定されます。</p>
-
-  <div class="grid-2">
-    <div class="grid-item green">
-      <h5><span class="icon">👍</span> 強い推奨 (Strong Recommendation)</h5>
-      <p><strong>ほぼすべての患者</strong>がその介入を受けるべき（または受けるべきでない）状況。利益と害のバランスが明確で、エビデンスの確実性が高く、患者の価値観の変動性が小さい場合に策定されます。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
-    </div>
-    <div class="grid-item orange">
-      <h5><span class="icon">🤔</span> 条件付き推奨 (Conditional Recommendation)</h5>
-      <p><strong>多くの患者</strong>はその介入を選択するが、一部の患者は異なる選択をする可能性がある状況。利益と害のバランスが微妙、エビデンスの確実性が低い、または価値観の変動性が大きい場合に策定されます。<a class="source-inline-ref" href="#ref-3">[3]</a></p>
-    </div>
-  </div>
-
-  <div class="key-message">
-    <div class="key-title">推奨の表現</div>
-    <p>強い推奨は「我々は～を推奨する (we recommend)」と表現され、条件付き推奨は「我々は～を提案する (we suggest)」と表現されるのが一般的です。この言葉遣いの違いが、推奨の強さのニュアンスを伝えます。</p>
-  </div>
-
-  <hr class="section-divider">
-
-  <h4>SoFテーブル（Summary of Findings Table）</h4>
-  <p>Core GRADEでは、エビデンスの要約を<strong>SoFテーブル</strong>として提示することを推奨しています。これにより、意思決定に必要な情報が構造化され、透明性が確保されます。</p>
-
-  <div class="figure-container">
-    <div class="figure-title">Table 1: Summary of Findings テーブルの主要構成要素</div>
-    <table class="styled-table">
-      <thead>
-        <tr><th>要素</th><th>内容</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>アウトカム</strong></td><td>評価対象のアウトカムの名称と定義</td></tr>
-        <tr><td><strong>比較対照群のリスク</strong></td><td>比較対照群におけるアウトカムの発生率（ベースラインリスク）</td></tr>
-        <tr><td><strong>介入群のリスク</strong></td><td>介入群におけるアウトカムの推定発生率</td></tr>
-        <tr><td><strong>相対効果</strong></td><td>RR、OR、HRなどの相対効果指標と95%信頼区間</td></tr>
-        <tr><td><strong>絶対効果</strong></td><td>1000人あたりのイベント数の差と95%信頼区間</td></tr>
-        <tr><td><strong>エビデンスの確実性</strong></td><td>GRADEの4段階評価（高・中・低・非常に低）と、その視覚的表現</td></tr>
-        <tr><td><strong>コメント</strong></td><td>グレードダウンの理由やその他の重要な注記</td></tr>
-      </tbody>
-    </table>
-    <div class="figure-caption">SoFテーブルは、利用可能な最良のエビデンスを簡潔にまとめたもので、EtDプロセスの中心的な要素です。</div>
-  </div>
-
-  <hr class="section-divider">
-
-  <h4>EtDフレームワークの実践例</h4>
-  <p>具体的な事例を通して、EtDフレームワークがどのように適用されるかを見てみましょう。</p>
-
-  <div class="concept-card">
-    <div class="card-label"><span class="icon">💡</span> 具体例：重症COVID-19患者に対するコルチコステロイド</div>
-    <ul class="icon-list">
-        <li><span class="icon">🎯</span> <strong>効果の大きさ</strong>：死亡率の相対リスク減少が約30%と大きく、高リスク群では1000人あたり30人の死亡を減少させる絶対効果がある。</li>
-        <li><span class="icon">⚖️</span> <strong>効果のバランス</strong>：利益（死亡率の低下）が、害（感染リスクの軽度増加など）を明らかに上回る。</li>
-        <li><span class="icon">🔍</span> <strong>エビデンスの確実性</strong>：中程度。ランダム化試験に基づいているが、不精確さ（imprecision）のため1段階グレードダウン。</li>
-        <li><span class="icon">❤️</span> <strong>価値観と選好</strong>：ほぼすべての患者が、生存期間の延長や死亡リスクの減少を非常に重要と考える。</li>
-        <li><span class="icon">💰</span> <strong>資源の利用</strong>：コルチコステロイドは安価で広く利用可能であり、資源の障壁は低い。</li>
-    </ul>
-    <div class="callout">
-      <strong>結論</strong>：上記の評価に基づき、重症COVID-19患者に対するコルチコステロイドの使用については<strong>強い推奨</strong>が策定される。 
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <div class="success-card">
-    <div class="card-label">✅ Chapter 11のまとめ</div>
-    <ul class="icon-list">
-      <li><span class="icon">📌</span> EtDフレームワークは<strong>5つの基準</strong>（効果の大きさ、バランス、確実性、価値観、資源）に基づく構造化された意思決定プロセスです。</li>
-      <li><span class="icon">📌</span> 推奨は、その強さに応じて<strong>強い推奨</strong>と<strong>条件付き推奨</strong>の2種類に分類されます。</li>
-      <li><span class="icon">📌</span> <strong>SoFテーブル</strong>は、エビデンスを構造化して提示し、透明性のある意思決定を支援する重要なツールです。</li>
-      <li><span class="icon">📌</span> 利益と害の<strong>正味のバランス</strong>が、推奨の方向性を決定する上で中心的な役割を果たします。</li>
-      <li><span class="icon">📌</span> エビデンスの確実性が低い場合や、患者の価値観に大きなばらつきがある場合は、<strong>条件付き推奨</strong>がより適切となります。</li>
-    </ul>
-  </div>
-
-  <div id="source-references" class="source-references">
-    <h4>参考文献</h4>
-    <div id="ref-1" class="source-ref-item">
-      <div class="ref-label">[1]</div>
-      <div class="ref-content">The EtD framework provides a structured and transparent approach for moving from evidence to decisions. Core GRADE has simplified the EtD framework to focus on five key criteria.</div>
-    </div>
-    <div id="ref-2" class="source-ref-item">
-      <div class="ref-label">[2]</div>
-      <div class="ref-content">"We recommend..." — All or almost all informed patients would choose the intervention.</div>
-    </div>
-    <div id="ref-3" class="source-ref-item">
-      <div class="ref-label">[3]</div>
-      <div class="ref-content">"We suggest..." — Most informed patients would choose the intervention, but a substantial minority would not.</div>
-    </div>
-  </div>
-
-
+<div class="concept-card">
+  <div class="card-label"><span class="icon">&#x1f4d6;</span> Core Concept</div>
+  <p>「GRADEを使用した」と主張するためには、単にGRADEの用語を使うだけでは不十分です。GRADEの基本原則を正しく理解し、体系的に適用していることが求められます。Core GRADEは、この要件をより明確にし、<strong>最低限必要な要素</strong>と<strong>推奨される追加要素</strong>を区別しています。</p>
+</div>
 
 <hr class="section-divider">
-<div class="pdf-reference-section" style="margin-top:30px;">
-<h3 style="color:#1a56db;border-bottom:2px solid #1a56db;padding-bottom:8px;">&#x1F4C4; 原文PDF参照</h3>
-<p style="color:#666;font-size:0.9em;margin-bottom:20px;">以下は本チャプターの元となったCore GRADE論文の原文ページです。フローチャートや図表を原文のまま確認できます。</p>
-<details style="margin:15px 0;">
-<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG1 OVERVIEW (9 pages)</summary>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 9</div>
-<img src="images/cg1_overview_p01.png" alt="cg1_overview page 1" style="width:100%;display:block;" loading="lazy">
+<h3>Core GRADEが提供する標準化されたプロセス</h3>
+
+<p>Core GRADEは、GRADEの適用を合理化するための<strong>簡潔で構造化された、ユーザーフレンドリーなアプローチ</strong>を提供します。これは、単一の介入と単一の対照との比較を扱う際にGRADEを適用するために必要な本質的な要素に焦点を当てています。</p>
+
+<a class="source-inline-ref" href="#ref-1">[1]</a>
+
+<p>Core GRADEのプロセスは、主に以下の<strong>2つの基本的なプロセス</strong>を扱います。</p>
+
+<div class="grid-2">
+  <div class="grid-item green">
+    <h5>1. エビデンスの確実性評価</h5>
+    <p>各重要なアウトカムのエビデンスの確実性を評価し、<strong>Summary of Findings（SoF）テーブル</strong>に提示します。</p>
+  </div>
+  <div class="grid-item purple">
+    <h5>2. エビデンスから推奨への移行</h5>
+    <p>推奨には<strong>方向性</strong>（賛成か反対か）と<strong>強さ</strong>（強いか条件付き/弱いか）の両方があります。</p>
+  </div>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 9</div>
-<img src="images/cg1_overview_p02.png" alt="cg1_overview page 2" style="width:100%;display:block;" loading="lazy">
+
+<div class="figure-container">
+    <h5 class="figure-title">Fig 1. Core GRADEアプローチの概略図</h5>
+    <div class="flowchart">
+        <div class="flow-node start">PICO形式で質問を定式化</div>
+        <div class="flow-connector"></div>
+        <div class="flow-node">アウトカムを特定</div>
+        <div class="flow-connector"></div>
+        <div class="flow-node">アウトカムの重要度を評価</div>
+        <div class="flow-connector"></div>
+        <div class="flow-node">エビデンスを統合</div>
+        <div class="flow-connector"></div>
+        <div class="flow-node end">調査結果の要約と確実性の評価</div>
+    </div>
+    <p class="figure-caption">Core GRADEアプローチの体系的な概要。システマティックレビューのプロセスとガイドライン作成のプロセスを示しています。</p>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 9</div>
-<img src="images/cg1_overview_p03.png" alt="cg1_overview page 3" style="width:100%;display:block;" loading="lazy">
+<hr class="section-divider">
+<h3>「名ばかりのGRADE」の問題</h3>
+
+<p>GRADEが世界標準として広く採用されるにつれ、「GRADEを使用した」と主張しながらも、実際にはGRADEの原則を正しく適用していないケースが増えています。これは<strong>「GRADE in name only（名ばかりのGRADE）」</strong>と呼ばれる深刻な問題です。</p>
+
+<div class="danger-card">
+  <div class="card-label">&#x274c; よくある誤った使用例</div>
+  <ul class="icon-list">
+    <li><span class="icon">&#x274c;</span> 研究デザインの階層（ヒエラルキー）だけでエビデンスの質を判断し、GRADEのドメイン評価を行わない</li>
+    <li><span class="icon">&#x274c;</span> GRADEの確実性レベル（高・中・低・非常に低）を使うが、その根拠を明示しない</li>
+    <li><span class="icon">&#x274c;</span> バイアスリスクの評価を個別研究レベルで行うが、エビデンスの総体（body of evidence）レベルでの評価を行わない</li>
+    <li><span class="icon">&#x274c;</span> Summary of Findings（SoF）テーブルを作成しない</li>
+    <li><span class="icon">&#x274c;</span> PICOの各要素を曖昧に定義する</li>
+    <li><span class="icon">&#x274c;</span> 相対効果と絶対効果を混同する</li>
+  </ul>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 9</div>
-<img src="images/cg1_overview_p04.png" alt="cg1_overview page 4" style="width:100%;display:block;" loading="lazy">
+
+<hr class="section-divider">
+<h3>GRADEを正しく使用するための最低要件</h3>
+
+<div class="step-flow">
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>PICO形式による質問の明確な定式化</h5>
+      <p>Patient（患者集団）、Intervention（介入）、Comparison（比較対照）、Outcome（アウトカム）の4つの要素に明確に分解します。Core GRADEは、<strong>PICOの各要素を可能な限り具体的に、曖昧さを避けて明確に指定すること</strong>を強調しています。</p>
+      <a class="source-inline-ref" href="#ref-2">[2]</a>
+<div class="figure-container">
+    <h5 class="figure-title">Table 1. 非重症covid-19患者におけるニルマトレルビル-リトナビルのPICO質問</h5>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>PICO要素</th>
+                <th>内容</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Population</strong></td>
+                <td>非重症のCOVID-19確定患者</td>
+            </tr>
+            <tr>
+                <td><strong>Intervention</strong></td>
+                <td>ニルマトレルビル+リトナビル+標準治療</td>
+            </tr>
+            <tr>
+                <td><strong>Comparison</strong></td>
+                <td>標準治療</td>
+            </tr>
+            <tr>
+                <td><strong>Outcomes</strong></td>
+                <td>全死因死亡率、機械的人工呼吸、有害事象、症状回復までの時間</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="figure-caption">ニルマトレルビル-リトナビルの使用に関するPICO質問の策定例。</p>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 9</div>
-<img src="images/cg1_overview_p05.png" alt="cg1_overview page 5" style="width:100%;display:block;" loading="lazy">
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>アウトカムの重要度評価</h5>
+      <p>患者にとって潜在的に重要なすべてのアウトカムを特定し、9点スケールを用いて重要度を評価します。<strong>「極めて重要（critical）」なアウトカムの最低確実性</strong>が、エビデンスの全体的な確実性を決定します。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>5つのドメインによる確実性評価</h5>
+      <p>バイアスリスク、不一致性、非直接性、不精確さ、出版バイアスの5つのドメインを体系的に評価し、確実性の格下げを検討します。Core GRADEは、これらのドメインを<strong>連続体（continua）</strong>として捉えることを強調しています。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h5>確実性の4段階評価</h5>
+      <p>各アウトカムに対して、エビデンスの確実性を「高、中、低、非常に低」の4段階で明示的に評価します。</p>
+<div class="figure-container">
+    <h5 class="figure-title">Fig 2. 介入効果におけるエビデンスの確実性評価アプローチ</h5>
+    <div class="process-diagram">
+        <div class="process-step">ランダム化研究 (初期: 高)</div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">5つのドメインで格下げ評価</div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">最終的な確実性 (高/中/低/非常に低)</div>
+    </div>
+    <div class="process-diagram">
+        <div class="process-step">観察研究 (初期: 低)</div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">5つのドメインで格下げ評価</div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">2つのドメインで格上げ評価</div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">最終的な確実性 (高/中/低/非常に低)</div>
+    </div>
+    <p class="figure-caption">Core GRADEにおけるエビデンスの確実性評価のフロー。研究デザインによって初期の確実性が異なり、複数のドメイン評価を経て最終的な確実性が決定されます。</p>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 9</div>
-<img src="images/cg1_overview_p06.png" alt="cg1_overview page 6" style="width:100%;display:block;" loading="lazy">
+<div class="cert-bar">
+  <div class="seg high">高</div>
+  <div class="seg mod">中</div>
+  <div class="seg low">低</div>
+  <div class="seg vlow">非常に低</div>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 9</div>
-<img src="images/cg1_overview_p07.png" alt="cg1_overview page 7" style="width:100%;display:block;" loading="lazy">
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h5>判断の透明性</h5>
+      <p>各ドメインの評価根拠を文書化し、なぜその確実性レベルに到達したかを<strong>明確に説明</strong>します。際どい判断（close calls）の場合は、そのことを明示的に注記します。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">6</div>
+    <div class="step-body">
+      <h5>MID（最小重要差）の事前特定</h5>
+      <p>エビデンスから推奨へ移行する際、<strong>すべてのアウトカムについて事前にMIDを特定すること</strong>が必須です。「パネル調査アプローチ」が実用的な方法として推奨されています。</p>
+      <a class="source-inline-ref" href="#ref-3">[3]</a>
+    </div>
+  </div>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 8 / 9</div>
-<img src="images/cg1_overview_p08.png" alt="cg1_overview page 8" style="width:100%;display:block;" loading="lazy">
+
+<hr class="section-divider">
+<h3>推奨される追加要素</h3>
+
+<div class="grid-2">
+  <div class="grid-item green">
+    <h5>Summary of Findings テーブル</h5>
+    <p>各アウトカムの効果推定値、信頼区間、確実性レベルを一覧にまとめた<strong>SoFテーブル</strong>の作成。エビデンスの要約として最も重要な成果物です。</p>
+  </div>
+  <div class="grid-item">
+    <h5>Evidence Profile</h5>
+    <p>各ドメインの評価結果を詳細に記録した<strong>エビデンスプロファイル</strong>の作成。評価の透明性を高めます。</p>
+  </div>
+  <div class="grid-item purple">
+    <h5>Evidence-to-Decision フレームワーク</h5>
+    <p>益と害のバランス、患者の価値観、資源の利用、公平性などを考慮した<strong>EtDフレームワーク</strong>の使用。</p>
+  </div>
+  <div class="grid-item orange">
+    <h5>推奨の強さの明示</h5>
+    <p>「強い推奨」と「条件付き推奨」の区別を明確にし、その根拠を説明します。</p>
+  </div>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 9 / 9</div>
-<img src="images/cg1_overview_p09.png" alt="cg1_overview page 9" style="width:100%;display:block;" loading="lazy">
+
+<hr class="section-divider">
+<h3>フローチャートとアルゴリズムの重要性</h3>
+
+<p>Core GRADEにおける最も重要な革新の一つは、<strong>詳細なフローチャートとアルゴリズムの導入</strong>です。これらは、ユーザーをGRADEのプロセスに沿ってステップバイステップで導くための視覚的なロードマップを提供します。</p>
+
+<a class="source-inline-ref" href="#ref-4">[4]</a>
+
+<div class="grid-3">
+  <div class="grid-item green">
+    <h5>体系的な評価の促進</h5>
+    <p>例えば、バイアスリスクの評価では、メタアナリシスにおける重みの<strong>65%以上</strong>がバイアスリスクの高い研究によるものである場合、グレードダウンを検討するという明確な基準を提供します。</p>
+  </div>
+  <div class="grid-item">
+    <h5>判断の明確化と統一</h5>
+    <p>以前のガイダンスでは曖昧だった領域が、アルゴリズムによって明確化され、異なるユーザー間での判断の一貫性が向上します。</p>
+  </div>
+  <div class="grid-item purple">
+    <h5>再現性の確保</h5>
+    <p>明確なステップに従うことで、評価プロセスが透明になり、他の研究者による再現性が高まります。</p>
+  </div>
 </div>
-</details>
+
+<hr class="section-divider">
+<h3>よくある誤用とその回避方法</h3>
+
+<table class="styled-table">
+  <thead>
+    <tr><th>誤用パターン</th><th>問題点</th><th>Core GRADEによる回避方法</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PICOの曖昧な定義</strong></td>
+      <td>レビューの範囲が不明確になり、関連性の低いエビデンスを含めたり、重要なエビデンスを見落としたりする</td>
+      <td>PICOの各要素を可能な限り具体的に指定。ステアリンググループの活用を推奨</td>
+    </tr>
+    <tr>
+      <td><strong>相対効果と絶対効果の混同</strong></td>
+      <td>治療の臨床的意義を誤って解釈する可能性がある</td>
+      <td>相対効果と絶対効果を明確に区別。患者ケアの決定には絶対効果が最も関連</td>
+    </tr>
+    <tr>
+      <td><strong>際どい判断の不適切な処理</strong></td>
+      <td>機械的にカテゴリーに押し込め、評価が極端に偏る</td>
+      <td>連続体として捉え、ゲシュタルト（全体像）で判断。際どい判断は明示的に注記</td>
+    </tr>
+    <tr>
+      <td><strong>バイアスリスク評価の不統一</strong></td>
+      <td>評価者間で一貫性がなく、信頼性が損なわれる</td>
+      <td>明確なアルゴリズムとROBUST-RCTツールの使用</td>
+    </tr>
+    <tr>
+      <td><strong>MIDの欠如</strong></td>
+      <td>効果推定値が臨床的に意味があるか客観的に判断できない</td>
+      <td>すべてのアウトカムについて事前にMIDを特定（パネル調査アプローチ）</td>
+    </tr>
+    <tr>
+      <td><strong>過度な複雑化</strong></td>
+      <td>GRADEの本質を見失い、適用が困難になる</td>
+      <td>Core GRADEの「ワンストップショッピング」型アプローチで簡素化</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="section-divider">
+<h3>Core GRADE における要件の簡素化</h3>
+
+<div class="purple-card">
+  <div class="card-label">Core GRADEの立場</div>
+  <p>Core GRADEは、完全なEtDチェックリストの完成は必須ではないとしています。重要なのは、エビデンスの確実性を正しく評価し、その根拠を透明に示すことです。</p>
+  <a class="source-inline-ref" href="#ref-5">[5]</a>
+  <p>つまり、エビデンスの確実性および推奨の方向性と強さに関する適切な判断を下すために<strong>必要不可欠でないガイダンスは、Core GRADEの一部としない</strong>という厳格な取捨選択基準が適用されています。</p>
+</div>
+
+<hr class="section-divider">
+<h3>透明性と再現性の確保</h3>
+
+<div class="grid-2">
+  <div class="grid-item green">
+    <h5>透明性の確保</h5>
+    <ul class="icon-list">
+      <li><span class="icon">&#x1f441;</span> PICOの明確な定義の開示</li>
+      <li><span class="icon">&#x1f441;</span> アウトカムの重要度評価の根拠の明示</li>
+      <li><span class="icon">&#x1f441;</span> 各ドメインの評価根拠の詳述</li>
+      <li><span class="icon">&#x1f441;</span> 際どい判断の明示的な注記</li>
+      <li><span class="icon">&#x1f441;</span> SoFテーブルによる構造化された提示</li>
+    </ul>
+  </div>
+  <div class="grid-item">
+    <h5>再現性の確保</h5>
+    <ul class="icon-list">
+      <li><span class="icon">&#x1f501;</span> 標準化されたプロセスとアルゴリズム</li>
+      <li><span class="icon">&#x1f501;</span> 明確なガイダンスと定義</li>
+      <li><span class="icon">&#x1f501;</span> 評価の各ステップの記録と文書化</li>
+      <li><span class="icon">&#x1f501;</span> MIDの体系的な特定方法</li>
+      <li><span class="icon">&#x1f501;</span> ROBUST-RCTなどの標準化ツール</li>
+    </ul>
+  </div>
+</div>
+
+<div class="success-card">
+  <div class="card-label">&#x2705; Chapter 3のまとめ</div>
+  <ul class="icon-list">
+    <li><span class="icon">&#x1f4dd;</span> 「GRADEを使用した」と主張するには、<strong>PICO設定、系統的検索、5ドメイン評価、4段階評価、判断の透明性、MIDの事前特定</strong>が最低限必要。</li>
+    <li><span class="icon">&#x1f4dd;</span> SoFテーブル、エビデンスプロファイル、EtDフレームワークの使用が<strong>推奨される追加要素</strong>。</li>
+    <li><span class="icon">&#x1f4dd;</span> Core GRADEは<strong>フローチャートとアルゴリズム</strong>を導入し、体系的な評価と再現性を大幅に向上させた。</li>
+    <li><span class="icon">&#x1f4dd;</span> 「名ばかりのGRADE」を避けるため、<strong>透明性と再現性</strong>の確保が不可欠。</li>
+  </ul>
+</div>
+
+<div class="source-references">
+  <h4>英文ソース</h4>
+  <div class="source-ref-item" id="ref-1"><span class="ref-label">[1]</span> Core GRADE was developed to provide the essentials of the GRADE approach in a single series of papers, offering a streamlined, structured, and user-friendly approach.</div>
+  <div class="source-ref-item" id="ref-2"><span class="ref-label">[2]</span> In the past, GRADE users have often lacked precision in how they specify their target PICO. The careful, explicit, and transparent specification of the target PICO represents a key aspect of Core GRADE.</div>
+  <div class="source-ref-item" id="ref-3"><span class="ref-label">[3]</span> Core GRADE mandates the identification of MIDs for all outcomes prior to moving from evidence to recommendations.</div>
+  <div class="source-ref-item" id="ref-4"><span class="ref-label">[4]</span> A key innovation in Core GRADE is the introduction of detailed flowcharts and algorithms that offer a visual roadmap to guide users step-by-step through the GRADE process.</div>
+  <div class="source-ref-item" id="ref-5"><span class="ref-label">[5]</span> The ultimate criterion stipulates that if guidance is not essential for making appropriate judgments regarding certainty of evidence and direction and strength of recommendations, it is not part of Core GRADE.</div>
+</div>
+
+<div class="ref-box">
+  <h4>参考文献</h4>
+  <ol>
+    <li>Core GRADE 0: Introduction. BMJ. 2025.</li>
+    <li>Core GRADE 1: Overview. BMJ. 2025.</li>
+    <li>Core GRADE 6: Summary of Findings. BMJ. 2025.</li>
+    <li>Core GRADE 7: Evidence-to-Decision. BMJ. 2025.</li>
+    <li>Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
+    <li>Guyatt GH, Oxman AD, Vist GE, et al. GRADE: an emerging consensus on rating quality of evidence and strength of recommendations. BMJ. 2008;336(7650):924-926.</li>
+  </ol>
 </div>
 
 </div>

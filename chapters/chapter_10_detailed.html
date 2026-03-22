@@ -1,172 +1,210 @@
-<link rel="stylesheet" href="chapter_common.css">
+<link rel="stylesheet" href="../chapter_common.css">
+<style>
+.funnel-plot-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+.funnel-plot {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.funnel-y-axis-label, .funnel-x-axis-label {
+  text-align: center;
+  font-size: 0.85em;
+  color: #64748b;
+  font-weight: 600;
+}
+.funnel-y-axis-label {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -60px;
+  top: 50%;
+  transform-origin: center;
+  width: 250px;
+}
+.funnel-guideline-x {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: #cbd5e1;
+}
+.funnel-guideline-y {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  background: #94a3b8;
+  transform: translateX(-50%);
+}
+.funnel-shape {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 100%;
+  transform: translateX(-50%);
+  clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0);
+  background: rgba(2, 132, 199, 0.05);
+  border-left: 2px dashed rgba(2, 132, 199, 0.4);
+  border-right: 2px dashed rgba(2, 132, 199, 0.4);
+}
+.funnel-point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #0284c7;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+}
+.funnel-point.red-point {
+  background: #ef4444;
+}
+</style>
 <div class="chapter-detail">
 
-<h3>Chapter 5：Outcomes（アウトカム）</h3>
+<h3>Chapter 10：出版バイアス（Publication Bias / Dissemination Bias）</h3>
 
 <div class="concept-card">
-  <div class="card-label"><span class="icon">💡</span> コアコンセプト</div>
-  <p>GRADEアプローチにおいて、<strong>アウトカムの選択と重要度の評価</strong>は、エビデンスの確実性評価と推奨の策定の基盤となります。Core GRADEは、患者にとって重要なアウトカムに焦点を当て、代理アウトカムではなく<strong>患者が直接経験するアウトカム</strong>を優先することを強調しています。</p>
+  <div class="card-label"><span class="icon">&#x1f4d6;</span> Core Concept</div>
+  <p>出版バイアス（Publication Bias）は、<strong>研究結果の方向性や統計的有意性に基づいて、研究の出版や報告が選択的に行われること</strong>により生じる系統的な偏りです。否定的な結果や統計的に有意でない結果の研究は出版されにくく、その結果、利用可能なエビデンスが介入の効果を過大評価する傾向があります。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
 </div>
 
 <hr class="section-divider">
 
-<h4>アウトカムの重要度評価 ― 9点スケール</h4>
+<h3>出版バイアスの形態</h3>
 
-<p>Core GRADEでは、ガイドラインパネルが患者にとって潜在的に重要なすべてのアウトカムを特定し、その後、<strong>9点スケール</strong>を用いて重要度を評価する構造化されたプロセスを実施します。</p>
-
-<div class="summary-box">
-  <div class="summary-title">アウトカム重要度の9点スケール</div>
-  <div class="grid-3">
-    <div class="grid-item" style="border-left: 4px solid #dc2626;">
-      <h5>7-9点：極めて重要 (Critical)</h5>
-      <p>推奨の策定において最も重要なアウトカム。エビデンスの確実性評価の中心となります。<strong>「極めて重要」なアウトカムの最低確実性</strong>が、エビデンスの全体的な確実性を決定します。</p>
-    </div>
-    <div class="grid-item" style="border-left: 4px solid #f59e0b;">
-      <h5>4-6点：重要 (Important)</h5>
-      <p>推奨の策定に関連するが、「極めて重要」ではないアウトカム。SoFテーブルに含めるべきですが、全体的な確実性の決定には直接影響しません。</p>
-    </div>
-    <div class="grid-item" style="border-left: 4px solid #64748b;">
-      <h5>1-3点：重要ではない (Not Important)</h5>
-      <p>推奨の策定にはほとんど関連しないアウトカム。通常、SoFテーブルには含めません。</p>
-    </div>
+<div class="grid-4">
+  <div class="grid-item red">
+    <h5>研究全体の非出版</h5>
+    <p>否定的な結果の研究が全く出版されないケース。最も深刻な形態であり、検出が最も困難です。製薬企業がスポンサーの研究で特に懸念されます。</p>
   </div>
-</div>
-
-<p>アウトカムの重要度評価に関するこのアプローチは、国際的なコンセンサスに基づいています。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
-
-<hr class="section-divider">
-
-<h4>アウトカム選択の原則</h4>
-
-<div class="process-diagram">
-  <div class="process-step">
-    <div class="process-num">1</div>
-    <div class="process-body">
-      <h5>患者中心のアウトカムを優先する</h5>
-      <p>代理アウトカム（surrogate outcomes）ではなく、患者が直接経験するアウトカムを優先します。例えば、血圧の変化（代理）ではなく、脳卒中や心筋梗塞（患者中心）を選択します。代理アウトカムを使用する場合は、非直接性としてグレードダウンの対象となります。</p>
-    </div>
+  <div class="grid-item orange">
+    <h5>選択的アウトカム報告</h5>
+    <p>研究は出版されるが、特定のアウトカムの結果が報告されないケース。Core GRADEでは、これを<strong>出版バイアスのドメイン</strong>で評価します（研究者が測定はしたが報告しなかったアウトカム）。</p>
   </div>
-  <div class="process-arrow">↓</div>
-  <div class="process-step">
-    <div class="process-num">2</div>
-    <div class="process-body">
-      <h5>益と害の両方を含める</h5>
-      <p>介入の利益だけでなく、<strong>有害事象</strong>も重要なアウトカムとして含めます。益と害のバランスが推奨の方向性と強さを決定する上で不可欠です。</p>
-    </div>
-  </div>
-  <div class="process-arrow">↓</div>
-  <div class="process-step">
-    <div class="process-num">3</div>
-    <div class="process-body">
-      <h5>時間枠を明確にする</h5>
-      <p>アウトカムの関連する時間枠を明確に定義します。例えば、WHOの敗血症ガイドラインでは、主要な期間として入院後<strong>28日間</strong>、副次的な期間として<strong>6ヶ月間</strong>が設定されました。</p>
-    </div>
-  </div>
-  <div class="process-arrow">↓</div>
-  <div class="process-step">
-    <div class="process-num">4</div>
-    <div class="process-body">
-      <h5>疾患の病期による違いを考慮する</h5>
-      <p>アウトカムの重要性は疾患の病期によって異なる場合があります。例えば、COVID-19患者に対するガイドラインでは、入院患者と外来患者で「極めて重要」なアウトカムが異なりました。</p>
-    </div>
-  </div>
-</div>
-
-<hr class="section-divider">
-
-<h4>全体的な確実性の決定</h4>
-
-<div class="key-message">
-  <div class="key-title">重要な原則</div>
-  <p>エビデンスの全体的な確実性は、<strong>「極めて重要」なアウトカムの中で最も確実性の低いエビデンス</strong>によって決定されます。したがって、ガイドラインパネルは「極めて重要」なアウトカムと「重要だが極めて重要ではない」アウトカムを明確に区別する必要があります。</p>
-</div>
-
-<p>例えば、ある介入について死亡率（極めて重要）のエビデンスの確実性が「中」、入院期間（極めて重要）の確実性が「低」、QOL（重要）の確実性が「高」であった場合、全体的な確実性は「低」となります。</p>
-
-<div class="figure-container">
-  <div class="figure-title">Fig 5.1: 全体的な確実性の決定例</div>
-  <table class="styled-table">
-    <thead>
-      <tr><th>アウトカム</th><th>重要度</th><th>確実性</th><th>全体的確実性への影響</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>死亡率</td><td>極めて重要 (9点)</td><td><span class="badge badge-orange">中</span></td><td>考慮される</td></tr>
-      <tr><td>入院期間</td><td>極めて重要 (8点)</td><td><span class="badge badge-red">低</span></td><td><strong>全体的確実性を決定</strong></td></tr>
-      <tr><td>QOL</td><td>重要 (6点)</td><td><span class="badge badge-green">高</span></td><td>直接影響しない</td></tr>
-      <tr><td>有害事象</td><td>極めて重要 (7点)</td><td><span class="badge badge-orange">中</span></td><td>考慮される</td></tr>
-    </tbody>
-  </table>
-  <div class="figure-caption">「極めて重要」なアウトカムの中で最も確実性が低い「入院期間」の「低」が、エビデンス全体の確実性となります。</div>
-</div>
-
-<hr class="section-divider">
-
-<h4>MID（最小重要差）の事前特定</h4>
-
-<p>Core GRADEは、エビデンスから推奨への移行において、<strong>すべてのアウトカムについて事前にMIDを特定すること</strong>が必須であると強調しています。MIDは、患者が重要だと認識するアウトカムの最小の変化として定義されます。</p>
-
-<p>MIDの事前特定は、Core GRADEの必須要件です。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
-
-<div class="grid-2">
-  <div class="grid-item green">
-    <h5>パネル調査アプローチ</h5>
-    <p>ガイドライン作成者やコンテンツの専門家を巻き込み、何が重要な差を構成するかを体系的に評価させる方法。選択されたMIDが透明で再現性があり、患者の価値観と選好に沿ったものであることを保証します。</p>
+  <div class="grid-item blue">
+    <h5>選択的分析報告</h5>
+    <p>複数の分析方法の中から、最も好ましい結果を示す分析のみが報告されるケース。Core GRADEでは、これを<strong>バイアスリスクのドメイン</strong>で評価します。</p>
   </div>
   <div class="grid-item purple">
-    <h5>文献ベースのアプローチ</h5>
-    <p>既存の文献から公表されたMIDを検索する方法。アンカーベースの方法（患者の全般的な変化の印象と関連づける）や分布ベースの方法（効果量の0.5SDなど）があります。</p>
+    <h5>時間的バイアス（Time-lag bias）</h5>
+    <p>肯定的な結果の研究がより早く出版される傾向。システマティックレビューの時点で、否定的な結果の研究がまだ出版されていない可能性があります。</p>
   </div>
 </div>
 
 <hr class="section-divider">
 
-<h4>アウトカムの測定方法</h4>
+<h3>出版バイアスの検出方法</h3>
 
-<div class="figure-container">
-  <div class="figure-title">Table 5.1: アウトカムの種類と測定方法</div>
-  <table class="styled-table">
-    <thead>
-      <tr><th>アウトカムの種類</th><th>測定方法</th><th>効果指標</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>二値アウトカム</strong></td>
-        <td>イベントの有無（死亡/生存、入院/非入院）</td>
-        <td>リスク比 (RR)、オッズ比 (OR)、リスク差 (RD)</td>
-      </tr>
-      <tr>
-        <td><strong>連続アウトカム</strong></td>
-        <td>数値スケール（痛みスコア、QOLスコア）</td>
-        <td>平均差 (MD)、標準化平均差 (SMD)</td>
-      </tr>
-      <tr>
-        <td><strong>生存時間アウトカム</strong></td>
-        <td>イベントまでの時間（無増悪生存期間）</td>
-        <td>ハザード比 (HR)</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="step-flow">
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>ファンネルプロット</h5>
+      <p>各研究の効果推定値（横軸）と精度の指標（縦軸、通常は標準誤差）をプロットします。出版バイアスがない場合、プロットは逆漏斗型の対称的な形状を示します。非対称性は出版バイアスの存在を示唆しますが、他の原因（異質性、小規模研究効果など）でも非対称性が生じ得ます。</p>
+      <div class="figure-container">
+        <div class="figure-title">Fig 10-1: ファンネルプロットの概念図</div>
+        <div class="funnel-plot-container">
+          <div class="funnel-y-axis-label">研究の精度（サンプルサイズ大）</div>
+          <div class="funnel-plot">
+            <div class="funnel-guideline-y"></div>
+            <div class="funnel-guideline-x"></div>
+            <div class="funnel-shape"></div>
+            <div class="funnel-point" style="bottom: 85%; left: 48%;"></div>
+            <div class="funnel-point" style="bottom: 80%; left: 52%;"></div>
+            <div class="funnel-point" style="bottom: 75%; left: 45%;"></div>
+            <div class="funnel-point" style="bottom: 60%; left: 55%;"></div>
+            <div class="funnel-point" style="bottom: 55%; left: 38%;"></div>
+            <div class="funnel-point" style="bottom: 40%; left: 65%;"></div>
+            <div class="funnel-point" style="bottom: 35%; left: 25%;"></div>
+            <div class="funnel-point" style="bottom: 20%; left: 75%;"></div>
+            <div class="funnel-point" style="bottom: 15%; left: 15%;"></div>
+            <div class="funnel-point red-point" style="bottom: 10%; left: 85%;"></div>
+            <div class="funnel-point red-point" style="bottom: 25%; left: 80%;"></div>
+            <div class="funnel-point red-point" style="bottom: 5%; left: 90%;"></div>
+          </div>
+          <div class="funnel-x-axis-label">効果推定値（例：オッズ比）</div>
+        </div>
+        <div class="figure-caption">出版バイアスがない場合、研究は効果推定値を中心に左右対称に分布する（逆漏斗型）。小規模で効果が小さい研究（右下の赤点部分）が欠けている場合、非対称な形状となり出版バイアスが示唆される。</div>
+      </div>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>統計的検定</h5>
+      <p>Egger's test、Begg's test、Peters' testなどの統計的検定が利用可能です。ただし、<strong>研究数が少ない場合（10未満）は検出力が非常に低い</strong>ため、結果の解釈には注意が必要です。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>試験登録との照合</h5>
+      <p>ClinicalTrials.govなどの試験登録データベースと照合し、登録されたが出版されていない研究を特定します。これは出版バイアスの最も直接的な証拠を提供します。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h5>総合的な判断</h5>
+      <p>上記の方法はいずれも限界があるため、Core GRADEは<strong>総合的な判断</strong>を重視しています。研究のスポンサー、研究分野の特性、効果の大きさのパターンなどを考慮します。</p>
+    </div>
+  </div>
 </div>
 
 <hr class="section-divider">
 
-<h4>患者の価値観と選好</h4>
+<h3>出版バイアスの疑いを高める要因</h3>
 
-<div class="callout purple">
-  <div class="callout-title">Core GRADEの推奨</div>
-  <p>アウトカムの重要度評価は、理想的には<strong>患者の価値観と選好に関するシステマティックレビューやフォーカスグループ</strong>によって裏付けられるべきです。患者が何を最も重要と考えるかは、臨床医の想定とは異なる場合があります。</p>
-  <p>例えば、がん治療において、臨床医は生存期間を最も重視する傾向がありますが、患者はQOLや副作用の軽減をより重視する場合があります。</p>
+<table class="styled-table">
+  <thead>
+    <tr><th>要因</th><th>説明</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>製薬企業のスポンサー</strong></td><td>企業がスポンサーの研究は、否定的な結果を出版しない傾向がある</td></tr>
+    <tr><td><strong>小規模研究のみ</strong></td><td>大規模な確認研究がない場合、初期の小規模研究の肯定的な結果が過大評価されている可能性</td></tr>
+    <tr><td><strong>ファンネルプロットの非対称性</strong></td><td>小規模研究が大きな効果を示し、大規模研究が小さな効果を示すパターン</td></tr>
+    <tr><td><strong>試験登録との不一致</strong></td><td>登録された研究のうち、出版されていないものが多い</td></tr>
+    <tr><td><strong>研究分野の特性</strong></td><td>競争が激しい分野や、肯定的な結果が出版に有利な分野</td></tr>
+  </tbody>
+</table>
+
+<hr class="section-divider">
+
+<h3>出版バイアスへの対処</h3>
+
+<div class="concept-card">
+  <div class="card-label">&#x1f6e0;&#xfe0f; Core GRADEにおける対処法</div>
+  <p>出版バイアスの完全な排除は不可能ですが、以下の対策により影響を軽減できます：</p>
+  <ul>
+    <li><strong>包括的な文献検索</strong>：灰色文献（grey literature）、学会抄録、試験登録データベースを含む</li>
+    <li><strong>言語制限の回避</strong>：英語以外の文献も検索対象に含める</li>
+    <li><strong>試験登録の照合</strong>：登録されたが出版されていない研究の著者に連絡</li>
+    <li><strong>感度分析</strong>：出版バイアスの影響を推定するための統計的手法（trim-and-fill法など）</li>
+  </ul>
 </div>
 
+<hr class="section-divider">
+
 <div class="success-card">
-  <div class="card-label">✅ Chapter 5のまとめ</div>
+  <div class="card-label">&#x2705; Chapter 10のまとめ</div>
   <ul class="icon-list">
-    <li><span class="icon">🎯</span>アウトカムの重要度は<strong>9点スケール</strong>で評価する（7-9：極めて重要、4-6：重要、1-3：重要ではない）。</li>
-    <li><span class="icon">🧑</span><strong>患者中心のアウトカム</strong>を優先し、代理アウトカムの使用は非直接性としてグレードダウンの対象。</li>
-    <li><span class="icon">📉</span>全体的な確実性は、<strong>「極めて重要」なアウトカムの最低確実性</strong>によって決定される。</li>
-    <li><span class="icon">⚖️</span><strong>益と害の両方</strong>をアウトカムに含め、時間枠を明確にする。</li>
-    <li><span class="icon">📏</span>すべてのアウトカムについて<strong>事前にMIDを特定</strong>することが必須。パネル調査アプローチが実用的。</li>
-    <li><span class="icon">❤️</span>患者の価値観と選好に基づくアウトカム評価が理想的。</li>
+    <li><span class="li-icon">&#x1f50e;</span>出版バイアスは<strong>否定的な結果の研究が出版されにくい</strong>ことにより生じる系統的な偏り。</li>
+    <li><span class="li-icon">&#x270f;&#xfe0f;</span>Core GRADEは、選択的アウトカム報告を<strong>出版バイアス</strong>、選択的分析報告を<strong>バイアスリスク</strong>として区別。</li>
+    <li><span class="li-icon">&#x1f4ca;</span>ファンネルプロットや統計的検定は参考指標であり、<strong>総合的な判断</strong>が重要。</li>
+    <li><span class="li-icon">&#x1f4c9;</span>研究数が少ない場合（10未満）は統計的検定の検出力が非常に低い。</li>
+    <li><span class="li-icon">&#x1f517;</span>試験登録データベースとの照合が最も直接的な証拠を提供。</li>
+    <li><span class="li-icon">&#x1f4dd;</span>包括的な文献検索と感度分析により影響を軽減。</li>
   </ul>
 </div>
 
@@ -174,70 +212,20 @@
   <h4>参考文献</h4>
   <ol>
     <li>Guyatt GH, et al. Core GRADE 1: Overview. BMJ. 2025.</li>
-    <li>Guyatt GH, et al. Core GRADE 7: Evidence-to-Decision. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 4: Risk of Bias. BMJ. 2025.</li>
     <li>Guyatt GH, et al. Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
-    <li>Guyatt GH, Oxman AD, Kunz R, et al. GRADE guidelines: 2. Framing the question and deciding on important outcomes. J Clin Epidemiol. 2011;64(4):395-400.</li>
-    <li>Guyatt GH, et al. Addressing challenges in certainty of evidence assessment when the point estimate is close to null. J Clin Epidemiol. 2025.</li>
+    <li>Guyatt GH, Oxman AD, Montori V, et al. GRADE guidelines: 5. Rating the quality of evidence—publication bias. J Clin Epidemiol. 2011;64(12):1277-1282.</li>
   </ol>
 </div>
+
+<hr class="section-divider">
 
 <div class="source-references">
   <h4>英文ソース</h4>
   <div class="source-ref-item" id="ref-1">
-    <div class="ref-label">[1]</div>
-    <div class="ref-content">Guideline panels should rate the importance of outcomes using a 9-point scale, where 7-9 represents critical outcomes, 4-6 represents important but not critical outcomes, and 1-3 represents outcomes of limited importance.</div>
+    <span class="ref-label">[1]</span>
+    <p>Publication bias occurs when the publication or non-publication of research findings is influenced by the nature and direction of the results. Studies with positive or statistically significant results are more likely to be published.</p>
   </div>
-  <div class="source-ref-item" id="ref-2">
-    <div class="ref-label">[2]</div>
-    <div class="ref-content">Core GRADE mandates the identification of MIDs for all outcomes prior to moving from evidence to recommendations. The panel survey approach represents a practical method for MID identification.</div>
-  </div>
-</div>
-
-
-
-<hr class="section-divider">
-<div class="pdf-reference-section" style="margin-top:30px;">
-<h3 style="color:#1a56db;border-bottom:2px solid #1a56db;padding-bottom:8px;">&#x1F4C4; 原文PDF参照</h3>
-<p style="color:#666;font-size:0.9em;margin-bottom:20px;">以下は本チャプターの元となったCore GRADE論文の原文ページです。フローチャートや図表を原文のまま確認できます。</p>
-<details style="margin:15px 0;">
-<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG1 OVERVIEW (9 pages)</summary>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 9</div>
-<img src="images/cg1_overview_p01.png" alt="cg1_overview page 1" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 9</div>
-<img src="images/cg1_overview_p02.png" alt="cg1_overview page 2" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 9</div>
-<img src="images/cg1_overview_p03.png" alt="cg1_overview page 3" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 9</div>
-<img src="images/cg1_overview_p04.png" alt="cg1_overview page 4" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 9</div>
-<img src="images/cg1_overview_p05.png" alt="cg1_overview page 5" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 9</div>
-<img src="images/cg1_overview_p06.png" alt="cg1_overview page 6" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 9</div>
-<img src="images/cg1_overview_p07.png" alt="cg1_overview page 7" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 8 / 9</div>
-<img src="images/cg1_overview_p08.png" alt="cg1_overview page 8" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 9 / 9</div>
-<img src="images/cg1_overview_p09.png" alt="cg1_overview page 9" style="width:100%;display:block;" loading="lazy">
-</div>
-</details>
 </div>
 
 </div>

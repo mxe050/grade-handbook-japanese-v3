@@ -1,242 +1,269 @@
-<link rel="stylesheet" href="chapters/chapter_common.css">
 <div class="chapter-detail">
 
-<h3>Chapter 12：GRADE推奨（GRADE Recommendations）</h3>
+<h3>Chapter 4：介入に関する質問の作成 ― PICO の精密な定式化</h3>
 
-<div class="concept-card">
-  <div class="card-label"><span class="icon">📖</span> Core Concept</div>
-  <p>GRADE推奨は、エビデンスの確実性評価とEtDフレームワークの結果を統合して、<strong>臨床実践に対する具体的な推奨</strong>を策定するプロセスです。Core GRADEは、推奨の策定において<strong>閾値ベースのアプローチ</strong>を採用し、推奨の方向性（介入を支持するか否か）と強さ（強い推奨か条件付き推奨か）を体系的に決定します。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
+<div class="summary-box">
+  <p>GRADEのすべての適用は、<strong>PICO形式</strong>（Population, Intervention, Comparison, Outcome）を用いて臨床的質問を特定することから始まります。Core GRADEは、PICOの各要素を<strong>可能な限り具体的に、曖昧さを避けて明確に指定すること</strong>を強調しています。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
 </div>
 
 <hr class="section-divider">
 
-<h4>推奨の4つのカテゴリー</h4>
-<p>GRADEの推奨は、その方向性（介入を支持するか、反対するか）と強さ（強いか、条件付きか）によって4つのカテゴリーに分類されます。これにより、臨床医や患者、政策立案者は、エビデンスに基づいた意思決定を明確な指針のもとで行うことができます。</p>
+<h4>Core GRADEにおけるPICO ― 「1つの介入 vs 1つの比較対照」</h4>
+<p>Core GRADEの最も重要な特徴の一つは、<strong>単一の介入と単一の比較対照の比較に焦点を当てる</strong>ことです。これは、GRADEが当初から目指してきた「厳密な簡潔さ」という概念を具現化したものです。GRADEが複雑化し、ユーザーにとって扱いにくくなっているという問題への対応として導入されました。</p>
 
-<div class="grid-2">
-  <div class="grid-item green">
-    <h5><span class="icon">👍</span> 介入を支持する強い推奨</h5>
-    <p>「〜することを<strong>推奨する</strong>」<br>
-    ほとんどすべての情報を得た患者がこの介入を選択すると想定されます。臨床医は、ほとんどすべての患者にこの介入を提供すべきであり、政策立案者はほとんどの状況でこれを採用できます。</p>
+<h4>PICO の 4 つの要素</h4>
+<div class="process-diagram">
+  <div class="process-step">
+    <div class="process-label">P</div>
+    <h5>Patient / Population（患者集団）</h5>
+    <p>対象となる患者集団を精密に定義します。単に「COVID-19患者」ではなく、「軽症から中等症のCOVID-19を発症し、重症化リスク因子を有する成人患者」のように詳細化します。WHOの敗血症ガイドラインでは、敗血症の定義が研究間で異なるという問題に直面し、最新のコンセンサス定義を採用することで対処しました。</p>
   </div>
-  <div class="grid-item green-light">
-    <h5><span class="icon">🤔</span> 介入を支持する条件付き推奨</h5>
-    <p>「〜することを<strong>提案する</strong>」<br>
-    多くの患者がこの介入を選択する一方で、かなりの少数派は異なる選択をすると想定されます。臨床医は、患者一人ひとりの価値観や状況に応じて判断を共有する<strong>共同意思決定（Shared Decision Making）</strong>を行うことが特に重要です。</p>
+  <div class="process-arrow">→</div>
+  <div class="process-step">
+    <div class="process-label">I</div>
+    <h5>Intervention（介入）</h5>
+    <p>評価したい介入を具体的に定義します。用量、投与経路、期間などを明確にします。例：「ニルマトレルビル・リトナビルの経口投与」のように、投与経路や用量も含めて定義します。</p>
   </div>
-  <div class="grid-item orange">
-    <h5><span class="icon">🤔</span> 介入に反対する条件付き推奨</h5>
-    <p>「〜しないことを<strong>提案する</strong>」<br>
-    多くの患者がこの介入を選択しない一方で、一部の患者は特定の状況下で介入を選択する可能性があります。ここでも共同意思決定が鍵となります。</p>
+  <div class="process-arrow">→</div>
+  <div class="process-step">
+    <div class="process-label">C</div>
+    <h5>Comparison（比較対照）</h5>
+    <p>介入と比較する対照を明確にします。Core GRADEは<strong>単一の介入と単一の比較対照の比較</strong>に焦点を当てます。複数の比較対照がある場合は、それぞれについて個別のPICO質問を立てます。</p>
   </div>
-  <div class="grid-item red">
-    <h5><span class="icon">👎</span> 介入に反対する強い推奨</h5>
-    <p>「〜しないことを<strong>推奨する</strong>」<br>
-    ほとんどすべての患者がこの介入を選択しないと想定されます。臨床医は、ほとんどすべての患者にこの介入を提供すべきではありません。</p>
+  <div class="process-arrow">→</div>
+  <div class="process-step">
+    <div class="process-label">O</div>
+    <h5>Outcome（アウトカム）</h5>
+    <p>患者にとって重要なアウトカムを選択します。9点スケールを用いて重要度を評価します（7-9点：極めて重要、4-6点：重要だが極めて重要ではない、1-3点：重要ではない）。代理アウトカムではなく、患者が直接経験するアウトカムを優先します。</p>
   </div>
 </div>
 
 <hr class="section-divider">
 
-<h4>推奨の強さを決定する要因</h4>
-<p>推奨の強さは、単にエビデンスの確実性だけで決まるわけではありません。以下の4つの主要な要因を総合的に評価して決定されます。</p>
+<h4>相対効果と絶対効果の区別 ― Core GRADEの重要な強調点</h4>
+<p>Core GRADEは、PICOの精密化において<strong>相対効果と絶対効果の明確な区別</strong>を特に重視しています。これは、過去のGRADEユーザーがしばしば混同してきた領域です。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
 
 <table class="styled-table">
   <thead>
-    <tr><th>要因</th><th>強い推奨を支持する状況</th><th>条件付き推奨を支持する状況</th></tr>
+    <tr><th>項目</th><th>相対効果（Relative Effect）</th><th>絶対効果（Absolute Effect）</th></tr>
   </thead>
   <tbody>
-    <tr>
-      <td><strong><span class="icon">⚖️</span> 利益と害のバランス</strong></td>
-      <td>利益が害を明らかに上回る（または、害が利益を明らかに上回る）</td>
-      <td>利益と害の差が小さい、またはバランスが不確実である</td>
-    </tr>
-    <tr>
-      <td><strong><span class="icon">🔍</span> エビデンスの確実性</strong></td>
-      <td>高い確実性（High certainty）</td>
-      <td>中等度、低い、または非常に低い確実性（Moderate, Low, Very low certainty）</td>
-    </tr>
-    <tr>
-      <td><strong><span class="icon">💖</span> 患者の価値観と意向</strong></td>
-      <td>患者間で価値観や意向のばらつきが小さい、またはないと想定される</td>
-      <td>患者間で価値観や意向のばらつきが大きい、または不確実である</td>
-    </tr>
-    <tr>
-      <td><strong><span class="icon">💰</span> 資源の利用（コスト）</strong></td>
-      <td>コストが低い、または費用対効果が非常に高い</td>
-      <td>コストが高い、または費用対効果が低い、あるいは不確実である</td>
-    </tr>
+    <tr><td><strong>定義</strong></td><td>リスク比（RR）、オッズ比（OR）など</td><td>リスク差（RD）、1000人あたりのイベント数の差など</td></tr>
+    <tr><td><strong>サブグループ間の変動</strong></td><td>真の違いは<strong>稀</strong></td><td>ベースラインリスクの違いにより<strong>頻繁に変動</strong></td></tr>
+    <tr><td><strong>臨床的意思決定への関連</strong></td><td>間接的</td><td><strong>最も直接的に関連</strong></td></tr>
+    <tr><td><strong>例</strong></td><td>RR = 0.75（25%のリスク減少）</td><td>高リスク群：1000人あたり50人減少<br>低リスク群：1000人あたり5人減少</td></tr>
   </tbody>
 </table>
 
 <div class="key-message">
-    <div class="key-title">重要なポイント</div>
-    <p>強い推奨は、利益と害のバランスが明確で、エビデンスの確実性が高く、患者の価値観が均一で、資源の利用が妥当な場合に策定されやすいです。一方、これらの要因のいずれかに不確実性がある場合、推奨は条件付きとなる傾向があります。</p>
+  <div class="key-title">重要なポイント</div>
+  <p>相対効果が同じ（例：RR = 0.75）であっても、ベースラインリスクが異なれば絶対効果は大きく異なります。<strong>患者ケアの決定には、絶対効果が最も関連します。</strong>高リスク群では臨床的に重要な差が生じるが、低リスク群では重要でない場合があります。WHOのCOVID-19ガイドラインでは、この原則に基づき、高リスク患者には強い推奨、低リスク患者には弱い推奨が出されました。</p>
 </div>
 
 <hr class="section-divider">
 
-<h4>確実性が低い場合の強い推奨</h4>
+<h4>サブグループ効果への3つのシナリオ</h4>
+<p>PICO質問を構築する際、治療効果が患者サブグループ間で異なる可能性を考慮する必要があります。Core GRADEは、この問題に対処するために<strong>3つのシナリオ</strong>を明確に提示しています。</p>
 
-<div class="warning-card">
-  <div class="card-label">⚠️ 例外的な状況</div>
-  <p>通常、エビデンスの確実性が低いまたは非常に低い場合は、条件付き推奨が適切です。しかし、GRADEアプローチでは、以下の5つの特定の状況において、<strong>確実性が低くても強い推奨</strong>が正当化される場合があることを認めています。</p>
-  <div class="icon-list">
-    <div class="icon-list-item">
-      <div class="icon-list-icon">🚨</div>
-      <div class="icon-list-text"><strong>生命を脅かす状況：</strong>介入なしではほぼ確実に死亡するような状況で、介入に潜在的な利益がある場合。（例：重症敗血症に対する抗菌薬の使用）</div>
+<div class="flowchart">
+  <div class="flow-node" style="background-color: #e0f2fe;">
+    <h5>シナリオA：差がないと疑う理由がない</h5>
+    <p>特定のサブグループにおける効果の違いを仮定する根拠がありません。PICO質問は広範な集団を対象とすることができます。これが最も一般的なシナリオです。</p>
+  </div>
+  <div class="flow-connector">↓</div>
+  <div class="flow-node" style="background-color: #fef9c3;">
+    <h5>シナリオB：差があると確信している</h5>
+    <p>特定のサブグループ間で介入の効果が異なるという強力なエビデンスや理論的根拠があります。PICO質問は、これらの特定のサブグループを明確に区別して策定されるべきです。</p>
+  </div>
+  <div class="flow-connector">↓</div>
+  <div class="flow-node" style="background-color: #f3e8ff;">
+    <h5>シナリオC：差を疑う十分な理由はあるが不確実</h5>
+    <p>サブグループ効果の可能性を示す兆候はあるものの、その存在や方向性について確信が持てません。全体のPICOで評価しつつ、サブグループ分析を計画します。<strong>相対効果と絶対効果の両方の仮説</strong>を明確に立てます。</p>
+  </div>
+</div>
+
+<p>相対効果の違いについては、信頼性を損なわないよう、<strong>仮説を立てるサブグループ効果の数を制限し（理想的には3以下）</strong>、その方向性を特定すべきです。対照的に、絶対効果はベースラインリスクの違いにより患者グループ間で頻繁に変動し、患者ケアの決定に最も関連します。</p>
+
+<hr class="section-divider">
+
+<h4>ターゲットPICO と ソースPICO</h4>
+<div class="comparison-flow">
+    <div class="comparison-item">
+        <h5>ターゲットPICO</h5>
+        <p>臨床的質問として設定した理想的なPICO。ガイドラインパネルが答えたい質問を反映します。</p>
     </div>
-    <div class="icon-list-item">
-      <div class="icon-list-icon">💣</div>
-      <div class="icon-list-text"><strong>不確実な利益と確実な害：</strong>介入の利益が不確実である一方、重大な害が確実である場合、その介入に反対する強い推奨がなされます。</div>
+    <div class="comparison-arrow">≠</div>
+    <div class="comparison-item">
+        <h5>ソースPICO</h5>
+        <p>実際に利用可能な研究のPICO。ターゲットPICOと完全に一致しない場合が多く、その不一致の程度が<strong>非直接性（indirectness）</strong>の評価対象となります。</p>
     </div>
-    <div class="icon-list-item">
-      <div class="icon-list-icon">💸</div>
-      <div class="icon-list-text"><strong>同等な選択肢とコスト：</strong>2つの選択肢の効果が同等である可能性が高いが、一方のコストが明らかに低い場合、コストの低い選択肢を強く推奨します。</div>
+</div>
+
+<hr class="section-divider">
+
+<h4>null効果に近い場合の扱い</h4>
+<p>Core GRADEのガイダンスでは、介入の効果がnull効果（効果なし）に近い場合に生じる特定の課題に対処するための詳細な考察が提供されています。</p>
+
+<div class="grid-2">
+  <div class="grid-item red">
+      <h5><span class="highlight-num">1</span> 課題：確実性評価の誤解</h5>
+      <p>点推定値がnull効果に非常に近い場合、「非null効果」の確実性を評価し続けると、実際には効果がほとんどないという正しい推論と矛盾します。</p>
+  </div>
+  <div class="grid-item red">
+      <h5><span class="highlight-num">2</span> 課題：不精確さの不適切な評価</h5>
+      <p>CIが狭いにもかかわらず、形式的にnullを横断しているために不精確と判断されるという矛盾が生じます。</p>
+  </div>
+</div>
+
+<div class="callout">
+  <div class="callout-title">解決策：確実性評価のターゲットの修正</div>
+  <p>確実性評価のターゲットを「非null効果」から<strong>「ほとんど効果がないか、全く効果がない」</strong>に修正します。これは、<strong>最小重要差（MID）</strong>という概念を導入することで実現されます。</p>
+</div>
+
+<div class="step-flow">
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>MIDの範囲を推定する</h5>
+      <p>利益のためのMIDと害のためのMIDの範囲を推定し、「ほとんど効果がないか、全く効果がない」という範囲を設定します。MIDには不確実性が伴うため、最も大きいMIDから最も小さいMIDまでの「もっともらしいMIDの範囲」を考慮します。</p>
     </div>
-    <div class="icon-list-item">
-      <div class="icon-list-icon">💥</div>
-      <div class="icon-list-text"><strong>壊滅的な結果のリスク：</strong>まれではあるが、壊滅的な害のリスクがあり、そのリスクを回避するための介入が存在する場合、その介入を強く推奨することがあります。</div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>点推定値とMIDの比較</h5>
+      <p><strong>点推定値がMIDより明らかに大きい場合</strong>：引き続き「非null効果」の確実性を評価。<br><strong>点推定値がMIDより明らかに小さい場合</strong>：ターゲットを「ほとんど効果がないか、全く効果がない」に修正。<br><strong>MIDの不確実性の範囲内にある場合</strong>：レビュー著者の判断に委ねられます。</p>
     </div>
-    <div class="icon-list-item">
-      <div class="icon-list-icon">⚖️</div>
-      <div class="icon-list-text"><strong>人権や公平性の問題：</strong>介入が基本的人権や健康の公平性に関わる重要な問題である場合、強い推奨がなされることがあります。</div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>ターゲット修正後の不精確さの評価</h5>
+      <p>CIが利益のためのMIDと害のためのMIDという2つの閾値のいずれかと重なるかどうかを判断します。CIが重要な効果を含む場合、不精確さのためにグレードダウンします。</p>
     </div>
   </div>
 </div>
 
 <hr class="section-divider">
 
-<h4>推奨の策定プロセス</h4>
-<p>GRADE推奨は、体系的で透明性の高いプロセスを経て策定されます。ガイドラインパネルは、以下のステップに従って議論を進めます。</p>
-
-<div class="process-diagram">
-  <div class="process-step">
-    <div class="process-number">1</div>
-    <div class="process-content">
-      <h5>エビデンスの要約</h5>
-      <p>SoF（Summary of Findings）テーブルとEtD（Evidence to Decision）フレームワークを用いて、利用可能なエビデンスを構造化して要約します。</p>
-    </div>
-  </div>
-  <div class="process-arrow">↓</div>
-  <div class="process-step">
-    <div class="process-number">2</div>
-    <div class="process-content">
-      <h5>パネル討議</h5>
-      <p>ガイドラインパネルが、エビデンスの解釈、価値判断、資源の考慮について討議します。多様な専門家と患者代表の参加が重要です。</p>
-    </div>
-  </div>
-  <div class="process-arrow">↓</div>
-  <div class="process-step">
-    <div class="process-number">3</div>
-    <div class="process-content">
-      <h5>推奨の策定</h5>
-      <p>方向性（支持/反対）と強さ（強い/条件付き）を決定します。可能な限り<strong>コンセンサス</strong>を目指しますが、投票が必要な場合もあります。</p>
-    </div>
-  </div>
-  <div class="process-arrow">↓</div>
-  <div class="process-step">
-    <div class="process-number">4</div>
-    <div class="process-content">
-      <h5>推奨の文言化</h5>
-      <p>推奨を明確で実行可能な文言で表現します。対象集団、介入の詳細、条件（条件付き推奨の場合）を明記します。</p>
-    </div>
-  </div>
-  <div class="process-arrow">↓</div>
-  <div class="process-step">
-    <div class="process-number">5</div>
-    <div class="process-content">
-      <h5>根拠の文書化</h5>
-      <p>推奨の根拠を透明に文書化します。EtDフレームワークの各基準に対する判断とその理由を記録します。</p>
-    </div>
-  </div>
-</div>
-
-<hr class="section-divider">
-
-<h4>共同意思決定（Shared Decision Making）</h4>
+<h4>間接的なエビデンスの活用</h4>
+<p>直接的なエビデンスの確実性が「低」または「非常に低」と予想される場合、Core GRADEは<strong>間接的なエビデンスのための特定のPICO</strong>を策定し、事前に準備することを推奨しています。</p>
 
 <div class="concept-card">
-  <div class="card-label"><span class="icon">💡</span> 条件付き推奨と共同意思決定</div>
-  <p>条件付き推奨は、<strong>「共同意思決定（Shared Decision Making）」</strong>が特に重要であることを示す強力なシグナルです。これは、すべての患者にとって唯一最善の選択肢が存在しない可能性が高いことを意味します。</p>
-  <p>このような状況では、臨床医は患者に対してエビデンスの要約（利益と害、確実性など）を分かりやすく提示し、患者自身の価値観や意向、状況について話し合う必要があります。その上で、個別化された最適な決定を患者と共に支援することが求められます。</p>
-  <p>Core GRADEは、このプロセスを支援するために、SoFテーブルを<strong>患者向けに簡略化したバージョン</strong>の作成を推奨しています。これにより、患者がエビデンスをより深く理解し、情報に基づいた意思決定に主体的に参加できるようになります。</p>
+  <div class="card-label"><span class="icon">💡</span> 具体例：COVID-19パンデミック初期のコルチコステロイド</div>
+  <p>COVID-19パンデミック初期には、重症COVID-19患者へのコルチコステロイド投与に関するRCTエビデンスが不足していました。ガイドライン作成者は、類似の臨床像を呈する<strong>急性呼吸窮迫症候群（ARDS）患者</strong>を対象としたRCTからのエビデンスを検索しました。非直接性による制限はあったものの、ARDS患者におけるコルチコステロイドの利益に関する確実性の高いエビデンスは、重症COVID-19患者への使用に対して条件付き推奨を出すのに十分であると判断されました。</p>
 </div>
+
+<p>間接的なエビデンスを対象とした検索から得られるエビデンスは、ほぼ例外なく非直接性のためにグレードダウンされます。対照的に、直接的なエビデンスの検索を通じて特定された研究に見られるPICOの非直接性の程度は、エビデンスの確実性をグレードダウンすることを正当化するほどのものであることは滅多にありません。</p>
+
+<hr class="section-divider">
+
+<h4>選択的アウトカム報告の2つの形式</h4>
+<p>Core GRADEは、選択的アウトカム報告の評価において、<strong>2つの異なる形式のバイアス</strong>を明確に区別しています。</p>
+
+<table class="styled-table">
+  <thead>
+    <tr><th>形式</th><th>内容</th><th>分類</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>出版バイアスの一種</strong></td>
+      <td>研究者が測定はしたが報告しなかったアウトカム</td>
+      <td>出版バイアス（Publication Bias）</td>
+    </tr>
+    <tr>
+      <td><strong>個々の研究における選択的報告</strong></td>
+      <td>報告はされたが、複数の可能な効果推定値（異なる時点、測定方法、解析アプローチなど）の中から選択されたアウトカム</td>
+      <td>バイアスリスク（Risk of Bias）</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="section-divider">
+
+<h4>GRADE専門家の関与</h4>
+<div class="purple-card">
+  <div class="card-label">実践的なアドバイス</div>
+  <p>Core GRADEは、PICOの設定プロセスにおいて<strong>GRADE専門家を関与させること</strong>を推奨しています。広範な質問を詳細な構造化された質問に変換する「ステアリンググループ」の活用が効果的です。特に以下の点でGRADE専門家の関与が重要です。</p>
+  <ul class="icon-list">
+    <li><span class="icon">🎯</span>対象集団の精密な定義の支援</li>
+    <li><span class="icon">📊</span>相対効果と絶対効果の仮説の明確化</li>
+    <li><span class="icon">🔬</span>サブグループ分析の計画</li>
+    <li><span class="icon">⚖️</span>アウトカムの重要度評価の構造化</li>
+    <li><span class="icon">📏</span>MIDの特定と閾値設定</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<h4>具体例：COVID-19患者に対する抗ウイルス薬のPICO</h4>
+<table class="styled-table">
+  <thead>
+    <tr><th>要素</th><th>具体的な定義</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>P（患者集団）</strong></td>
+      <td>軽症から中等症のCOVID-19を発症し、重症化リスク因子（高齢、基礎疾患、免疫不全）を有する成人患者</td>
+    </tr>
+    <tr>
+      <td><strong>I（介入）</strong></td>
+      <td>ニルマトレルビル・リトナビルの経口投与</td>
+    </tr>
+    <tr>
+      <td><strong>C（比較対照）</strong></td>
+      <td>プラセボまたは標準的な対症療法</td>
+    </tr>
+    <tr>
+      <td><strong>O（アウトカム）</strong></td>
+      <td>
+        <ul class="icon-list" style="padding-left: 0; margin-bottom: 0;">
+            <li><span class="icon">🔴</span><strong>極めて重要</strong>：全死亡率、入院または重症化</li>
+            <li><span class="icon">🟡</span><strong>重要</strong>：症状の持続期間、有害事象</li>
+            <li><span class="icon">⚪️</span><strong>重要ではない</strong>：臨床的に意味のない検査値の変化</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <hr class="section-divider">
 
 <div class="success-card">
-  <div class="card-label">✅ Chapter 12のまとめ</div>
-  <ul>
-    <li>GRADE推奨は<strong>4つのカテゴリー</strong>（強い推奨/条件付き推奨 × 支持/反対）に分類されます。</li>
-    <li>推奨の強さは<strong>利益と害のバランス、エビデンスの確実性、患者の価値観、資源</strong>の4つの要因で総合的に決定されます。</li>
-    <li>エビデンスの確実性が低くても、<strong>5つの例外的な状況</strong>では強い推奨が正当化されることがあります。</li>
-    <li>条件付き推奨は、患者と臨床医による<strong>共同意思決定</strong>が特に重要であることを示唆します。</li>
-    <li>推奨の策定プロセスとその根拠は、透明性を確保するために<strong>EtDフレームワークを用いて文書化</strong>されるべきです。</li>
+  <div class="card-label">✅ Chapter 4のまとめ</div>
+  <ul class="icon-list">
+    <li><span class="icon">📌</span>GRADEのすべての適用は<strong>PICO形式</strong>による質問の定式化から始まる。Core GRADEは「1つの介入 vs 1つの比較対照」に焦点を当てる。</li>
+    <li><span class="icon">📌</span><strong>相対効果と絶対効果の区別</strong>が極めて重要。患者ケアの決定には絶対効果が最も関連する。</li>
+    <li><span class="icon">📌</span>サブグループ効果について<strong>3つのシナリオ</strong>を事前に検討する。仮説を立てるサブグループ効果の数は理想的には3以下に制限する。</li>
+    <li><span class="icon">📌</span><strong>ターゲットPICOとソースPICO</strong>の不一致は非直接性として評価される。</li>
+    <li><span class="icon">📌</span>null効果に近い場合は、確実性評価のターゲットを<strong>「ほとんど効果がないか、全く効果がない」</strong>に修正することを検討する。</li>
+    <li><span class="icon">📌</span>直接的なエビデンスが不足する場合は、<strong>間接的なエビデンスのためのPICO</strong>を事前に策定する。</li>
+    <li><span class="icon">📌</span>GRADE専門家の関与とステアリンググループの活用が推奨される。</li>
   </ul>
-</div>
-
-<div class="source-references">
-  <h4><span class="icon">📚</span> 英文ソース</h4>
-  <div id="ref-1" class="source-ref-item">
-    <div class="ref-label">[1]</div>
-    <div class="ref-content">GRADE recommendations integrate certainty of evidence assessments with the EtD framework to formulate specific clinical practice recommendations.</div>
-  </div>
 </div>
 
 <div class="ref-box">
   <h4>参考文献</h4>
   <ol>
-    <li>Andrews JC, et al. GRADE guidelines: 15. Going from evidence to recommendation. J Clin Epidemiol. 2013;66(7):726-735.</li>
-    <li>Guyatt GH, et al. GRADE guidelines: 1. Introduction-GRADE evidence profiles and summary of findings tables. J Clin Epidemiol. 2011;64(4):383-394.</li>
+    <li>Guyatt GH, et al. Core GRADE 0: Introduction. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 1: Overview of the GRADE approach to rating the certainty of evidence and developing recommendations. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 5: Indirectness. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
+    <li>Guyatt GH, et al. Addressing challenges in certainty of evidence assessment when the point estimate is close to null. J Clin Epidemiol. 2025.</li>
+    <li>Guyatt GH, Oxman AD, Kunz R, et al. GRADE guidelines: 2. Framing the question and deciding on important outcomes. J Clin Epidemiol. 2011;64(4):395-400.</li>
   </ol>
 </div>
 
-
-
-<hr class="section-divider">
-<div class="pdf-reference-section" style="margin-top:30px;">
-<h3 style="color:#1a56db;border-bottom:2px solid #1a56db;padding-bottom:8px;">&#x1F4C4; 原文PDF参照</h3>
-<p style="color:#666;font-size:0.9em;margin-bottom:20px;">以下は本チャプターの元となったCore GRADE論文の原文ページです。フローチャートや図表を原文のまま確認できます。</p>
-<details style="margin:15px 0;">
-<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG1 OVERVIEW (9 pages)</summary>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 9</div>
-<img src="images/cg1_overview_p01.png" alt="cg1_overview page 1" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 9</div>
-<img src="images/cg1_overview_p02.png" alt="cg1_overview page 2" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 9</div>
-<img src="images/cg1_overview_p03.png" alt="cg1_overview page 3" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 9</div>
-<img src="images/cg1_overview_p04.png" alt="cg1_overview page 4" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 9</div>
-<img src="images/cg1_overview_p05.png" alt="cg1_overview page 5" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 9</div>
-<img src="images/cg1_overview_p06.png" alt="cg1_overview page 6" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 9</div>
-<img src="images/cg1_overview_p07.png" alt="cg1_overview page 7" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 8 / 9</div>
-<img src="images/cg1_overview_p08.png" alt="cg1_overview page 8" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 9 / 9</div>
-<img src="images/cg1_overview_p09.png" alt="cg1_overview page 9" style="width:100%;display:block;" loading="lazy">
-</div>
-</details>
+<div class="source-references">
+  <h4>英文ソース</h4>
+  <div class="source-ref-item" id="ref-1">
+    <div class="ref-label">[1]</div>
+    <p>In the past, GRADE users have often lacked precision in how they specify their target PICO. The careful, explicit, and transparent specification of the target PICO represents a key aspect of Core GRADE.</p>
+  </div>
+  <div class="source-ref-item" id="ref-2">
+    <div class="ref-label">[2]</div>
+    <p>Core GRADE users will further refine the clinical question, considering the possibility that treatment effects differ across population, intervention, or outcome characteristics. In the past, GRADE users have often shown confusion between relative and absolute effects.</p>
+  </div>
 </div>
 
 </div>

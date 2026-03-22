@@ -1,221 +1,195 @@
-
 <link rel="stylesheet" href="chapters/chapter_common.css">
 <div class="chapter-detail">
 
-  <h3>Chapter 7：ランダム化試験のデザインまたは実施における限界（バイアスリスク）</h3>
+<h3>Chapter 12：GRADE推奨（GRADE Recommendations）</h3>
 
-  <div class="concept-card">
-    <div class="card-label"><span class="icon">&#x1f4d6;</span> Core Concept</div>
-    <p>バイアスリスク（Risk of Bias, RoB）は、GRADEの5つのグレードダウンドメインの一つであり、<strong>研究のデザインや実施における系統的な偏りが効果推定値を歪める可能性</strong>を評価します。Core GRADEは、従来のRoB 2.0ツールに代わる新しい<strong>ROBUST-RCTツール</strong>を導入し、GRADEの確実性評価との整合性を高めています。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
-  </div>
-
-  <hr class="section-divider">
-
-  <h4>ROBUST-RCT ― 新しいバイアスリスク評価ツール</h4>
-
-  <p>ROBUST-RCTは、「Risk Of Bias Unified by Structured Transparency for Randomized Controlled Trials」の略称で、Core GRADEシリーズの一環として開発されました。従来のCochrane RoB 2.0ツールは個々の研究のバイアスリスク評価に焦点を当てていましたが、ROBUST-RCTはエビデンス全体（body of evidence）の確実性評価に直接結びつくように設計されています。</p>
-
-  <div class="comparison-flow">
-    <div class="comparison-item">
-      <h5>RoB 2.0</h5>
-      <ul>
-        <li>個々の研究のバイアスを評価</li>
-        <li>詳細なシグナリング質問</li>
-        <li>アルゴリズムベースの判断</li>
-        <li>GRADE評価とは間接的に連携</li>
-      </ul>
-    </div>
-    <div class="comparison-arrow">&rarr;</div>
-    <div class="comparison-item">
-      <h5>ROBUST-RCT (Core GRADE)</h5>
-      <ul>
-        <li>エビデンス全体のバイアスを評価</li>
-        <li>より簡潔で実用的なドメイン</li>
-        <li>構造化された透明な判断</li>
-        <li>GRADE確実性評価に<strong>直接統合</strong></li>
-      </ul>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <h4>ROBUST-RCTの6つの評価ドメイン</h4>
-  <p>ROBUST-RCTは、以下の6つのドメインを通じてバイアスリスクを体系的に評価します。</p>
-
-  <div class="process-diagram">
-    <div class="process-step">
-      <div class="highlight-num">1</div>
-      <h5>ランダム化プロセス</h5>
-      <p>ランダム化の方法、割付の隠蔽、ベースラインの不均衡を評価します。適切なランダム化は、交絡因子を均等に分布させるための基盤です。</p>
-    </div>
-    <div class="process-arrow">&darr;</div>
-    <div class="process-step">
-      <div class="highlight-num">2</div>
-      <h5>意図された介入からの逸脱</h5>
-      <p>プロトコルからの逸脱、クロスオーバー、共介入の影響を評価します。ITT解析とper-protocol解析の選択も考慮されます。</p>
-    </div>
-    <div class="process-arrow">&darr;</div>
-    <div class="process-step">
-      <div class="highlight-num">3</div>
-      <h5>アウトカムデータの欠損</h5>
-      <p>追跡不能の割合と理由、欠損データの処理方法を評価します。欠損の理由がランダムかどうかが重要です。</p>
-    </div>
-    <div class="process-arrow">&darr;</div>
-    <div class="process-step">
-      <div class="highlight-num">4</div>
-      <h5>アウトカムの測定</h5>
-      <p>盲検化の有無と適切性、アウトカム評価者のバイアスの可能性を評価します。特に主観的アウトカムで重要となります。</p>
-    </div>
-    <div class="process-arrow">&darr;</div>
-    <div class="process-step">
-      <div class="highlight-num">5</div>
-      <h5>報告されたアウトカムの選択</h5>
-      <p>事前登録されたプロトコルと実際の報告の一致性、選択的報告の有無を評価します。</p>
-    </div>
-    <div class="process-arrow">&darr;</div>
-    <div class="process-step">
-      <div class="highlight-num">6</div>
-      <h5>全体的なバイアスリスク</h5>
-      <p>上記5ドメインを統合し、<strong>「教育された直感（gestalt）」</strong>を用いて総合的に判断します。機械的な合算ではなく、バイアスの方向性と大きさを考慮します。</p>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <h4>バイアスリスクの判断カテゴリー</h4>
-  <p>ROBUST-RCTによる評価は、最終的に3つのカテゴリーに分類され、これがエビデンスの確実性の格下げに直接影響します。</p>
-
-  <div class="grid-3">
-    <div class="grid-item green">
-      <h5><span class="icon">✅</span> 低リスク (Low Risk)</h5>
-      <p>研究のデザインと実施に重大な欠陥がなく、効果推定値が実質的に歪められている可能性は低いと判断されます。</p>
-      <div class="summary-box"><strong>アクション:</strong> グレードダウンなし</div>
-    </div>
-    <div class="grid-item orange">
-      <h5><span class="icon">⚠️</span> 中程度のリスク (Some Concerns)</h5>
-      <p>いくつかの懸念事項があるものの、効果推定値への影響は限定的と判断される場合に適用されます。</p>
-      <div class="summary-box"><strong>アクション:</strong> 1段階のグレードダウンを検討</div>
-    </div>
-    <div class="grid-item red">
-      <h5><span class="icon">❌</span> 高リスク (High Risk)</h5>
-      <p>重大な欠陥があり、効果推定値が実質的に歪められている可能性が高いと判断される場合に適用されます。</p>
-      <div class="summary-box"><strong>アクション:</strong> 1～2段階のグレードダウン</div>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <h4>盲検化の問題 ― Core GRADEの視点</h4>
-
-  <div class="key-message">
-    <div class="key-title">盲検化の評価における重要な視点</div>
-    <p>Core GRADEは、盲検化の欠如が自動的にバイアスリスクの増加を意味するわけではないことを強調しています。評価の鍵は<strong>アウトカムの客観性</strong>にあります。</p>
-    <ul class="icon-list">
-        <li><span class="icon">🔬</span><strong>客観的アウトカム</strong>（例：死亡率、検査値）：盲検化の欠如がバイアスに与える影響は限定的です。</li>
-        <li><span class="icon">🤔</span><strong>主観的アウトカム</strong>（例：痛み、QOL、機能評価）：盲検化の欠如が重大なバイアスの原因となり得ます。</li>
-    </ul>
-  </div>
-
-  <h4>感度分析の活用</h4>
-  <p>バイアスリスクの評価において、Core GRADEは<strong>感度分析</strong>の活用を推奨しています。例えば、高リスクと判断された研究を除外してメタ解析を再実行し、効果推定値が大きく変化するかどうかを確認します。これにより、バイアスがエビデンス全体に与える影響の大きさを定量的に推定できます。</p>
-
-  <div class="callout">
-    <span class="icon">&#x1f4a1;</span>
-    <div class="callout-content">
-      <h5>実践的なアドバイス</h5>
-      <p>バイアスリスクの評価は、必ず<strong>アウトカムごとに</strong>行うべきです。同じ研究であっても、アウトカムによってバイアスリスクの程度は異なります。例えば、盲検化されていない試験では、死亡率（客観的）のバイアスリスクは「低リスク」と判断される一方で、QOL（主観的）のバイアスリスクは「高リスク」と判断されることがあります。</p>
-    </div>
-  </div>
-
-  <hr class="section-divider">
-
-  <div class="success-card">
-    <div class="card-label">&#x2705; Chapter 7のまとめ</div>
-    <ul class="icon-list">
-      <li><span class="icon">🛠️</span>Core GRADEは、GRADE評価と直接統合される新しいバイアスリスク評価ツール<strong>ROBUST-RCT</strong>を導入しました。</li>
-      <li><span class="icon">📈</span>ROBUST-RCTは<strong>6つのドメイン</strong>で構成され、最終的な判断には<strong>「教育された直感」</strong>が重要な役割を果たします。</li>
-      <li><span class="icon">👁️</span>盲検化の欠如は、<strong>アウトカムの客観性</strong>に依存するため、自動的にバイアスリスクが高いとは限りません。</li>
-      <li><span class="icon">🔍</span><strong>感度分析</strong>を活用することで、バイアスが結果に与える影響の大きさを推定できます。</li>
-      <li><span class="icon">🎯</span>バイアスリスクの評価は、研究単位ではなく<strong>アウトカムごと</strong>に行う必要があります。</li>
-    </ul>
-  </div>
-
-  <div class="source-references">
-    <h4>英文ソース</h4>
-    <div class="source-ref-item" id="ref-1">
-      <span class="ref-label">[1]</span>
-      <p>Core GRADE introduces ROBUST-RCT, a new tool for assessing risk of bias in randomized trials that is specifically designed to align with GRADE certainty of evidence assessments.</p>
-    </div>
-  </div>
-
-  <div class="ref-box">
-    <h4>参考文献</h4>
-    <ol>
-      <li>Guyatt GH, et al. Core GRADE 4: Risk of Bias. BMJ. 2025.</li>
-      <li>Guyatt GH, et al. Core GRADE 4: Risk of Bias Appendix. BMJ. 2025.</li>
-      <li>ROBUST-RCT Development Group. ROBUST-RCT: A new tool for assessing risk of bias in randomized trials. 2025.</li>
-      <li>Guyatt GH, et al. Core GRADE 1: Overview. BMJ. 2025.</li>
-      <li>Guyatt GH, et al. Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
-    </ol>
-  </div>
-
-
+<div class="concept-card">
+  <div class="card-label"><span class="icon">📖</span> Core Concept</div>
+  <p>GRADE推奨は、エビデンスの確実性評価とEtDフレームワークの結果を統合して、<strong>臨床実践に対する具体的な推奨</strong>を策定するプロセスです。Core GRADEは、推奨の策定において<strong>閾値ベースのアプローチ</strong>を採用し、推奨の方向性（介入を支持するか否か）と強さ（強い推奨か条件付き推奨か）を体系的に決定します。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
+</div>
 
 <hr class="section-divider">
-<div class="pdf-reference-section" style="margin-top:30px;">
-<h3 style="color:#1a56db;border-bottom:2px solid #1a56db;padding-bottom:8px;">&#x1F4C4; 原文PDF参照</h3>
-<p style="color:#666;font-size:0.9em;margin-bottom:20px;">以下は本チャプターの元となったCore GRADE論文の原文ページです。フローチャートや図表を原文のまま確認できます。</p>
-<details style="margin:15px 0;">
-<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG7 ETD (12 pages)</summary>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 12</div>
-<img src="images/cg7_etd_p01.png" alt="cg7_etd page 1" style="width:100%;display:block;" loading="lazy">
+
+<h4>推奨の4つのカテゴリー</h4>
+<p>GRADEの推奨は、その方向性（介入を支持するか、反対するか）と強さ（強いか、条件付きか）によって4つのカテゴリーに分類されます。これにより、臨床医や患者、政策立案者は、エビデンスに基づいた意思決定を明確な指針のもとで行うことができます。</p>
+
+<div class="grid-2">
+  <div class="grid-item green">
+    <h5><span class="icon">👍</span> 介入を支持する強い推奨</h5>
+    <p>「〜することを<strong>推奨する</strong>」<br>
+    ほとんどすべての情報を得た患者がこの介入を選択すると想定されます。臨床医は、ほとんどすべての患者にこの介入を提供すべきであり、政策立案者はほとんどの状況でこれを採用できます。</p>
+  </div>
+  <div class="grid-item green-light">
+    <h5><span class="icon">🤔</span> 介入を支持する条件付き推奨</h5>
+    <p>「〜することを<strong>提案する</strong>」<br>
+    多くの患者がこの介入を選択する一方で、かなりの少数派は異なる選択をすると想定されます。臨床医は、患者一人ひとりの価値観や状況に応じて判断を共有する<strong>共同意思決定（Shared Decision Making）</strong>を行うことが特に重要です。</p>
+  </div>
+  <div class="grid-item orange">
+    <h5><span class="icon">🤔</span> 介入に反対する条件付き推奨</h5>
+    <p>「〜しないことを<strong>提案する</strong>」<br>
+    多くの患者がこの介入を選択しない一方で、一部の患者は特定の状況下で介入を選択する可能性があります。ここでも共同意思決定が鍵となります。</p>
+  </div>
+  <div class="grid-item red">
+    <h5><span class="icon">👎</span> 介入に反対する強い推奨</h5>
+    <p>「〜しないことを<strong>推奨する</strong>」<br>
+    ほとんどすべての患者がこの介入を選択しないと想定されます。臨床医は、ほとんどすべての患者にこの介入を提供すべきではありません。</p>
+  </div>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 12</div>
-<img src="images/cg7_etd_p02.png" alt="cg7_etd page 2" style="width:100%;display:block;" loading="lazy">
+
+<hr class="section-divider">
+
+<h4>推奨の強さを決定する要因</h4>
+<p>推奨の強さは、単にエビデンスの確実性だけで決まるわけではありません。以下の4つの主要な要因を総合的に評価して決定されます。</p>
+
+<table class="styled-table">
+  <thead>
+    <tr><th>要因</th><th>強い推奨を支持する状況</th><th>条件付き推奨を支持する状況</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><span class="icon">⚖️</span> 利益と害のバランス</strong></td>
+      <td>利益が害を明らかに上回る（または、害が利益を明らかに上回る）</td>
+      <td>利益と害の差が小さい、またはバランスが不確実である</td>
+    </tr>
+    <tr>
+      <td><strong><span class="icon">🔍</span> エビデンスの確実性</strong></td>
+      <td>高い確実性（High certainty）</td>
+      <td>中等度、低い、または非常に低い確実性（Moderate, Low, Very low certainty）</td>
+    </tr>
+    <tr>
+      <td><strong><span class="icon">💖</span> 患者の価値観と意向</strong></td>
+      <td>患者間で価値観や意向のばらつきが小さい、またはないと想定される</td>
+      <td>患者間で価値観や意向のばらつきが大きい、または不確実である</td>
+    </tr>
+    <tr>
+      <td><strong><span class="icon">💰</span> 資源の利用（コスト）</strong></td>
+      <td>コストが低い、または費用対効果が非常に高い</td>
+      <td>コストが高い、または費用対効果が低い、あるいは不確実である</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="key-message">
+    <div class="key-title">重要なポイント</div>
+    <p>強い推奨は、利益と害のバランスが明確で、エビデンスの確実性が高く、患者の価値観が均一で、資源の利用が妥当な場合に策定されやすいです。一方、これらの要因のいずれかに不確実性がある場合、推奨は条件付きとなる傾向があります。</p>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 12</div>
-<img src="images/cg7_etd_p03.png" alt="cg7_etd page 3" style="width:100%;display:block;" loading="lazy">
+
+<hr class="section-divider">
+
+<h4>確実性が低い場合の強い推奨</h4>
+
+<div class="warning-card">
+  <div class="card-label">⚠️ 例外的な状況</div>
+  <p>通常、エビデンスの確実性が低いまたは非常に低い場合は、条件付き推奨が適切です。しかし、GRADEアプローチでは、以下の5つの特定の状況において、<strong>確実性が低くても強い推奨</strong>が正当化される場合があることを認めています。</p>
+  <div class="icon-list">
+    <div class="icon-list-item">
+      <div class="icon-list-icon">🚨</div>
+      <div class="icon-list-text"><strong>生命を脅かす状況：</strong>介入なしではほぼ確実に死亡するような状況で、介入に潜在的な利益がある場合。（例：重症敗血症に対する抗菌薬の使用）</div>
+    </div>
+    <div class="icon-list-item">
+      <div class="icon-list-icon">💣</div>
+      <div class="icon-list-text"><strong>不確実な利益と確実な害：</strong>介入の利益が不確実である一方、重大な害が確実である場合、その介入に反対する強い推奨がなされます。</div>
+    </div>
+    <div class="icon-list-item">
+      <div class="icon-list-icon">💸</div>
+      <div class="icon-list-text"><strong>同等な選択肢とコスト：</strong>2つの選択肢の効果が同等である可能性が高いが、一方のコストが明らかに低い場合、コストの低い選択肢を強く推奨します。</div>
+    </div>
+    <div class="icon-list-item">
+      <div class="icon-list-icon">💥</div>
+      <div class="icon-list-text"><strong>壊滅的な結果のリスク：</strong>まれではあるが、壊滅的な害のリスクがあり、そのリスクを回避するための介入が存在する場合、その介入を強く推奨することがあります。</div>
+    </div>
+    <div class="icon-list-item">
+      <div class="icon-list-icon">⚖️</div>
+      <div class="icon-list-text"><strong>人権や公平性の問題：</strong>介入が基本的人権や健康の公平性に関わる重要な問題である場合、強い推奨がなされることがあります。</div>
+    </div>
+  </div>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 12</div>
-<img src="images/cg7_etd_p04.png" alt="cg7_etd page 4" style="width:100%;display:block;" loading="lazy">
+
+<hr class="section-divider">
+
+<h4>推奨の策定プロセス</h4>
+<p>GRADE推奨は、体系的で透明性の高いプロセスを経て策定されます。ガイドラインパネルは、以下のステップに従って議論を進めます。</p>
+
+<div class="process-diagram">
+  <div class="process-step">
+    <div class="process-number">1</div>
+    <div class="process-content">
+      <h5>エビデンスの要約</h5>
+      <p>SoF（Summary of Findings）テーブルとEtD（Evidence to Decision）フレームワークを用いて、利用可能なエビデンスを構造化して要約します。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="process-number">2</div>
+    <div class="process-content">
+      <h5>パネル討議</h5>
+      <p>ガイドラインパネルが、エビデンスの解釈、価値判断、資源の考慮について討議します。多様な専門家と患者代表の参加が重要です。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="process-number">3</div>
+    <div class="process-content">
+      <h5>推奨の策定</h5>
+      <p>方向性（支持/反対）と強さ（強い/条件付き）を決定します。可能な限り<strong>コンセンサス</strong>を目指しますが、投票が必要な場合もあります。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="process-number">4</div>
+    <div class="process-content">
+      <h5>推奨の文言化</h5>
+      <p>推奨を明確で実行可能な文言で表現します。対象集団、介入の詳細、条件（条件付き推奨の場合）を明記します。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="process-number">5</div>
+    <div class="process-content">
+      <h5>根拠の文書化</h5>
+      <p>推奨の根拠を透明に文書化します。EtDフレームワークの各基準に対する判断とその理由を記録します。</p>
+    </div>
+  </div>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 12</div>
-<img src="images/cg7_etd_p05.png" alt="cg7_etd page 5" style="width:100%;display:block;" loading="lazy">
+
+<hr class="section-divider">
+
+<h4>共同意思決定（Shared Decision Making）</h4>
+
+<div class="concept-card">
+  <div class="card-label"><span class="icon">💡</span> 条件付き推奨と共同意思決定</div>
+  <p>条件付き推奨は、<strong>「共同意思決定（Shared Decision Making）」</strong>が特に重要であることを示す強力なシグナルです。これは、すべての患者にとって唯一最善の選択肢が存在しない可能性が高いことを意味します。</p>
+  <p>このような状況では、臨床医は患者に対してエビデンスの要約（利益と害、確実性など）を分かりやすく提示し、患者自身の価値観や意向、状況について話し合う必要があります。その上で、個別化された最適な決定を患者と共に支援することが求められます。</p>
+  <p>Core GRADEは、このプロセスを支援するために、SoFテーブルを<strong>患者向けに簡略化したバージョン</strong>の作成を推奨しています。これにより、患者がエビデンスをより深く理解し、情報に基づいた意思決定に主体的に参加できるようになります。</p>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 12</div>
-<img src="images/cg7_etd_p06.png" alt="cg7_etd page 6" style="width:100%;display:block;" loading="lazy">
+
+<hr class="section-divider">
+
+<div class="success-card">
+  <div class="card-label">✅ Chapter 12のまとめ</div>
+  <ul>
+    <li>GRADE推奨は<strong>4つのカテゴリー</strong>（強い推奨/条件付き推奨 × 支持/反対）に分類されます。</li>
+    <li>推奨の強さは<strong>利益と害のバランス、エビデンスの確実性、患者の価値観、資源</strong>の4つの要因で総合的に決定されます。</li>
+    <li>エビデンスの確実性が低くても、<strong>5つの例外的な状況</strong>では強い推奨が正当化されることがあります。</li>
+    <li>条件付き推奨は、患者と臨床医による<strong>共同意思決定</strong>が特に重要であることを示唆します。</li>
+    <li>推奨の策定プロセスとその根拠は、透明性を確保するために<strong>EtDフレームワークを用いて文書化</strong>されるべきです。</li>
+  </ul>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 12</div>
-<img src="images/cg7_etd_p07.png" alt="cg7_etd page 7" style="width:100%;display:block;" loading="lazy">
+
+<div class="source-references">
+  <h4><span class="icon">📚</span> 英文ソース</h4>
+  <div id="ref-1" class="source-ref-item">
+    <div class="ref-label">[1]</div>
+    <div class="ref-content">GRADE recommendations integrate certainty of evidence assessments with the EtD framework to formulate specific clinical practice recommendations.</div>
+  </div>
 </div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 8 / 12</div>
-<img src="images/cg7_etd_p08.png" alt="cg7_etd page 8" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 9 / 12</div>
-<img src="images/cg7_etd_p09.png" alt="cg7_etd page 9" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 10 / 12</div>
-<img src="images/cg7_etd_p10.png" alt="cg7_etd page 10" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 11 / 12</div>
-<img src="images/cg7_etd_p11.png" alt="cg7_etd page 11" style="width:100%;display:block;" loading="lazy">
-</div>
-<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 12 / 12</div>
-<img src="images/cg7_etd_p12.png" alt="cg7_etd page 12" style="width:100%;display:block;" loading="lazy">
-</div>
-</details>
+
+<div class="ref-box">
+  <h4>参考文献</h4>
+  <ol>
+    <li>Andrews JC, et al. GRADE guidelines: 15. Going from evidence to recommendation. J Clin Epidemiol. 2013;66(7):726-735.</li>
+    <li>Guyatt GH, et al. GRADE guidelines: 1. Introduction-GRADE evidence profiles and summary of findings tables. J Clin Epidemiol. 2011;64(4):383-394.</li>
+  </ol>
 </div>
 
 </div>
