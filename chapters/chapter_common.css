@@ -1,0 +1,545 @@
+/* ===== GRADE Handbook - Chapter Detail Common Styles ===== */
+/* Readability-focused redesign: larger fonts, generous spacing, clear hierarchy */
+
+/* ===== Base Typography ===== */
+.chapter-detail {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Segoe UI', sans-serif;
+  line-height: 2.05;
+  color: #1e293b;
+  max-width: 100%;
+  font-size: 1.05em;
+  letter-spacing: 0.02em;
+}
+
+/* ===== Section Headings ===== */
+.chapter-detail h3 {
+  color: #0f172a;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  border-left: 6px solid #0284c7;
+  border-bottom: none;
+  border-radius: 0 12px 12px 0;
+  padding: 18px 24px;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);
+}
+.chapter-detail h3:first-child { margin-top: 0; }
+
+.chapter-detail h4 {
+  color: #0369a1;
+  margin-top: 40px;
+  margin-bottom: 18px;
+  font-size: 1.25em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.6;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0f2fe;
+}
+.chapter-detail h4::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 28px;
+  background: linear-gradient(180deg, #0284c7, #38bdf8);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.chapter-detail h5 {
+  color: #0c4a6e;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin: 4px 0 10px 0;
+  line-height: 1.6;
+}
+
+/* ===== Paragraphs ===== */
+.chapter-detail p {
+  margin-bottom: 20px;
+  font-size: 1.05em;
+  line-height: 2.05;
+  color: #334155;
+}
+
+/* ===== Section Divider ===== */
+.section-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+  margin: 40px 0;
+}
+
+/* ===== Cards - Shared Base ===== */
+.concept-card, .warning-card, .danger-card, .success-card, .purple-card {
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin: 28px 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.concept-card::before, .warning-card::before, .danger-card::before,
+.success-card::before, .purple-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
+/* --- Concept Card (Blue) --- */
+.concept-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left: 6px solid #0284c7;
+}
+.concept-card::before { background: linear-gradient(90deg, #0284c7, #38bdf8); }
+.concept-card .card-label {
+  font-weight: 800;
+  color: #0c4a6e;
+  font-size: 1.1em;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.03em;
+}
+.concept-card .card-label .icon { font-size: 1.4em; }
+
+/* --- Warning Card (Orange) --- */
+.warning-card {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-left: 6px solid #d97706;
+}
+.warning-card::before { background: linear-gradient(90deg, #d97706, #fbbf24); }
+.warning-card .card-label {
+  font-weight: 800;
+  color: #92400e;
+  font-size: 1.1em;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Danger Card (Red) --- */
+.danger-card {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border-left: 6px solid #dc2626;
+}
+.danger-card::before { background: linear-gradient(90deg, #dc2626, #f87171); }
+.danger-card .card-label {
+  font-weight: 800;
+  color: #991b1b;
+  font-size: 1.1em;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Success Card (Green) --- */
+.success-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-left: 6px solid #16a34a;
+}
+.success-card::before { background: linear-gradient(90deg, #16a34a, #4ade80); }
+.success-card .card-label {
+  font-weight: 800;
+  color: #14532d;
+  font-size: 1.1em;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Purple Card --- */
+.purple-card {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border-left: 6px solid #9333ea;
+}
+.purple-card::before { background: linear-gradient(90deg, #9333ea, #c084fc); }
+.purple-card .card-label {
+  font-weight: 800;
+  color: #581c87;
+  font-size: 1.1em;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== Key Message Box (New) ===== */
+.key-message {
+  background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+  border: 2px solid #eab308;
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin: 28px 0;
+  position: relative;
+}
+.key-message::before {
+  content: '\1F4A1';
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  background: white;
+  padding: 0 8px;
+  font-size: 1.4em;
+}
+.key-message .key-title {
+  font-weight: 800;
+  color: #854d0e;
+  font-size: 1.05em;
+  margin-bottom: 10px;
+}
+
+/* ===== Comparison Grid ===== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 28px 0;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 28px 0;
+}
+.grid-item {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  border-top: 5px solid #0284c7;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.grid-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.grid-item.orange { border-top-color: #d97706; }
+.grid-item.red { border-top-color: #dc2626; }
+.grid-item.green { border-top-color: #16a34a; }
+.grid-item.purple { border-top-color: #9333ea; }
+.grid-item.gray { border-top-color: #64748b; }
+
+.grid-item h5 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.grid-item p {
+  font-size: 1em;
+  line-height: 1.9;
+  color: #475569;
+}
+
+/* ===== Step Flow ===== */
+.step-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 32px 0;
+}
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 24px;
+}
+.step-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 26px;
+  top: 56px;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #0284c7, #bae6fd);
+}
+.step-num {
+  min-width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2em;
+  z-index: 1;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+.step-body {
+  flex: 1;
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 20px 24px;
+  border: 1px solid #e2e8f0;
+}
+.step-body h5 {
+  margin-top: 0;
+  color: #0369a1;
+  font-size: 1.1em;
+}
+.step-body p {
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+/* ===== Tables ===== */
+.styled-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 28px 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  font-size: 1em;
+}
+.styled-table thead th {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.98em;
+  letter-spacing: 0.02em;
+}
+.styled-table tbody td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  line-height: 1.8;
+  color: #334155;
+}
+.styled-table tbody tr:nth-child(even) { background: #f8fafc; }
+.styled-table tbody tr:hover { background: #e0f2fe; transition: background 0.2s; }
+
+/* ===== English Note ===== */
+.en-note {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #94a3b8;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 20px 0;
+  font-size: 0.92em;
+  color: #64748b;
+  line-height: 1.8;
+  font-style: italic;
+}
+.en-note::before {
+  content: '\1F4D6 Original English';
+  display: block;
+  font-weight: 700;
+  color: #94a3b8;
+  font-size: 0.78em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-style: normal;
+}
+
+/* ===== Visual Diagram Box ===== */
+.diagram-box {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px 0;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+.diagram-box .diagram-title {
+  font-weight: 800;
+  color: #0c4a6e;
+  margin-bottom: 20px;
+  font-size: 1.15em;
+}
+
+/* ===== Certainty Bars ===== */
+.cert-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 16px auto;
+  max-width: 640px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.cert-bar .seg {
+  flex: 1;
+  padding: 14px 10px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9em;
+  letter-spacing: 0.03em;
+}
+.cert-bar .high { background: #16a34a; }
+.cert-bar .mod { background: #eab308; }
+.cert-bar .low { background: #d97706; }
+.cert-bar .vlow { background: #dc2626; }
+
+/* ===== Highlight Badge ===== */
+.badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.82em;
+  font-weight: 700;
+  vertical-align: middle;
+  letter-spacing: 0.02em;
+}
+.badge-blue { background: #dbeafe; color: #1e40af; }
+.badge-green { background: #dcfce7; color: #166534; }
+.badge-orange { background: #fef3c7; color: #92400e; }
+.badge-red { background: #fee2e2; color: #991b1b; }
+.badge-purple { background: #f3e8ff; color: #6b21a8; }
+
+/* ===== Reference Section ===== */
+.ref-box {
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-top: 48px;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #64748b;
+}
+.ref-box h4 {
+  margin-top: 0;
+  color: #475569;
+  font-size: 1.1em;
+}
+.ref-box h4::before {
+  background: #64748b;
+}
+.ref-box ol { padding-left: 24px; }
+.ref-box li {
+  font-size: 0.92em;
+  color: #64748b;
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+
+/* ===== Flowchart Arrows ===== */
+.flow-arrow {
+  text-align: center;
+  font-size: 1.8em;
+  color: #0284c7;
+  margin: 12px 0;
+}
+
+/* ===== Lists ===== */
+.chapter-detail ul, .chapter-detail ol {
+  margin-bottom: 20px;
+  padding-left: 28px;
+}
+.chapter-detail li {
+  margin-bottom: 10px;
+  font-size: 1.02em;
+  line-height: 1.95;
+  color: #334155;
+}
+.chapter-detail ul li::marker {
+  color: #0284c7;
+}
+.chapter-detail ol li::marker {
+  color: #0284c7;
+  font-weight: 700;
+}
+
+/* ===== Emphasis & Inline Styles ===== */
+.chapter-detail strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* ===== Collapsible Details (New) ===== */
+.chapter-detail details {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+.chapter-detail details summary {
+  padding: 16px 24px;
+  font-weight: 700;
+  color: #0369a1;
+  cursor: pointer;
+  background: #f0f9ff;
+  font-size: 1.02em;
+  transition: background 0.2s;
+}
+.chapter-detail details summary:hover {
+  background: #e0f2fe;
+}
+.chapter-detail details[open] summary {
+  border-bottom: 1px solid #e2e8f0;
+}
+.chapter-detail details > div,
+.chapter-detail details > p {
+  padding: 20px 24px;
+}
+
+/* ===== Image Container ===== */
+.chapter-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin: 12px 0;
+}
+
+/* ===== Blockquote Style ===== */
+.chapter-detail blockquote {
+  border-left: 5px solid #0284c7;
+  background: #f0f9ff;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 12px 12px 0;
+  font-size: 1.02em;
+  color: #334155;
+  line-height: 2.0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .chapter-detail h3 {
+    font-size: 1.3em;
+    padding: 14px 18px;
+  }
+  .chapter-detail h4 { font-size: 1.15em; }
+  .concept-card, .warning-card, .danger-card, .success-card, .purple-card {
+    padding: 20px 22px;
+  }
+  .step-num {
+    min-width: 44px;
+    height: 44px;
+    font-size: 1em;
+  }
+  .styled-table { font-size: 0.92em; }
+  .styled-table thead th { padding: 12px 14px; }
+  .styled-table tbody td { padding: 10px 14px; }
+}
+
+@media (max-width: 480px) {
+  .chapter-detail { font-size: 1em; }
+  .chapter-detail h3 { font-size: 1.2em; }
+  .step-item { gap: 12px; }
+}

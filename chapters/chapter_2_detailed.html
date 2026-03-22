@@ -1,0 +1,240 @@
+
+<link rel="stylesheet" href="chapters/chapter_common.css">
+<div class="chapter-detail">
+
+<h3>Chapter 2：GRADEの開発方法論 ― Core GRADEの誕生</h3>
+
+<div class="concept-card">
+  <div class="card-label"><span class="icon">💡</span> Core Concept</div>
+  <p>GRADEは2004年の導入以来、世界標準として進化を続けてきましたが、20年以上にわたる改訂により<strong>40以上のガイダンス論文</strong>が蓄積し、フレームワークが過度に複雑化しました。Core GRADEは、この複雑化の問題を解決するために、GRADEの核心的な専門家たちが「できるだけシンプルに、しかしシンプルすぎない」という原則のもとに開発した、実践的な再構築版です。</p>
+</div>
+
+<hr class="section-divider">
+
+<h3>GRADEワーキンググループと Core GRADE の関係</h3>
+
+<p>GRADE（Grading of Recommendations Assessment, Development and Evaluation）は、エビデンスの確実性を評価し、推奨の強さを決定するための世界的な標準システムです。Cochrane CollaborationによるすべてのシステマティックレビューはGRADEに従うことが義務付けられており、WHO、American College of Physicians、UpToDate、The BMJを含む<strong>世界中の120以上の組織</strong>によって採用されています。</p>
+
+<p>Core GRADEは、GRADEワーキンググループの「公式」な成果物ではありません。しかし、GRADEを開発した第一人者たちによる共同作業として誕生しました。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
+
+<p>Core GRADEの著者たちは、数百のシステマティックレビューや臨床ガイドラインの監督支援を提供し、BMJ Rapid Recommendationsの開発やWHO COVIDガイドラインの作成に貢献してきました。20年以上にわたる学生やガイドラインパネルメンバーへのGRADE教育経験が、Core GRADEの設計に反映されています。</p>
+
+<hr class="section-divider">
+
+<h3>なぜ Core GRADE が必要になったのか？</h3>
+
+<p>GRADEの成功と発展に伴い、以下の3つの深刻な問題が浮上しました。</p>
+
+<div class="grid-3">
+  <div class="grid-item red">
+    <h5>1. 複雑さの増大</h5>
+    <p>GRADEはますます複雑になり、新規ユーザーだけでなく既存ユーザーにとっても扱いにくいものとなっていました。特にCochrane RoB2やROBINS-Iなどのツールは、方法論的に優れているものの実用性に課題がありました。</p>
+  </div>
+  <div class="grid-item orange">
+    <h5>2. 古い情報と組織化の欠如</h5>
+    <p>20年以上にわたる論文の逐次的な出版により、ガイダンスが時代遅れになり、組織化されていないという問題が生じていました。ユーザーは新しいガイダンスを見つけ処理することが困難でした。</p>
+  </div>
+  <div class="grid-item purple">
+    <h5>3. 重複と不一致</h5>
+    <p>複数のジャーナルやプラットフォームにわたって公開された結果、かなりの重複、修正、および時代遅れの資料が混在していました。現在のガイダンスを特定するには細心の注意が必要でした。</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h3>GRADEの歴史的発展</h3>
+
+<p>GRADEの本質は、<strong>Journal of Clinical Epidemiology (JCE) の最初の15本のGRADEシリーズ論文</strong>に示されました。その後、「リビング（常に更新される）」なガイダンスシステムとして、以下のような重要な修正が行われてきました。</p>
+
+<div class="figure-container">
+    <div class="figure-title">Fig 1: GRADEの主な歴史的修正</div>
+    <div class="process-diagram">
+        <div class="process-step"><span>診断テスト</span></div>
+        <div class="process-arrow">→</div>
+        <div class="process-step"><span>価値観と選好</span></div>
+        <div class="process-arrow">→</div>
+        <div class="process-step"><span>ROBINS-I</span></div>
+        <div class="process-arrow">→</div>
+        <div class="process-step"><span>欠測データ</span></div>
+        <div class="process-arrow">→</div>
+        <div class="process-step"><span>費用対効果</span></div>
+        <div class="process-arrow">→</div>
+        <div class="process-step"><span>ネットワークメタアナリシス</span></div>
+        <div class="process-arrow">→</div>
+        <div class="process-step" style="background-color: #fef2f2; border-color: #dc2626;"><strong>確実性評価の対象の変更</strong></div>
+        <div class="process-arrow">→</div>
+        <div class="process-step" style="background-color: #fef2f2; border-color: #dc2626;"><strong>不精確さのガイダンス修正</strong></div>
+    </div>
+    <div class="figure-caption">GRADEは時代と共に進化し、特に「確実性評価の対象」の変更は根本的なものでした。</div>
+</div>
+
+
+<div class="warning-card">
+  <div class="card-label">⚠️ 重要な認識</div>
+  <p>これらの更新されたガイダンスのかなりの部分は、GRADEユーザーにとって<strong>滅多に適用されないほど十分に複雑</strong>であることが判明しています。これが Core GRADE 開発の直接的な動機となりました。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
+</div>
+
+<hr class="section-divider">
+
+<h3>Core GRADE の開発原則</h3>
+
+<p>Core GRADEの開発にあたり、以下の基本原則が設定されました。</p>
+
+<div class="step-flow">
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>柔軟性（Flexibility）</h5>
+      <p>エビデンスの確実性やエビデンスから推奨への移行については、<strong>複数の最良の判断がしばしば可能</strong>です。したがって、Core GRADEは「ルール」ではなく「ガイダンス」を提供します。際どい判断（close-call decisions）があるという認識が、この柔軟性をさらに強化します。<a class="source-inline-ref" href="#ref-3">[3]</a></p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>実用性（Practicality）</h5>
+      <p>理論的な完全性よりも、実際の臨床現場やガイドライン作成で使いやすいことを優先します。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>概念の単純化（Simplification of Concepts）</h5>
+      <p>複雑な概念をより直感的に理解できる形に再構成します。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h5>厳格な取捨選択</h5>
+      <p>エビデンスの確実性および推奨の方向性と強さに関する適切な判断を下すために<strong>必要不可欠でないガイダンスは、Core GRADEの一部としない</strong>。これは、ガイダンスが優雅さ、理解の深さ、透明性の向上に貢献する場合でも同様です。<a class="source-inline-ref" href="#ref-4">[4]</a></p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h3>BMJ 7論文シリーズの構成</h3>
+
+<p>Core GRADEは、The BMJに掲載された7本の論文からなるシリーズとして構成されています。</p>
+
+<table class="styled-table">
+  <thead>
+    <tr><th>論文番号</th><th>タイトル</th><th>主な内容</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><span class="badge badge-blue">Core 1</span></td><td>Overview</td><td>全体像、PICO設定、確実性の連続体の概念</td></tr>
+    <tr><td><span class="badge badge-blue">Core 2</span></td><td>Imprecision</td><td>閾値の選択、OISの簡略化、不精確さ評価のアルゴリズム</td></tr>
+    <tr><td><span class="badge badge-blue">Core 3</span></td><td>Inconsistency</td><td>研究間のばらつき評価、フローチャート、サブグループ分析</td></tr>
+    <tr><td><span class="badge badge-blue">Core 4</span></td><td>Risk of Bias</td><td>ROBUST-RCTツール、大きな効果、用量反応、出版バイアス</td></tr>
+    <tr><td><span class="badge badge-blue">Core 5</span></td><td>Indirectness</td><td>適用可能性、代理アウトカム、PICOの不一致</td></tr>
+    <tr><td><span class="badge badge-blue">Core 6</span></td><td>Summary of Findings</td><td>結果の要約テーブル、標準化された表現</td></tr>
+    <tr><td><span class="badge badge-blue">Core 7</span></td><td>Evidence-to-Decision</td><td>エビデンスから推奨へ、MID、益と害のバランス</td></tr>
+  </tbody>
+</table>
+
+<hr class="section-divider">
+
+<h3>Core GRADE の主な簡素化ポイント</h3>
+
+<p>Core GRADEは、以下の点で従来のGRADEガイダンスを簡素化しています。</p>
+
+<div class="grid-2">
+  <div class="grid-item green">
+    <h5>非ランダム化研究の評価</h5>
+    <p><strong>Core GRADE</strong>：当初から「確実性が低い（low）」エビデンスとして評価</p>
+    <p><strong>従来</strong>：ROBINS-Iでは高い確実性からグレードダウンすることを許容</p>
+  </div>
+  <div class="grid-item gray">
+    <h5>RCTのバイアスリスク評価</h5>
+    <p><strong>Core GRADE</strong>：シンプルなROBUST-RCTツールを使用</p>
+    <p><strong>従来</strong>：複雑なCochrane RoB2ツールが存在</p>
+  </div>
+  <div class="grid-item orange">
+    <h5>エビデンスのグレードアップ基準</h5>
+    <p><strong>Core GRADE</strong>：「大きな効果」と「用量反応勾配」の2基準のみ</p>
+    <p><strong>従来</strong>：「もっともらしい残余交絡」の3つ目の基準も存在</p>
+  </div>
+  <div class="grid-item purple">
+    <h5>EtDフレームワーク</h5>
+    <p><strong>Core GRADE</strong>：完全なチェックリスト完成は必須でなく、主要ドメインに限定</p>
+    <p><strong>従来</strong>：より包括的なチェックリストの完成が求められる場合があった</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h3>Core GRADE の革新的要素</h3>
+
+<div class="concept-card">
+  <div class="card-label"><span class="icon">🗺️</span> フローチャートとアルゴリズム</div>
+  <p>Core GRADEにおける最も重要な革新は、<strong>詳細なフローチャートとアルゴリズムの導入</strong>です。これらは、ユーザーをGRADEのプロセスに沿ってステップバイステップで導くための視覚的なロードマップを提供します。手順を明確にし、曖昧さを低減させ、GRADEの使用をより体系的かつ利用しやすいものにします。<a class="source-inline-ref" href="#ref-5">[5]</a></p>
+</div>
+
+<div class="concept-card">
+  <div class="card-label"><span class="icon">↔️</span> 連続体としての確実性</div>
+  <p>Core GRADEは、エビデンスの確実性が「高・中・低・非常に低」というカテゴリーとして提示されているものの、実際には基礎となる<strong>連続体（continua）</strong>を表していることを強調しています。これは個々のドメイン評価にも全体的な確実性評価にも当てはまり、<strong>際どい判断（close calls）</strong>がいかに頻繁であるかを浮き彫りにしています。<a class="source-inline-ref" href="#ref-6">[6]</a></p>
+    <div class="figure-container" style="margin-top: 20px;">
+        <div class="figure-title" style="font-size: 1em;">Fig 2: 確実性の連続体モデル</div>
+        <div class="spectrum-bar">
+            <div class="spectrum-segment" style="background-color: #16a34a;">高い</div>
+            <div class="spectrum-segment" style="background-color: #facc15;">中程度</div>
+            <div class="spectrum-segment" style="background-color: #fb923c;">低い</div>
+            <div class="spectrum-segment" style="background-color: #f87171;">非常に低い</div>
+        </div>
+        <div class="figure-caption" style="font-size: 0.9em;">確実性は固定的なカテゴリではなく、流動的な連続体として捉えられます。</div>
+    </div>
+</div>
+
+<hr class="section-divider">
+
+<div class="success-card">
+  <div class="card-label">✅ Chapter 2のまとめ</div>
+  <ul class="icon-list">
+    <li><span class="li-icon">🤯</span>GRADEは2004年の導入以来、120以上の組織に採用される世界標準となったが、<strong>複雑化・古い情報・重複</strong>が問題となった。</li>
+    <li><span class="li-icon">🧭</span>Core GRADEは、GRADEの核心的な専門家たちが「<strong>ルールではなくガイダンス</strong>」の原則で開発した実践的な再構築版である。</li>
+    <li><span class="li-icon">📚</span>BMJの<strong>7論文シリーズ</strong>として体系化され、フローチャート・アルゴリズム・連続体の概念を導入した。</li>
+    <li><span class="li-icon">✂️</span>「エビデンスの確実性に関する適切な判断に<strong>必要不可欠でないものは含めない</strong>」という厳格な取捨選択基準を適用している。</li>
+  </ul>
+</div>
+
+<div class="source-references">
+  <h4>参考文献</h4>
+  <div id="ref-1" class="source-ref-item">
+    <div class="ref-label">[1]</div>
+    <div class="ref-content">Core GRADE comes not as an official product of the GRADE Working Group, but rather as the collaborative effort of a group of GRADE experts who have played central roles in much of the prior GRADE guidance.</div>
+  </div>
+  <div id="ref-2" class="source-ref-item">
+    <div class="ref-label">[2]</div>
+    <div class="ref-content">A considerable portion of these updated guidance has proved sufficiently complex that it is seldom applied by GRADE users.</div>
+  </div>
+  <div id="ref-3" class="source-ref-item">
+    <div class="ref-label">[3]</div>
+    <div class="ref-content">Fundamental principles of Core GRADE include its flexibility: more than one best judgment is often available for certainty of evidence and moving from evidence to recommendations. Thus, we offer guidance, not rules.</div>
+  </div>
+    <div id="ref-4" class="source-ref-item">
+    <div class="ref-label">[4]</div>
+    <div class="ref-content">The ultimate criterion stipulates that if guidance is not essential for making appropriate judgments regarding certainty of evidence and direction and strength of recommendations, it is not part of Core GRADE.</div>
+  </div>
+  <div id="ref-5" class="source-ref-item">
+    <div class="ref-label">[5]</div>
+    <div class="ref-content">A key innovation in Core GRADE is the introduction of detailed flowcharts and algorithms that offer a visual roadmap to guide users step-by-step through the GRADE process.</div>
+  </div>
+  <div id="ref-6" class="source-ref-item">
+    <div class="ref-label">[6]</div>
+    <div class="ref-content">A key contribution in the series emphasizes that concepts of evidence trustworthiness, although presented as categories, in fact represent underlying continua.</div>
+  </div>
+</div>
+
+<div class="ref-box">
+  <h4>関連文献</h4>
+  <ol>
+    <li>Guyatt GH, Oxman AD, Vist GE, et al. GRADE: an emerging consensus on rating quality of evidence and strength of recommendations. BMJ. 2008;336(7650):924-926.</li>
+    <li>Core GRADE 0: Introduction. BMJ. 2025.</li>
+    <li>Core GRADE 1: Overview. BMJ. 2025.</li>
+    <li>Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
+    <li>Sterne JAC, Savovic J, Page MJ, et al. RoB 2: a revised tool for assessing risk of bias in randomised trials. BMJ. 2019;366:l4898.</li>
+    <li>Sterne JA, Hernan MA, Reeves BC, et al. ROBINS-I: a tool for assessing risk of bias in non-randomised studies of interventions. BMJ. 2016;355:i4919.</li>
+  </ol>
+</div>
+
+</div>

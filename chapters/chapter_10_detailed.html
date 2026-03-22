@@ -1,0 +1,231 @@
+<link rel="stylesheet" href="../chapter_common.css">
+<style>
+.funnel-plot-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+.funnel-plot {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.funnel-y-axis-label, .funnel-x-axis-label {
+  text-align: center;
+  font-size: 0.85em;
+  color: #64748b;
+  font-weight: 600;
+}
+.funnel-y-axis-label {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -60px;
+  top: 50%;
+  transform-origin: center;
+  width: 250px;
+}
+.funnel-guideline-x {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: #cbd5e1;
+}
+.funnel-guideline-y {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  background: #94a3b8;
+  transform: translateX(-50%);
+}
+.funnel-shape {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 100%;
+  transform: translateX(-50%);
+  clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0);
+  background: rgba(2, 132, 199, 0.05);
+  border-left: 2px dashed rgba(2, 132, 199, 0.4);
+  border-right: 2px dashed rgba(2, 132, 199, 0.4);
+}
+.funnel-point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #0284c7;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+}
+.funnel-point.red-point {
+  background: #ef4444;
+}
+</style>
+<div class="chapter-detail">
+
+<h3>Chapter 10：出版バイアス（Publication Bias / Dissemination Bias）</h3>
+
+<div class="concept-card">
+  <div class="card-label"><span class="icon">&#x1f4d6;</span> Core Concept</div>
+  <p>出版バイアス（Publication Bias）は、<strong>研究結果の方向性や統計的有意性に基づいて、研究の出版や報告が選択的に行われること</strong>により生じる系統的な偏りです。否定的な結果や統計的に有意でない結果の研究は出版されにくく、その結果、利用可能なエビデンスが介入の効果を過大評価する傾向があります。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
+</div>
+
+<hr class="section-divider">
+
+<h3>出版バイアスの形態</h3>
+
+<div class="grid-4">
+  <div class="grid-item red">
+    <h5>研究全体の非出版</h5>
+    <p>否定的な結果の研究が全く出版されないケース。最も深刻な形態であり、検出が最も困難です。製薬企業がスポンサーの研究で特に懸念されます。</p>
+  </div>
+  <div class="grid-item orange">
+    <h5>選択的アウトカム報告</h5>
+    <p>研究は出版されるが、特定のアウトカムの結果が報告されないケース。Core GRADEでは、これを<strong>出版バイアスのドメイン</strong>で評価します（研究者が測定はしたが報告しなかったアウトカム）。</p>
+  </div>
+  <div class="grid-item blue">
+    <h5>選択的分析報告</h5>
+    <p>複数の分析方法の中から、最も好ましい結果を示す分析のみが報告されるケース。Core GRADEでは、これを<strong>バイアスリスクのドメイン</strong>で評価します。</p>
+  </div>
+  <div class="grid-item purple">
+    <h5>時間的バイアス（Time-lag bias）</h5>
+    <p>肯定的な結果の研究がより早く出版される傾向。システマティックレビューの時点で、否定的な結果の研究がまだ出版されていない可能性があります。</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h3>出版バイアスの検出方法</h3>
+
+<div class="step-flow">
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>ファンネルプロット</h5>
+      <p>各研究の効果推定値（横軸）と精度の指標（縦軸、通常は標準誤差）をプロットします。出版バイアスがない場合、プロットは逆漏斗型の対称的な形状を示します。非対称性は出版バイアスの存在を示唆しますが、他の原因（異質性、小規模研究効果など）でも非対称性が生じ得ます。</p>
+      <div class="figure-container">
+        <div class="figure-title">Fig 10-1: ファンネルプロットの概念図</div>
+        <div class="funnel-plot-container">
+          <div class="funnel-y-axis-label">研究の精度（サンプルサイズ大）</div>
+          <div class="funnel-plot">
+            <div class="funnel-guideline-y"></div>
+            <div class="funnel-guideline-x"></div>
+            <div class="funnel-shape"></div>
+            <div class="funnel-point" style="bottom: 85%; left: 48%;"></div>
+            <div class="funnel-point" style="bottom: 80%; left: 52%;"></div>
+            <div class="funnel-point" style="bottom: 75%; left: 45%;"></div>
+            <div class="funnel-point" style="bottom: 60%; left: 55%;"></div>
+            <div class="funnel-point" style="bottom: 55%; left: 38%;"></div>
+            <div class="funnel-point" style="bottom: 40%; left: 65%;"></div>
+            <div class="funnel-point" style="bottom: 35%; left: 25%;"></div>
+            <div class="funnel-point" style="bottom: 20%; left: 75%;"></div>
+            <div class="funnel-point" style="bottom: 15%; left: 15%;"></div>
+            <div class="funnel-point red-point" style="bottom: 10%; left: 85%;"></div>
+            <div class="funnel-point red-point" style="bottom: 25%; left: 80%;"></div>
+            <div class="funnel-point red-point" style="bottom: 5%; left: 90%;"></div>
+          </div>
+          <div class="funnel-x-axis-label">効果推定値（例：オッズ比）</div>
+        </div>
+        <div class="figure-caption">出版バイアスがない場合、研究は効果推定値を中心に左右対称に分布する（逆漏斗型）。小規模で効果が小さい研究（右下の赤点部分）が欠けている場合、非対称な形状となり出版バイアスが示唆される。</div>
+      </div>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>統計的検定</h5>
+      <p>Egger's test、Begg's test、Peters' testなどの統計的検定が利用可能です。ただし、<strong>研究数が少ない場合（10未満）は検出力が非常に低い</strong>ため、結果の解釈には注意が必要です。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>試験登録との照合</h5>
+      <p>ClinicalTrials.govなどの試験登録データベースと照合し、登録されたが出版されていない研究を特定します。これは出版バイアスの最も直接的な証拠を提供します。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h5>総合的な判断</h5>
+      <p>上記の方法はいずれも限界があるため、Core GRADEは<strong>総合的な判断</strong>を重視しています。研究のスポンサー、研究分野の特性、効果の大きさのパターンなどを考慮します。</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h3>出版バイアスの疑いを高める要因</h3>
+
+<table class="styled-table">
+  <thead>
+    <tr><th>要因</th><th>説明</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>製薬企業のスポンサー</strong></td><td>企業がスポンサーの研究は、否定的な結果を出版しない傾向がある</td></tr>
+    <tr><td><strong>小規模研究のみ</strong></td><td>大規模な確認研究がない場合、初期の小規模研究の肯定的な結果が過大評価されている可能性</td></tr>
+    <tr><td><strong>ファンネルプロットの非対称性</strong></td><td>小規模研究が大きな効果を示し、大規模研究が小さな効果を示すパターン</td></tr>
+    <tr><td><strong>試験登録との不一致</strong></td><td>登録された研究のうち、出版されていないものが多い</td></tr>
+    <tr><td><strong>研究分野の特性</strong></td><td>競争が激しい分野や、肯定的な結果が出版に有利な分野</td></tr>
+  </tbody>
+</table>
+
+<hr class="section-divider">
+
+<h3>出版バイアスへの対処</h3>
+
+<div class="concept-card">
+  <div class="card-label">&#x1f6e0;&#xfe0f; Core GRADEにおける対処法</div>
+  <p>出版バイアスの完全な排除は不可能ですが、以下の対策により影響を軽減できます：</p>
+  <ul>
+    <li><strong>包括的な文献検索</strong>：灰色文献（grey literature）、学会抄録、試験登録データベースを含む</li>
+    <li><strong>言語制限の回避</strong>：英語以外の文献も検索対象に含める</li>
+    <li><strong>試験登録の照合</strong>：登録されたが出版されていない研究の著者に連絡</li>
+    <li><strong>感度分析</strong>：出版バイアスの影響を推定するための統計的手法（trim-and-fill法など）</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<div class="success-card">
+  <div class="card-label">&#x2705; Chapter 10のまとめ</div>
+  <ul class="icon-list">
+    <li><span class="li-icon">&#x1f50e;</span>出版バイアスは<strong>否定的な結果の研究が出版されにくい</strong>ことにより生じる系統的な偏り。</li>
+    <li><span class="li-icon">&#x270f;&#xfe0f;</span>Core GRADEは、選択的アウトカム報告を<strong>出版バイアス</strong>、選択的分析報告を<strong>バイアスリスク</strong>として区別。</li>
+    <li><span class="li-icon">&#x1f4ca;</span>ファンネルプロットや統計的検定は参考指標であり、<strong>総合的な判断</strong>が重要。</li>
+    <li><span class="li-icon">&#x1f4c9;</span>研究数が少ない場合（10未満）は統計的検定の検出力が非常に低い。</li>
+    <li><span class="li-icon">&#x1f517;</span>試験登録データベースとの照合が最も直接的な証拠を提供。</li>
+    <li><span class="li-icon">&#x1f4dd;</span>包括的な文献検索と感度分析により影響を軽減。</li>
+  </ul>
+</div>
+
+<div class="ref-box">
+  <h4>参考文献</h4>
+  <ol>
+    <li>Guyatt GH, et al. Core GRADE 1: Overview. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 4: Risk of Bias. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
+    <li>Guyatt GH, Oxman AD, Montori V, et al. GRADE guidelines: 5. Rating the quality of evidence—publication bias. J Clin Epidemiol. 2011;64(12):1277-1282.</li>
+  </ol>
+</div>
+
+<hr class="section-divider">
+
+<div class="source-references">
+  <h4>英文ソース</h4>
+  <div class="source-ref-item" id="ref-1">
+    <span class="ref-label">[1]</span>
+    <p>Publication bias occurs when the publication or non-publication of research findings is influenced by the nature and direction of the results. Studies with positive or statistically significant results are more likely to be published.</p>
+  </div>
+</div>
+
+</div>

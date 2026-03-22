@@ -1,0 +1,199 @@
+<link rel="stylesheet" href="chapter_common.css">
+<div class="chapter-detail">
+
+<h3>Chapter 9：不精確さ（Imprecision）</h3>
+
+<div class="concept-card">
+  <div class="card-label"><span class="icon">🎯</span> Core Concept</div>
+  <p>不精確さ（Imprecision）は、<strong>効果推定値の信頼区間が広く、臨床的に重要な閾値をまたぐ場合</strong>にグレードダウンの対象となるドメインです。Core GRADEは、従来のOIS（Optimal Information Size）アプローチを廃止し、<strong>MID（最小重要差）に基づく閾値アプローチ</strong>を導入しました。これはCore GRADEにおける最も重要な革新の一つです。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
+</div>
+
+<hr class="section-divider">
+
+</div>
+
+<h4>従来のアプローチ vs Core GRADEアプローチ</h4>
+
+<div class="grid-2">
+  <div class="grid-item gray">
+    <h5>従来のGRADE（OISアプローチ）</h5>
+    <ul>
+      <li><span class="icon">🤔</span> <strong>基本的な考え方:</strong> 十分な情報量（サンプルサイズ）があるか</li>
+      <li><span class="icon">📏</span> <strong>閾値の設定:</strong> RR 0.75 / 1.25（任意の基準）</li>
+      <li><span class="icon">CONTEXT</span> <strong>文脈化:</strong> 大・中・小の効果という文脈</li>
+      <li><span class="icon">0️⃣</span> <strong>null効果の扱い:</strong> CIがnullをまたぐかどうか</li>
+    </ul>
+  </div>
+  <div class="grid-item green">
+    <h5>Core GRADE（閾値アプローチ）</h5>
+    <ul>
+      <li><span class="icon">🎯</span> <strong>基本的な考え方:</strong> 信頼区間がMID閾値をまたぐか</li>
+      <li><span class="icon">📈</span> <strong>閾値の設定:</strong> <strong>MIDに基づく臨床的に意味のある閾値</strong></li>
+      <li><span class="icon">CONTEXT</span> <strong>文脈化:</strong> <strong>廃止</strong>。閾値のみで判断</li>
+      <li><span class="icon">0️⃣</span> <strong>null効果の扱い:</strong> CIがMID閾値をまたぐかどうか（nullは閾値ではない）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="key-message">
+  <div class="key-title">アプローチの核心的変更</div>
+  <p>Core GRADEでは、不精確さの評価軸が「サンプルサイズは十分か？」から「<strong>効果の推定値は、臨床的に意味のある差（MID）の閾値をまたいでいるか？</strong>」へと根本的にシフトしました。これにより、より文脈に即した、臨床的に意味のある判断が可能になります。</p>
+</div>
+
+<hr class="section-divider">
+
+<h4>MID閾値に基づく不精確さの評価プロセス</h4>
+
+<div class="process-diagram">
+  <div class="process-step">
+    <div class="highlight-num">1</div>
+    <div class="process-content">
+      <h5>MIDの特定</h5>
+      <p>各アウトカムについて、<strong>利益のためのMID</strong>と<strong>害のためのMID</strong>を事前に特定します。MIDには不確実性が伴うため、「もっともらしいMIDの範囲」として幅を持たせることが推奨されます。</p>
+    </div>
+  </div>
+  <div class="process-arrow">➔</div>
+  <div class="process-step">
+    <div class="highlight-num">2</div>
+    <div class="process-content">
+      <h5>閾値の設定</h5>
+      <p>MIDに基づき、効果の大きさを判断する閾値を設定します。Core GRADEでは、<strong>null効果は閾値ではありません</strong>。閾値は臨床的に重要な利益または害の境界を示します。</p>
+    </div>
+  </div>
+  <div class="process-arrow">➔</div>
+  <div class="process-step">
+    <div class="highlight-num">3</div>
+    <div class="process-content">
+      <h5>信頼区間と閾値の比較</h5>
+      <p>95%信頼区間（CI）が設定したMID閾値をまたぐかを確認します。CIが閾値をまたぐ場合、不精確さによるグレードダウンを検討します。</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h4>不精確さの判断基準 ― 4つのシナリオ</h4>
+
+<div class="grid-2">
+  <div class="grid-item green">
+    <h5>シナリオ1：グレードダウンなし</h5>
+    <p>CIの上限と下限の両方がMID閾値の同じ側にあり、閾値をまたがない。効果の方向性と大きさについて十分な精度があると判断します。</p>
+    <div class="spectrum-bar">
+      <div class="spectrum-ci" style="left: 5%; width: 30%;"><div class="spectrum-pe" style="left: 60%;"></div></div>
+      <div class="spectrum-threshold" style="left: 50%;"></div>
+      <span class="spectrum-label" style="left: 50%;">MID</span>
+    </div>
+  </div>
+  <div class="grid-item orange">
+    <h5>シナリオ2：1段階グレードダウン</h5>
+    <p>CIが1つのMID閾値をまたぐ。効果が臨床的に重要かどうかについて不確実性があるため、1段階グレードダウンします。</p>
+    <div class="spectrum-bar">
+      <div class="spectrum-ci" style="left: 30%; width: 40%;"><div class="spectrum-pe" style="left: 40%;"></div></div>
+      <div class="spectrum-threshold" style="left: 50%;"></div>
+      <span class="spectrum-label" style="left: 50%;">MID</span>
+    </div>
+  </div>
+  <div class="grid-item red">
+    <h5>シナリオ3：2段階グレードダウン</h5>
+    <p>CIが利益と害の両方のMID閾値をまたぐ。効果が利益をもたらすか害をもたらすかさえ不確実なため、2段階グレードダウンします。</p>
+    <div class="spectrum-bar">
+      <div class="spectrum-ci" style="left: 10%; width: 80%;"><div class="spectrum-pe" style="left: 50%;"></div></div>
+      <div class="spectrum-threshold" style="left: 25%; background: #16a34a;"></div>
+      <span class="spectrum-label" style="left: 25%;">MID(益)</span>
+      <div class="spectrum-threshold" style="left: 75%;"></div>
+      <span class="spectrum-label" style="left: 75%;">MID(害)</span>
+    </div>
+  </div>
+  <div class="grid-item purple">
+    <h5>シナリオ4：null効果に近い場合</h5>
+    <p>点推定値がnull効果に近く、CIが両方のMID閾値の内側にある場合、「ほとんど効果がない」と結論付け、グレードダウンしません。</p>
+    <div class="spectrum-bar">
+      <div class="spectrum-ci" style="left: 35%; width: 30%;"><div class="spectrum-pe" style="left: 50%;"></div></div>
+      <div class="spectrum-threshold" style="left: 25%; background: #16a34a;"></div>
+      <span class="spectrum-label" style="left: 25%;">MID(益)</span>
+      <div class="spectrum-threshold" style="left: 75%;"></div>
+      <span class="spectrum-label" style="left: 75%;">MID(害)</span>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+<h4>アウトカムの種類と不精確さ</h4>
+
+<div class="grid-2">
+  <div class="grid-item green">
+    <h5>二値アウトカム</h5>
+    <p>相対効果（RR）と絶対効果（RD）の両方で評価しますが、特に<strong>絶対効果の不精確さ</strong>が推奨策定において最も重要です。</p>
+    <ul class="icon-list">
+      <li><span class="icon">📊</span> ベースラインリスクが異なると、同じRRでも絶対効果の不精確さは変わります。</li>
+    </ul>
+  </div>
+  <div class="grid-item purple">
+    <h5>連続アウトカム</h5>
+    <p>平均差（MD）または標準化平均差（SMD）の信頼区間とMID閾値を比較します。</p>
+    <ul class="icon-list">
+      <li><span class="icon">📏</span> SMDの場合、一般的に<strong>0.5 SD</strong>がMIDの目安とされますが、アウトカム固有のMIDを優先します。</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h4>不精確さと不一致性の関係</h4>
+
+<div class="warning-card">
+  <div class="card-label">⚠️ 二重カウントの回避</div>
+  <p>不精確さと不一致性は密接に関連しています。異質性が大きいことで信頼区間が広がっている場合、その問題は主に「不一致性」のドメインで評価し、不精確さで再度グレードダウンする<strong>二重カウントを避ける</strong>べきです。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
+</div>
+
+<hr class="section-divider">
+<h4>具体例：COVID-19患者に対するニルマトレルビルの不精確さ評価</h4>
+
+<div class="concept-card">
+  <div class="card-label"><span class="icon">💡</span> 具体例</div>
+  <p><strong>アウトカム</strong>：入院または死亡（二値アウトカム）<br>
+  <strong>効果推定値</strong>：RR = 0.57（95% CI: 0.36 - 0.89）<br>
+  <strong>MID</strong>：RR = 0.75（パネル調査で設定）</p>
+  <div class="callout orange">
+    <p><strong>判断</strong>：CIの上限（0.89）がMID（0.75）を超えているため、CIがMID閾値をまたいでいると判断し、<strong>1段階グレードダウン</strong>します。</p>
+  </div>
+  <p class="small-text">※絶対効果で評価した場合も同様の結論に至ることが多いです。例えば、高リスク群（ベースラインリスク10%）では1000人あたり43人の入院減少（CI: 11-64）となり、MIDが25人の場合、CIの下限（11）がMIDを下回るため、やはり1段階グレードダウンとなります。</p>
+</div>
+
+<hr class="section-divider">
+
+<div class="success-card">
+  <div class="card-label">✅ Chapter 9のまとめ</div>
+  <ul class="icon-list">
+    <li><span class="icon">🎯</span> Core GRADEは従来のOISアプローチを廃止し、<strong>MID閾値ベースのアプローチ</strong>を導入しました。</li>
+    <li><span class="icon">🚫</span> <strong>null効果は閾値ではありません</strong>。臨床的に意味のあるMIDを使用します。</li>
+    <li><span class="icon">📉</span> CIが閾値をまたぐ数に応じて、<strong>0, 1, または2段階</strong>のグレードダウンを行います。</li>
+    <li><span class="icon">🔄</span> null効果に近い場合は、確実性評価のターゲットを「ほとんど効果がない」に修正します。
+</li>
+    <li><span class="icon">⚠️</span> 不精確さと不一致性の<strong>二重カウントを避ける</strong>ことが重要です。</li>
+    <li><span class="icon">📈</span> <strong>絶対効果の不精確さ</strong>が、最終的な推奨の策定において最も関連性が高くなります。</li>
+  </ul>
+</div>
+
+<div class="ref-box">
+  <h4>参考文献</h4>
+  <ol>
+    <li>Guyatt GH, et al. Core GRADE 2: Imprecision. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 2: Imprecision Appendix. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 1: Overview. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. GRADE確実性文脈やめ閾値. 2025.</li>
+    <li>Guyatt GH, et al. Addressing challenges when the point estimate is close to null. J Clin Epidemiol. 2025.</li>
+  </ol>
+</div>
+
+<div class="source-references">
+  <h4>英文ソース</h4>
+  <div id="ref-1" class="source-ref-item">
+    <span class="ref-label">[1]</span>
+    <p>Core GRADE has abandoned the OIS approach and instead uses MID-based thresholds for assessing imprecision. This represents one of the most significant innovations in Core GRADE.</p>
+  </div>
+  <div id="ref-2" class="source-ref-item">
+    <span class="ref-label">[2]</span>
+    <p>Core GRADE emphasizes avoiding double counting between imprecision and inconsistency. When heterogeneity is the primary driver of wide confidence intervals, the issue should be addressed primarily under inconsistency rather than imprecision.</p>
+  </div>
+</div>

@@ -1,0 +1,204 @@
+
+<link rel="stylesheet" href="chapters/chapter_common.css">
+<div class="chapter-detail">
+
+<h3>Chapter 6：介入の確実性評価の原則</h3>
+
+<div class="concept-card">
+  <div class="card-label"><span class="icon">📖</span> Core Concept</div>
+  <p>GRADEアプローチの中核は、<strong>エビデンスの確実性（certainty of evidence）</strong>を体系的に評価することです。Core GRADEは、確実性評価のプロセスを5つのドメイン（バイアスリスク、不一致性、非直接性、不精確さ、出版バイアス）に基づいて構造化し、RCTエビデンスは「高」から出発し、観察研究は「低」から出発するという原則を維持しています。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
+</div>
+
+<hr class="section-divider">
+
+<h4>確実性の4段階</h4>
+<p>エビデンスの確実性は、真の効果がどの程度推定効果に近いかを示す信頼性のレベルであり、4つの段階に分類されます。</p>
+
+<div class="figure-container">
+  <div class="figure-title">Fig 6-1: エビデンスの確実性の4段階</div>
+  <div class="certainty-bar">
+    <div class="bar-item high">
+      <div class="bar-label">高（High）</div>
+      <div class="bar-desc">真の効果が推定効果に近いという強い確信がある</div>
+    </div>
+    <div class="bar-item moderate">
+      <div class="bar-label">中（Moderate）</div>
+      <div class="bar-desc">推定効果にある程度の確信があるが、真の効果が大きく異なる可能性がある</div>
+    </div>
+    <div class="bar-item low">
+      <div class="bar-label">低（Low）</div>
+      <div class="bar-desc">推定効果に対する確信は限定的で、真の効果が大きく異なるかもしれない</div>
+    </div>
+    <div class="bar-item very-low">
+      <div class="bar-label">非常に低（Very Low）</div>
+      <div class="bar-desc">推定効果にほとんど確信がなく、真の効果は大きく異なる可能性が高い</div>
+    </div>
+  </div>
+  <div class="figure-caption">確実性が高いほど、推奨を支持する信頼性が高まります。</div>
+</div>
+
+
+<h4>出発点の原則</h4>
+<p>研究デザインの種類によって、確実性評価の出発点が異なります。</p>
+<div class="grid-2">
+  <div class="grid-item green">
+    <h5><span class="icon">🔬</span>RCT（ランダム化比較試験）</h5>
+    <p>確実性の出発点は<strong>「高」</strong>です。ランダム化により交絡因子が均等に分布するため、因果推論の基盤が強固です。ここから5つのドメインに基づいてグレードダウンされる可能性があります。</p>
+  </div>
+  <div class="grid-item orange">
+    <h5><span class="icon">🩺</span>観察研究（Observational Studies）</h5>
+    <p>確実性の出発点は<strong>「低」</strong>です。交絡因子の影響を完全に排除できないため、因果推論の基盤が弱いです。ただし、大きな効果量など特定の条件でグレードアップされる可能性があります。</p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h3>グレードダウンの5つのドメイン</h3>
+<p>出発点から確実性を引き下げる可能性のある5つの要因を評価します。</p>
+
+<div class="process-diagram">
+  <div class="process-step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>バイアスリスク（Risk of Bias）</h5>
+      <p>研究のデザインや実施における系統的な偏りの可能性。ランダム化の不備、盲検化の欠如、不完全なアウトカムデータ、選択的報告などが含まれます。Core GRADEでは、<strong>ROBUST-RCTツール</strong>を用いた評価が推奨されています。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>不一致性（Inconsistency）</h5>
+      <p>研究間での効果推定値の異質性。I²統計量、予測区間、視覚的なフォレストプロットの検査により評価します。Core GRADEは、<strong>予測区間（prediction interval）</strong>を特に重視しています。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>非直接性（Indirectness）</h5>
+      <p>利用可能なエビデンスのPICOとターゲットPICOとの不一致。患者集団、介入、比較対照、アウトカムのいずれかが異なる場合に生じます。Core GRADEは、<strong>ターゲットPICOとソースPICOの明確な区別</strong>を強調しています。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h5>不精確さ（Imprecision）</h5>
+      <p>効果推定値の信頼区間が広く、臨床的に重要な閾値をまたぐ場合。Core GRADEは、<strong>MID（最小重要差）に基づく閾値</strong>を用いた評価を導入し、従来のOIS（最適情報量）アプローチを廃止しました。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h5>出版バイアス（Publication Bias）</h5>
+      <p>否定的な結果の研究が出版されにくいことによる系統的な偏り。ファンネルプロット等により評価しますが、Core GRADEは統計的検定の限界を認識し、<strong>総合的な判断</strong>を重視しています。</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h3>グレードアップの3つの条件</h3>
+<p>観察研究のエビデンスは、以下の3つの条件のいずれかが満たされる場合にグレードアップされる可能性があります。</p>
+
+<div class="figure-container">
+  <div class="figure-title">Table 6-1: 観察研究におけるグレードアップの条件</div>
+  <table class="styled-table">
+    <thead>
+      <tr><th>条件</th><th>説明</th><th>例</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="highlight-num">1</span> <strong>大きな効果量</strong></td>
+        <td>RR &gt; 2 または RR &lt; 0.5（1段階アップ）<br>RR &gt; 5 または RR &lt; 0.2（2段階アップ）</td>
+        <td>喫煙と肺がんの関連（RR ≈ 15-30）</td>
+      </tr>
+      <tr>
+        <td><span class="highlight-num">2</span> <strong>用量反応関係</strong></td>
+        <td>介入の用量が増加するにつれて効果が増大する明確なパターン</td>
+        <td>放射線量と甲状腺がんリスクの関係</td>
+      </tr>
+      <tr>
+        <td><span class="highlight-num">3</span> <strong>もっともらしい交絡因子</strong></td>
+        <td>残存する交絡因子が効果を過小評価する方向に作用している場合</td>
+        <td>健康な労働者効果（healthy worker effect）</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="section-divider">
+
+<h3>Core GRADEの革新 ― 「文脈化」から「閾値」へ</h3>
+
+<div class="callout warning">
+  <div class="callout-title">重要な変更点</div>
+  <p>Core GRADEは、従来の「文脈化アプローチ（contextualized approach）」を廃止し、<strong>閾値ベースのアプローチ</strong>を導入しました。従来のアプローチでは、「大きな効果」「中程度の効果」「小さな効果」という文脈に基づいて確実性を評価していましたが、Core GRADEでは<strong>MIDに基づく明確な閾値</strong>を設定し、信頼区間がその閾値をまたぐかどうかで判断します。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
+</div>
+
+
+<h4>確実性評価における「直感（Gestalt）」の役割</h4>
+
+<div class="summary-box">
+  <div class="summary-title"><span class="icon">💡</span> Guyatt先生の見解</div>
+  <p>確実性評価の最終段階では、5つのドメインの個別評価を統合して全体的な確実性を決定します。この統合プロセスにおいて、Core GRADEは<strong>「教育された直感（educated gestalt）」</strong>の役割を明確に認めています。これは恣意的な主観ではなく、構造化されたプロセスの上に成り立つ総合的判断です。</p>
+</div>
+
+<hr class="section-divider">
+
+<h3>確実性評価のプロセス全体像</h3>
+<p>Core GRADEにおける確実性評価の全体的な流れは、以下のステップで構成されます。</p>
+
+<div class="flowchart">
+    <div class="flow-node start">1. 出発点の決定<br><small>(RCT→高, 観察研究→低)</small></div>
+    <div class="flow-connector"></div>
+    <div class="flow-node process">2. グレードダウン評価<br><small>(5ドメインを評価、不精確さにMID閾値導入)</small></div>
+    <div class="flow-connector"></div>
+    <div class="flow-node process">3. グレードアップ検討<br><small>(大きな効果、用量反応、交絡因子)</small></div>
+    <div class="flow-connector"></div>
+    <div class="flow-node process">4. 全体的な確実性の決定<br><small>(教育された直感の役割を明示)</small></div>
+    <div class="flow-connector"></div>
+    <div class="flow-node end">5. 推奨への移行<br><small>(EtDフレームワークと閾値ベースの意思決定)</small></div>
+</div>
+
+
+<div class="success-card">
+  <div class="card-label">✅ Chapter 6のまとめ</div>
+  <ul class="icon-list">
+    <li><span class="icon">📊</span>確実性は<strong>4段階</strong>（高・中・低・非常に低）で評価される。</li>
+    <li><span class="icon">🏁</span>RCTは「高」、観察研究は「低」から出発する。</li>
+    <li><span class="icon">📉</span><strong>5つのドメイン</strong>（バイアスリスク、不一致性、非直接性、不精確さ、出版バイアス）でグレードダウンを評価。</li>
+    <li><span class="icon">📈</span><strong>3つの条件</strong>（大きな効果量、用量反応、交絡因子）でグレードアップの可能性。</li>
+    <li><span class="icon">🎯</span>Core GRADEは「文脈化」から<strong>「閾値ベース」</strong>のアプローチに移行。</li>
+    <li><span class="icon">🧠</span>確実性評価の統合において<strong>「教育された直感」</strong>の役割を明確に認めている。</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<div class="source-references">
+  <h4>参考文献</h4>
+  <div id="ref-1" class="source-ref-item">
+    <div class="ref-label">[1]</div>
+    <div class="ref-content">The certainty of evidence reflects the extent to which our confidence in an estimate of the effect is adequate to support a particular decision or recommendation.</div>
+  </div>
+  <div id="ref-2" class="source-ref-item">
+    <div class="ref-label">[2]</div>
+    <div class="ref-content">Core GRADE has moved away from the contextualized approach and instead uses threshold-based assessment. This represents a fundamental shift in how imprecision is evaluated.</div>
+  </div>
+  
+  <h5>関連文献一覧</h5>
+  <ol>
+    <li>Guyatt GH, et al. Core GRADE 1: Overview of the GRADE approach. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 2: Imprecision. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 3: Inconsistency. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 4: Risk of Bias. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 5: Indirectness. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
+    <li>Guyatt GH, et al. GRADE確実性文脈やめ閾値. 2025.</li>
+  </ol>
+</div>
+
+</div>
