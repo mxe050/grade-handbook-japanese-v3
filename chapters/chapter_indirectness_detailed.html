@@ -1,0 +1,450 @@
+
+<div class="chapter-content">
+
+<!-- ========== ヘッダー ========== -->
+<div class="chapter-header">
+  <div class="chapter-number">非直接性</div>
+  <h2 class="chapter-title">非直接性（Indirectness）の評価</h2>
+  <p class="chapter-subtitle">Core GRADE — エビデンスの適用可能性をどう評価するか</p>
+</div>
+
+<!-- ========== 導入 ========== -->
+<div class="concept-card" style="border-left-color: #3498db;">
+  <div class="concept-card-title">
+    <span class="concept-icon">📋</span> この章で学ぶこと
+  </div>
+  <div class="concept-card-body">
+    <p>非直接性（indirectness）とは、<strong>利用可能なエビデンスが、関心のあるPICO要素（集団、介入、比較対象、アウトカム）と異なる場合</strong>に生じる問題を指す。非直接性は、エビデンスの確実性を格下げする5つのドメインの1つであり、エビデンスの適用可能性（applicability）に直接関わる。本章では、非直接性の概念、評価方法、緩和策について体系的に解説する。</p>
+  </div>
+</div>
+
+<div class="original-english">
+  <strong>原文：</strong> "Indirectness refers to the degree to which the available evidence differs from the PICO elements of interest. It is one of the five domains that can lower the certainty of evidence in the GRADE framework." — GRADEpro Guideline Development Tool
+</div>
+
+<!-- ========== セクション1: 非直接性とは何か ========== -->
+<div class="section-divider">
+  <h3>1. 非直接性とは何か？</h3>
+</div>
+
+<p>GRADEフレームワークにおいて、非直接性は<strong>エビデンスの確実性を格下げする5つのドメイン</strong>の1つである。非直接性は、利用可能なエビデンスが関心のあるPICO要素と異なる場合に生じる。具体的には、以下の4つのPICO要素のいずれかにおいて不一致が生じうる。</p>
+
+<div class="comparison-table">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th style="width:20%;">PICO要素</th>
+        <th style="width:40%;">非直接性の例</th>
+        <th style="width:40%;">影響</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>集団（Population）</strong></td>
+        <td>成人を対象とした研究のエビデンスを小児に適用する場合</td>
+        <td>年齢、併存疾患、重症度などの違いにより、介入効果が異なる可能性がある</td>
+      </tr>
+      <tr>
+        <td><strong>介入（Intervention）</strong></td>
+        <td>研究で使用された介入が、関心のある介入と用量・投与方法・期間が異なる場合</td>
+        <td>介入の実施条件の違いにより、効果の大きさが変わる可能性がある</td>
+      </tr>
+      <tr>
+        <td><strong>比較対象（Comparator）</strong></td>
+        <td>プラセボとの比較研究を、標準治療との比較に適用する場合</td>
+        <td>比較対象の違いにより、相対効果が異なる可能性がある</td>
+      </tr>
+      <tr>
+        <td><strong>アウトカム（Outcome）</strong></td>
+        <td>患者に重要なアウトカムが直接測定されず、代理アウトカムに依存する場合</td>
+        <td>代理アウトカムと真のアウトカムの相関が不十分な場合、効果の推定が不正確になる</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="concept-card" style="border-left-color: #e74c3c;">
+  <div class="concept-card-title">
+    <span class="concept-icon">⚠</span> 非直接性と不一致性の違い
+  </div>
+  <div class="concept-card-body">
+    <p>非直接性と不一致性（inconsistency）は混同されやすいが、明確に区別される概念である。</p>
+    <div class="comparison-table">
+      <table class="styled-table">
+        <thead>
+          <tr><th>特徴</th><th>非直接性（Indirectness）</th><th>不一致性（Inconsistency）</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>定義</strong></td><td>エビデンスがPICO要素と異なること</td><td>研究間で結果に説明のつかないばらつきがあること</td></tr>
+          <tr><td><strong>評価対象</strong></td><td>エビデンスの適用可能性</td><td>研究結果の一貫性</td></tr>
+          <tr><td><strong>原因</strong></td><td>PICO要素の不一致</td><td>研究デザイン、集団、介入の異質性</td></tr>
+          <tr><td><strong>対処法</strong></td><td>より直接的なエビデンスの探索、感度分析</td><td>サブグループ分析、メタ回帰</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="key-point">
+  <strong>重要：</strong>非直接性は、すべての研究に何らかの程度で存在する。「直接的」「間接的」というラベルは、エビデンスが意思決定にとって十分に直接的であるかどうかについての判断を反映している。完全に直接的なエビデンスは存在しないが、非直接性が意思決定に実質的な影響を与えるかどうかが重要である。
+</div>
+
+<!-- ========== セクション2: 非直接性の評価方法 ========== -->
+<div class="section-divider">
+  <h3>2. 非直接性の評価方法：体系的アプローチ</h3>
+</div>
+
+<p>非直接性の評価は、以下の体系的なステップに従って行われる。</p>
+
+<div class="step-flow">
+  <div class="step-item">
+    <div class="step-number">1</div>
+    <div class="step-content">
+      <h4>ステップ1：閾値の数を決定する</h4>
+      <p>まず、エビデンスの確実性を評価するために使用する<strong>閾値の数</strong>を決定する。</p>
+      <ul>
+        <li><strong>1つの閾値</strong>：効果が特定の閾値の一方の側にあるかどうかに関心がある場合（例：介入の効果は少なくとも小さな利益か？）</li>
+        <li><strong>2つの閾値</strong>：効果が特定の範囲内にあるかどうかに関心がある場合（例：効果は些細、小さい、中程度、大きい利益のいずれか？）</li>
+      </ul>
+      <p>これらの閾値はコンセンサスまたは経験的エビデンスを通じて設定し、設定方法を透明に報告する。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-number">中</div>
+    <div class="step-content">
+      <h4>中間ステップ（二値アウトカムのみ）</h4>
+      <p>適切なベースラインリスクと相対効果またはメタ分析推定値から、<strong>信頼区間を含む絶対効果推定値</strong>を計算する。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-number">2</div>
+    <div class="step-content">
+      <h4>ステップ2：確実性評価の目標を決定する</h4>
+      <p>確実性評価の目標を特定する。これは通常、<strong>絶対効果の点推定値が位置する範囲</strong>に対応する。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-number">3</div>
+    <div class="step-content">
+      <h4>ステップ3：エビデンスを評価する</h4>
+      <p>エビデンス統合に含まれる個々の研究が、関心のあるPICO要素をどの程度反映しているかを評価する。</p>
+      <ul>
+        <li>非直接性の程度が異なる研究間で効果推定値を比較し、交互作用の可能性を評価する</li>
+        <li>非直接性の懸念は主に以下から生じる：(a) 介入と他のPICO要素間の交互作用、(b) ベースラインリスクの不確実性</li>
+        <li>これらの懸念を特定し、アウトカムレベルおよびPICO要素全体の判断を行い、透明性のために非直接性テーブルに記録する</li>
+      </ul>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-number">4</div>
+    <div class="step-content">
+      <h4>ステップ4：格下げの適切性を判断する</h4>
+      <p>非直接性の程度が異なる研究の結果が<strong>一致している</strong>（同じ範囲内にある）場合、格下げは適切でない可能性が高い。結果が<strong>一致していない</strong>場合、または<strong>ベースラインリスク推定値の確実性に懸念</strong>がある場合、懸念の深刻度に応じて1〜3段階の格下げを検討する。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== セクション3: 非直接性テーブル ========== -->
+<div class="section-divider">
+  <h3>3. 非直接性テーブル：透明性のある評価ツール</h3>
+</div>
+
+<p>非直接性の評価を体系的かつ透明に行うために、GRADEでは<strong>非直接性テーブル</strong>の使用を推奨している。このテーブルは、各PICO要素について個々の研究レベルおよびエビデンス全体レベルでの非直接性の判断を記録する。</p>
+
+<div class="concept-card" style="border-left-color: #2ecc71;">
+  <div class="concept-card-title">
+    <span class="concept-icon">🎯</span> 非直接性テーブルの構成
+  </div>
+  <div class="concept-card-body">
+    <p>非直接性テーブルは以下の要素で構成される：</p>
+    <ol>
+      <li><strong>個別研究レベルのテーブル</strong>：各研究について、各PICO要素の非直接性を評価する（図1参照）</li>
+      <li><strong>エビデンス全体レベルのテーブル</strong>：すべての研究にわたるPICO要素ごとの非直接性を要約する（図3参照）</li>
+    </ol>
+    <p>判断は以下の4段階で行われる：</p>
+    <div class="comparison-table">
+      <table class="styled-table">
+        <thead>
+          <tr><th>判断</th><th>色</th><th>意味</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>十分に直接的</strong></td><td style="background:#27ae60;color:white;">緑</td><td>エビデンスはPICO要素と十分に一致している</td></tr>
+          <tr><td><strong>おそらく十分に直接的</strong></td><td style="background:#f1c40f;color:black;">黄</td><td>軽微な不一致があるが、実質的な影響はない可能性が高い</td></tr>
+          <tr><td><strong>おそらく十分に直接的でない</strong></td><td style="background:#e67e22;color:white;">橙</td><td>中程度の不一致があり、効果推定に影響する可能性がある</td></tr>
+          <tr><td><strong>十分に直接的でない</strong></td><td style="background:#e74c3c;color:white;">赤</td><td>重大な不一致があり、効果推定に実質的な影響がある</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="key-point">
+  <strong>重要：</strong>PICO要素を要約する際、すべての研究がプール推定値に等しく寄与するわけではないことを認識することが重要である。<strong>統計的重みが大きい研究</strong>は、全体的な判断においてより大きな影響力を持つべきである。また、非直接性の懸念から当初含まれていた研究が、さらなる評価の結果、あまりにも間接的であると判断された場合、除外されることもある。
+</div>
+
+<!-- ========== セクション4: 交互作用・サブグループ効果による非直接性 ========== -->
+<div class="section-divider">
+  <h3>4. 交互作用またはサブグループ効果による非直接性</h3>
+</div>
+
+<p>非直接性を評価する主な方法は<strong>感度分析</strong>であり、統計的検定を用いた正式な方法と、フォレストプロットと関連する意思決定閾値の視覚的検査による非公式な方法がある。</p>
+
+<div class="concept-card" style="border-left-color: #9b59b6;">
+  <div class="concept-card-title">
+    <span class="concept-icon">🔍</span> 感度分析の指導原則
+  </div>
+  <div class="concept-card-body">
+    <p>指導原則は以下のとおりである：</p>
+    <ul>
+      <li><strong>格下げすべき場合</strong>：非直接性の程度が大きい研究と小さい研究で<strong>不一致な結果</strong>が得られた場合、確実性を格下げすべきである</li>
+      <li><strong>格下げ不要の場合</strong>：非直接性の程度が異なる研究間で推定効果が<strong>同じ範囲内</strong>にある場合、または一貫して関連する閾値の同じ側にある場合、非直接性はプール推定値に意味のある影響を与える可能性が低い</li>
+    </ul>
+  </div>
+</div>
+
+<div class="concept-card" style="border-left-color: #e74c3c;">
+  <div class="concept-card-title">
+    <span class="concept-icon">⚠</span> 直接的エビデンスと間接的エビデンスの一致性
+  </div>
+  <div class="concept-card-body">
+    <p>直接的エビデンスと間接的エビデンスの一致性を評価する際、以下の2つのシナリオを区別する：</p>
+    <div class="comparison-table">
+      <table class="styled-table">
+        <thead>
+          <tr><th>シナリオ</th><th>説明</th><th>対応</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>不一致</strong></td>
+            <td>直接的な試験は小さな利益を示唆し、間接的なエビデンスは中程度の利益を示す</td>
+            <td>非直接性による格下げを検討</td>
+          </tr>
+          <tr>
+            <td><strong>一致</strong></td>
+            <td>直接的な試験と間接的な試験の両方が実質的な効果なしを示す</td>
+            <td>非直接性による格下げは不要</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>すべての試験にはある程度の非直接性が存在する。「直接的」「間接的」というラベルは、エビデンスが意思決定にとって十分に直接的であるかどうかについての判断を反映している。</p>
+  </div>
+</div>
+
+<p>交互作用またはサブグループ効果による非直接性は、集団特性の違い、介入の実施方法、比較対象の性質、アウトカムの測定方法から生じうる。交互作用やサブグループ効果はしばしば仮説として提唱されるが、経験的エビデンスは比較的まれであることを示唆している。ほとんどの場合、効果推定値は異なる集団、介入方法、比較対象、アウトカム測定間で一貫している。</p>
+
+<div class="original-english">
+  <strong>原文：</strong> "The guiding principle is that certainty should be rated down when studies with greater and lesser degrees of indirectness yield discordant results. Conversely, if the estimated effects across varying levels of indirectness fall within the same range—or consistently remain on the same side of a relevant threshold—then indirectness is unlikely to have a meaningful impact on the pooled estimate."
+</div>
+
+<!-- ========== セクション5: ベースラインリスクによる非直接性 ========== -->
+<div class="section-divider">
+  <h3>5. ベースラインリスクによる非直接性</h3>
+</div>
+
+<p>ベースラインリスクによる非直接性は、<strong>集団の非直接性の特殊な形態</strong>である。これは通常、関心のある集団における真のベースラインリスクに不確実性がある場合に生じる。</p>
+
+<div class="concept-card" style="border-left-color: #f39c12;">
+  <div class="concept-card-title">
+    <span class="concept-icon">📊</span> ベースラインリスクの非直接性への対処法
+  </div>
+  <div class="concept-card-body">
+    <p>GRADEユーザーは、直ちに格下げするのではなく、より分析的なアプローチを採用することが推奨される：</p>
+    <ol>
+      <li><strong>外部ソースからのベースラインリスク推定</strong>：縦断研究などの外部ソースから、より代表的なベースラインリスクを推定する</li>
+      <li><strong>もっともらしいベースラインリスクの検討</strong>：異なるもっともらしいベースラインリスクを検討し、対応する絶対効果推定値が異なる効果サイズ範囲に入るかどうかを調べる</li>
+      <li><strong>リスク差のプロット</strong>：もっともらしいベースラインリスクの範囲にわたってリスク差をプロットし、絶対効果が主要な意思決定閾値を超えるかどうかを視覚的に評価する</li>
+    </ol>
+    <p>絶対効果が異なる範囲に入る場合は格下げが適切であり、同じ範囲内にとどまる場合は格下げは一般的に不要である。</p>
+  </div>
+</div>
+
+<!-- ========== セクション6: 各PICO要素の非直接性 ========== -->
+<div class="section-divider">
+  <h3>6. 各PICO要素における非直接性の詳細</h3>
+</div>
+
+<h4>6.1 集団の非直接性（Population indirectness）</h4>
+
+<p>集団の非直接性は、エビデンスの大部分が関心のある集団とは異なる集団から得られている場合に生じる。これには2つの主要な形態がある：</p>
+
+<div class="comparison-table">
+  <table class="styled-table">
+    <thead>
+      <tr><th style="width:30%;">形態</th><th style="width:35%;">説明</th><th style="width:35%;">緩和策</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>サブグループ効果による集団の非直接性</strong></td>
+        <td>含まれる研究の大部分が関心のある集団と異なる集団から得られており、交互作用により相対効果が異なる</td>
+        <td>関心のある集団を直接含む研究を優先する。関連する集団のサブグループ分析を実施し、効果推定値が一致するか評価する</td>
+      </tr>
+      <tr>
+        <td><strong>ベースラインリスクの不確実性による集団の非直接性</strong></td>
+        <td>含まれる研究のベースラインリスクが対象集団のベースラインリスクを代表していない懸念がある</td>
+        <td>観察研究のベースラインリスクデータを用いて絶対効果推定値を計算する。もっともらしいベースラインリスクを検討し、対応する絶対効果推定値が一致するか評価する</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>6.2 介入の非直接性（Intervention indirectness）</h4>
+
+<p>介入の非直接性は、エビデンスの大部分が関心のある介入とは異なる介入に関するものである場合に生じる。例えば、研究で使用された介入が「理想的すぎる」条件下で実施されている場合、実際の臨床現場での効果と異なる可能性がある。</p>
+
+<div class="concept-card" style="border-left-color: #3498db;">
+  <div class="concept-card-title">
+    <span class="concept-icon">💊</span> 介入の非直接性の緩和策
+  </div>
+  <div class="concept-card-body">
+    <ul>
+      <li>関心のある介入を評価する研究を優先する</li>
+      <li>追加のエビデンス（例：観察研究）を使用して、相対効果の違いを検証する</li>
+      <li>ランダム化試験の効果推定値と、介入がより直接的な実世界の設定で適用された非ランダム化研究の効果推定値を比較する</li>
+    </ul>
+  </div>
+</div>
+
+<h4>6.3 比較対象の非直接性（Comparator indirectness）</h4>
+
+<p>比較対象の非直接性は、介入がレビューまたはガイドライン質問で指定されたものとは異なる比較対象と比較されている場合に生じる。</p>
+
+<div class="concept-card" style="border-left-color: #e67e22;">
+  <div class="concept-card-title">
+    <span class="concept-icon">⚖</span> 比較対象の非直接性の緩和策
+  </div>
+  <div class="concept-card-body">
+    <ul>
+      <li>最も直接的な比較を優先する</li>
+      <li>異なる比較対象を用いた感度分析を実施し、絶対推定値が一致するか評価する</li>
+    </ul>
+  </div>
+</div>
+
+<h4>6.4 アウトカムの非直接性（Outcome indirectness）</h4>
+
+<p>アウトカムの非直接性は、人々にとって最も重要なアウトカムが直接測定されず、<strong>代理アウトカム</strong>、最適でない方法で測定されたアウトカム、または追跡期間が短すぎるアウトカムに依存する場合に生じる。</p>
+
+<div class="concept-card" style="border-left-color: #e74c3c;">
+  <div class="concept-card-title">
+    <span class="concept-icon">📏</span> アウトカムの非直接性の緩和策
+  </div>
+  <div class="concept-card-body">
+    <ul>
+      <li>関心のあるアウトカムを測定する研究に焦点を当てる</li>
+      <li>追加のエビデンス（例：観察研究）を使用して、より正確な測定によるアウトカムをモデル化する</li>
+      <li>追跡期間が短い場合、より長い追跡期間を持つ非ランダム化研究のエビデンスを使用して、延長された期間にわたるアウトカムをモデル化する</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== セクション7: 非直接性の緩和策 ========== -->
+<div class="section-divider">
+  <h3>7. 非直接性の緩和策</h3>
+</div>
+
+<p>PICO要素のいずれかに実質的な非直接性が疑われる場合、GRADEユーザーはこれらの懸念に対処するために<strong>追加のエビデンスソース</strong>を組み込むことができる。</p>
+
+<div class="comparison-table">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th style="width:20%;">サブドメイン</th>
+        <th style="width:40%;">一般的な非直接性の原因</th>
+        <th style="width:40%;">緩和策</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>集団の非直接性（サブグループ効果）</strong></td>
+        <td>エビデンスの大部分が関心のある集団と異なる集団から得られており、交互作用により相対効果が異なる</td>
+        <td>関心のある集団を直接含む研究を優先する。関連する集団のサブグループ分析を実施し、効果推定値が一致するか評価する</td>
+      </tr>
+      <tr>
+        <td><strong>集団の非直接性（ベースラインリスクの不確実性）</strong></td>
+        <td>含まれる研究のベースラインリスクが対象集団のベースラインリスクを代表していない懸念がある</td>
+        <td>観察研究のベースラインリスクデータを用いて絶対効果推定値を計算する。もっともらしいベースラインリスクを検討し、対応する絶対効果推定値が一致するか評価する</td>
+      </tr>
+      <tr>
+        <td><strong>介入の非直接性</strong></td>
+        <td>エビデンスの大部分が関心のある介入と異なる介入に関するものであり、相対効果が異なる可能性が高い</td>
+        <td>関心のある介入を評価する研究を優先する。追加のエビデンス（例：観察研究）を使用して相対効果の違いを検証する</td>
+      </tr>
+      <tr>
+        <td><strong>比較対象の非直接性</strong></td>
+        <td>介入がレビューまたはガイドライン質問で指定されたものとは異なる比較対象と比較されている</td>
+        <td>最も直接的な比較を優先する。異なる比較対象を用いた感度分析を実施し、絶対推定値が一致するか評価する</td>
+      </tr>
+      <tr>
+        <td><strong>アウトカムの非直接性</strong></td>
+        <td>人々にとって最も重要なアウトカムが直接測定されず、代理アウトカムや最適でない測定に依存している</td>
+        <td>関心のあるアウトカムを測定する研究に焦点を当てる。追加のエビデンス（例：観察研究）を使用してより正確な測定によるアウトカムをモデル化する</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="original-english">
+  <strong>原文：</strong> "When substantial indirectness is suspected in any of the PICO components, GRADE users may incorporate additional sources of evidence to address these concerns."
+</div>
+
+<!-- ========== セクション8: 間接比較 ========== -->
+<div class="section-divider">
+  <h3>8. 間接比較（Indirect comparisons）</h3>
+</div>
+
+<p>間接比較は、2つの介入が直接比較されていないが、共通の比較対象を介して間接的に比較される場合に生じる。例えば、介入Aと介入Bがそれぞれプラセボと比較されている場合、AとBの相対効果を間接的に推定することができる。</p>
+
+<div class="concept-card" style="border-left-color: #8e44ad;">
+  <div class="concept-card-title">
+    <span class="concept-icon">🔗</span> 間接比較の注意点
+  </div>
+  <div class="concept-card-body">
+    <p>間接比較は、直接比較が利用できない場合に有用であるが、以下の制限がある：</p>
+    <ul>
+      <li><strong>推移性の仮定</strong>：間接比較の妥当性は、共通の比較対象に対する各介入の効果が、研究間で比較可能であるという仮定に依存する</li>
+      <li><strong>非直接性の追加</strong>：間接比較は、直接比較と比べて追加の非直接性を導入する可能性がある</li>
+      <li><strong>確実性の格下げ</strong>：間接比較に基づくエビデンスは、通常、非直接性のために確実性が格下げされる</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== セクション9: 実践的アドバイス ========== -->
+<div class="section-divider">
+  <h3>9. 実践的アドバイス</h3>
+</div>
+
+<div class="concept-card" style="border-left-color: #2ecc71;">
+  <div class="concept-card-title">
+    <span class="concept-icon">💡</span> 非直接性評価の実践的ポイント
+  </div>
+  <div class="concept-card-body">
+    <ol>
+      <li><strong>サブグループ効果による非直接性</strong>は、メタ分析で観察される不一致性を説明するのに役立つ場合がある。例えば、リスク比などの相対指標を用いて介入効果を評価するシステマティックレビュー著者は、非直接性の程度が大きい研究と小さい研究で異なる結果が得られるかどうかを探索することができる</li>
+      <li><strong>意思決定閾値</strong>は通常、絶対効果について定義される（介入の実際の影響をより良く反映するため）が、相対効果指標に容易に逆変換でき、リスク比などの相対推定値と併用できる</li>
+      <li><strong>陽性の感度分析</strong>（すなわち、より間接的な研究とより直接的な研究の間で不一致な結果を検出すること）は、信頼できるサブグループ効果の存在を確認するために必要であるが、十分ではない。そのような発見は偽陽性を表す可能性がある</li>
+      <li><strong>ICEMANなどのツール</strong>は、サブグループ仮説の信頼性を評価し、観察されたサブグループ効果がもっともらしく、エビデンスの確実性を格下げすることが正当化されるかどうかを判断するのに役立つ</li>
+    </ol>
+  </div>
+</div>
+
+<div class="key-point">
+  <strong>まとめ：</strong>非直接性の評価は、エビデンスの適用可能性を判断する上で不可欠なプロセスである。各PICO要素について体系的に評価し、非直接性テーブルを用いて透明性を確保することが重要である。非直接性が疑われる場合は、感度分析や追加のエビデンスソースを活用して、その影響を評価・緩和することが推奨される。
+</div>
+
+<!-- ========== 参考文献 ========== -->
+<div class="section-divider">
+  <h3>参考文献</h3>
+</div>
+
+<div class="references">
+  <ol>
+    <li>Schünemann HJ, Higgins JPT, Vist GE, et al. Completing 'Summary of findings' tables and grading the certainty of the evidence. In: Higgins JPT, Thomas J, Chandler J, et al., editors. Cochrane Handbook for Systematic Reviews of Interventions. 2nd Edition. Chichester (UK): John Wiley & Sons, 2019.</li>
+    <li>Guyatt GH, Oxman AD, Kunz R, et al. GRADE guidelines: 8. Rating the quality of evidence—indirectness. J Clin Epidemiol. 2011;64(12):1303-1310.</li>
+    <li>Schünemann HJ, Cuello C, Akl EA, et al. GRADE guidelines: 18. How ROBINS-I and other tools to assess risk of bias in nonrandomized studies should be used to rate the certainty of a body of evidence. J Clin Epidemiol. 2019;111:105-114.</li>
+    <li>Iorio A, Spencer FA, Falavigna M, et al. Use of GRADE for assessment of evidence about prognosis: rating confidence in estimates of event rates in broad categories of patients. BMJ. 2015;350:h870.</li>
+    <li>Schandelmaier S, Briel M, Varadhan R, et al. Development of the Instrument to assess the Credibility of Effect Modification Analyses (ICEMAN) in randomized controlled trials and meta-analyses. CMAJ. 2020;192(32):E901-E906.</li>
+  </ol>
+</div>
+
+</div>
