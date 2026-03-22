@@ -1,20 +1,20 @@
-
-<link rel="stylesheet" href="chapter_common.css">
-<div class="chapter-detail">
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="chapter_common.css" />
+</head><body><div class="chapter-detail">
 
   <h3>Chapter 13：非ランダム化試験の統合（Integrating NRSI with RCTs）</h3>
 
   <div class="concept-card">
-    <div class="card-label"><span class="icon">&#x1f4d6;</span> コアコンセプト</div>
+    <div class="card-label"><span class="icon">📖</span> コアコンセプト</div>
     <p>非ランダム化介入研究（Non-Randomized Studies of Interventions, NRSI）は、RCTが実施困難な場合や、RCTのエビデンスが不十分な場合に重要な役割を果たします。しかし、NRSIには<strong>交絡（confounding）</strong>という根本的な問題があり、その統合には特別な注意が必要です。<a class="source-inline-ref" href="#ref-1">[1]</a> GRADE Guidance 44は、NRSIとRCTのエビデンスを統合するための4ステップフレームワークを提供しています。</p>
   </div>
 
-  <hr class="section-divider">
+  <hr class="section-divider" />
 
   <h4>NRSIの根本的な問題：交絡（Confounding）</h4>
 
   <div class="danger-card">
-    <div class="card-label">&#x274c; なぜNRSIは問題なのか</div>
+    <div class="card-label">❌ なぜNRSIは問題なのか</div>
     <p>ランダム化試験では、ランダム割付により<strong>既知・未知の交絡因子が群間で均等に分布</strong>します。一方、NRSIではランダム割付がないため、治療群と対照群の間に<strong>系統的な差異</strong>が存在する可能性があります。この差異が効果推定値を歪め、介入の真の効果を正確に推定することを困難にします。</p>
   </div>
 
@@ -26,25 +26,25 @@
 
   <div class="grid-2">
     <div class="grid-item red">
-      <h5><span class="icon">&#x1f500;</span> 交絡因子の混入</h5>
+      <h5><span class="icon">🔀</span> 交絡因子の混入</h5>
       <p>未調整データには、介入の効果だけでなく、<strong>年齢、重症度、併存疾患などの交絡因子の影響</strong>が含まれています。例えば、より重症の患者が特定の治療を受ける傾向がある場合、未調整データではその治療の効果が過小評価されます。</p>
     </div>
     <div class="grid-item red">
-      <h5><span class="icon">&#x1f4a5;</span> 見かけ上の精度の高さ</h5>
+      <h5><span class="icon">💥</span> 見かけ上の精度の高さ</h5>
       <p>NRSIは一般的にRCTよりも<strong>大きなサンプルサイズ</strong>を持つため、未調整データを使用すると信頼区間が狭くなり、<strong>見かけ上の精度が高く</strong>なります。しかし、この「精度」は交絡の影響を含んだ偽りの精度です。</p>
     </div>
     <div class="grid-item red">
-      <h5><span class="icon">&#x1f6a8;</span> RCTの結果を圧倒</h5>
+      <h5><span class="icon">🚨</span> RCTの結果を圧倒</h5>
       <p>メタアナリシスでは、サンプルサイズが大きい研究により大きな重みが与えられます。NRSIの未調整データを含めると、<strong>大規模NRSIの交絡を含んだ結果がRCTの結果を圧倒</strong>し、全体の効果推定値を歪めます。</p>
     </div>
     <div class="grid-item red">
-      <h5><span class="icon">&#x1f4ab;</span> 誤った確実性の印象</h5>
+      <h5><span class="icon">💫</span> 誤った確実性の印象</h5>
       <p>狭い信頼区間は高い確実性の印象を与えますが、実際には<strong>系統的な偏りにより効果推定値自体が歪んでいる</strong>可能性があります。これは「精度は高いが正確ではない」状態です。</p>
     </div>
   </div>
 
   <div class="concept-card">
-    <div class="card-label"><span class="icon">&#x1f4a1;</span> 具体例で理解する：新しい降圧薬Aの効果</div>
+    <div class="card-label"><span class="icon">💡</span> 具体例で理解する：新しい降圧薬Aの効果</div>
     <p>観察研究で、薬Aを服用した群（n=5,000）と服用しなかった群（n=5,000）を比較。薬Aを服用した群では、より重症の高血圧患者が多く含まれていた（交絡因子）。</p>
     <div class="figure-container">
         <div class="figure-title">Fig 13.1: 交絡の調整による効果推定値の変化</div>
@@ -61,19 +61,19 @@
     </div>
   </div>
 
-  <hr class="section-divider">
+  <hr class="section-divider" />
 
   <h4>調整済み効果推定値の使用 ― 正しいアプローチ</h4>
 
   <div class="success-card">
-    <div class="card-label"><span class="icon">&#x2705;</span> 推奨されるアプローチ</div>
+    <div class="card-label"><span class="icon">✅</span> 推奨されるアプローチ</div>
     <p>NRSIをメタアナリシスに統合する際は、<strong>各研究で交絡因子を調整した効果推定値（adjusted effect estimates）</strong>を使用すべきです。これにより、交絡の影響を可能な限り除去した上で、研究間の効果を比較・統合できます。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
   </div>
 
   <h4>調整方法の違いがもたらす困難</h4>
 
   <div class="warning-card">
-    <div class="card-label">&#x26a0;&#xfe0f; 実践上の課題</div>
+    <div class="card-label">⚠️ 実践上の課題</div>
     <p>しかし、調整済み効果推定値の使用にも重要な課題があります。<strong>各研究で交絡因子の調整方法が異なる</strong>ため、統合の妥当性に疑問が生じます。</p>
   </div>
 
@@ -114,7 +114,7 @@
     <div class="figure-caption">各研究が異なる交絡因子のセットを調整し、異なる統計手法を使用している場合、<strong>これらの研究を単純に統合することの妥当性</strong>は慎重に検討する必要があります。</div>
   </div>
 
-  <hr class="section-divider">
+  <hr class="section-divider" />
 
   <h3>GRADE Guidance 44の4ステップフレームワーク</h3>
 
@@ -126,37 +126,33 @@
         <p>RCTとNRSIのエビデンスを<strong>それぞれ独立に</strong>評価します。各デザインの強みと限界を考慮し、効果推定値の確実性を個別に判断します。NRSIの場合、交絡の調整方法と残余交絡の可能性を特に注意深く評価します。</p>
       </div>
     </div>
-    <div class="process-arrow
-">&darr;</div>
+    <div class="process-arrow&#10;">↓</div>
     <div class="process-step">
       <div class="highlight-num">2</div>
       <div class="process-body">
         <h5>一致性の評価（Coherence Assessment）</h5>
         <p>RCTとNRSIの効果推定値が<strong>一致しているかどうか</strong>を評価します。効果の方向性と大きさの一致性を確認し、不一致がある場合はその原因を探索します。</p>
         <div class="comparison-flow">
-          <div class="comparison-item green"><h6>一致</h6><p>NRSIがRCTの結果を支持 &rarr; 統合の根拠が強まる</p></div>
-          <div class="comparison-arrow
-">&harr;</div>
+          <div class="comparison-item green"><h6>一致</h6><p>NRSIがRCTの結果を支持 → 統合の根拠が強まる</p></div>
+          <div class="comparison-arrow&#10;">↔</div>
           <div class="comparison-item red"><h6>不一致</h6><p>交絡、集団の違い、介入の違いなどの原因を探索</p></div>
         </div>
       </div>
     </div>
-    <div class="process-arrow
-">&darr;</div>
+    <div class="process-arrow&#10;">↓</div>
     <div class="process-step">
       <div class="highlight-num">3</div>
       <div class="process-body">
         <h5>統合の判断（Integration Decision）</h5>
         <p>RCTとNRSIを<strong>統合するかどうか</strong>を判断します。統合の選択肢は以下の通りです：</p>
         <ul class="icon-list">
-          <li><span class="li-icon">&#x1f4c8;</span><strong>統計的統合（メタアナリシス）</strong>：効果推定値が一致し、調整方法が類似している場合</li>
-          <li><span class="li-icon">&#x1f4dd;</span><strong>ナラティブ統合</strong>：統計的統合が不適切な場合、定性的に統合</li>
-          <li><span class="li-icon">&#x1f500;</span><strong>別々に提示</strong>：不一致が大きい場合、それぞれのエビデンスを独立に提示</li>
+          <li><span class="li-icon">📈</span><strong>統計的統合（メタアナリシス）</strong>：効果推定値が一致し、調整方法が類似している場合</li>
+          <li><span class="li-icon">📝</span><strong>ナラティブ統合</strong>：統計的統合が不適切な場合、定性的に統合</li>
+          <li><span class="li-icon">🔀</span><strong>別々に提示</strong>：不一致が大きい場合、それぞれのエビデンスを独立に提示</li>
         </ul>
       </div>
     </div>
-    <div class="process-arrow
-">&darr;</div>
+    <div class="process-arrow&#10;">↓</div>
     <div class="process-step">
       <div class="highlight-num">4</div>
       <div class="process-body">
@@ -166,38 +162,38 @@
     </div>
   </div>
 
-  <hr class="section-divider">
+  <hr class="section-divider" />
 
   <h4>NRSIが特に有用な状況</h4>
 
   <div class="grid-3">
     <div class="grid-item blue">
-      <h5><span class="icon">&#x1f6ab;</span> RCTが実施困難</h5>
+      <h5><span class="icon">🚫</span> RCTが実施困難</h5>
       <p>倫理的な理由（例：喫煙の害）、実施上の理由（例：まれな疾患）、または費用の理由でRCTが実施困難な場合。</p>
     </div>
     <div class="grid-item blue">
-      <h5><span class="icon">&#x1f4c5;</span> 長期的なアウトカム</h5>
+      <h5><span class="icon">📅</span> 長期的なアウトカム</h5>
       <p>RCTの追跡期間では捕捉できない長期的な効果や害（例：薬剤の長期副作用）を評価する場合。</p>
     </div>
     <div class="grid-item blue">
-      <h5><span class="icon">&#x1f30d;</span> 実世界での有効性</h5>
+      <h5><span class="icon">🌍</span> 実世界での有効性</h5>
       <p>RCTの厳格な条件下ではなく、実際の臨床実践における介入の有効性（effectiveness）を評価する場合。</p>
     </div>
   </div>
 
   <div class="summary-box">
-    <div class="summary-title">&#x2705; Chapter 13のまとめ</div>
+    <div class="summary-title">✅ Chapter 13のまとめ</div>
     <ul class="icon-list">
-      <li><span class="li-icon">&#x26a0;&#xfe0f;</span>NRSIの最大の問題は<strong>交絡（confounding）</strong>であり、ランダム化の欠如により群間に系統的な差異が生じる。</li>
-      <li><span class="li-icon">&#x274c;</span><strong>未調整のイベント数・症例数でメタアナリシスを行うことは極めて危険</strong> ― 交絡の影響が混入し、見かけ上の精度が高い偽りの結果を生む。</li>
-      <li><span class="li-icon">&#x1f504;</span>NRSIの統合には<strong>調整済み効果推定値</strong>を使用すべきだが、各研究の調整方法が異なるため統合の妥当性に課題がある。</li>
-      <li><span class="li-icon">&#x1f4d0;</span>GRADE Guidance 44の<strong>4ステップフレームワーク</strong>（個別評価→一致性評価→統合判断→確実性評価）に従う。</li>
-      <li><span class="li-icon">&#x1f4a1;</span>NRSIはRCTが実施困難な場合、長期アウトカム、実世界での有効性評価に特に有用。</li>
+      <li><span class="li-icon">⚠️</span>NRSIの最大の問題は<strong>交絡（confounding）</strong>であり、ランダム化の欠如により群間に系統的な差異が生じる。</li>
+      <li><span class="li-icon">❌</span><strong>未調整のイベント数・症例数でメタアナリシスを行うことは極めて危険</strong> ― 交絡の影響が混入し、見かけ上の精度が高い偽りの結果を生む。</li>
+      <li><span class="li-icon">🔄</span>NRSIの統合には<strong>調整済み効果推定値</strong>を使用すべきだが、各研究の調整方法が異なるため統合の妥当性に課題がある。</li>
+      <li><span class="li-icon">📐</span>GRADE Guidance 44の<strong>4ステップフレームワーク</strong>（個別評価→一致性評価→統合判断→確実性評価）に従う。</li>
+      <li><span class="li-icon">💡</span>NRSIはRCTが実施困難な場合、長期アウトカム、実世界での有効性評価に特に有用。</li>
     </ul>
   </div>
 
   <div class="source-references">
-    <h4><span class="icon">&#x1f4da;</span> 英語原文出典</h4>
+    <h4><span class="icon">📚</span> 英語原文出典</h4>
     <div class="source-ref-item" id="ref-1">
       <div class="ref-label">[1]</div>
       <div class="ref-body">NRSI are subject to confounding — the fundamental problem that treatment groups may differ systematically in ways that affect outcomes, making it difficult to attribute observed effects to the intervention itself.</div>
@@ -219,3 +215,4 @@
   </div>
 
 </div>
+</body></html>

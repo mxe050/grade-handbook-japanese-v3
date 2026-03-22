@@ -1,6 +1,6 @@
-
-<link rel="stylesheet" href="chapters/chapter_common.css">
-<div class="chapter-detail">
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="chapters/chapter_common.css" />
+</head><body><div class="chapter-detail">
 
 <h3>Chapter 15：閾値とユーティリティ（Thresholds and Utility）</h3>
 
@@ -9,26 +9,26 @@
   <p>閾値（Threshold）は、<strong>介入の効果が「臨床的に重要」と判断される境界値</strong>です。Core GRADEは、不精確さの評価とEtDフレームワークの両方で閾値を中心的な概念として位置づけています。閾値の計算には<strong>ユーティリティ（効用値）</strong>が用いられますが、ユーティリティの概念には重要な注意点があります。</p>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>閾値の種類</h4>
 
 <div class="grid-3">
   <div class="grid-item blue">
-    <h5>利益の閾値<br>（Benefit Threshold）</h5>
+    <h5>利益の閾値<br />（Benefit Threshold）</h5>
     <p>介入の効果が<strong>臨床的に重要な利益</strong>と判断される最小の効果量。MID（最小重要差）に基づいて設定されます。</p>
   </div>
   <div class="grid-item red">
-    <h5>害の閾値<br>（Harm Threshold）</h5>
+    <h5>害の閾値<br />（Harm Threshold）</h5>
     <p>介入の副作用が<strong>臨床的に重要な害</strong>と判断される最小の効果量。害のMIDに基づいて設定されます。</p>
   </div>
   <div class="grid-item purple">
-    <h5>正味の閾値<br>（Net Threshold）</h5>
+    <h5>正味の閾値<br />（Net Threshold）</h5>
     <p>利益と害を<strong>ユーティリティで重み付け</strong>して統合した閾値。EtDフレームワークで使用されます。</p>
   </div>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>ユーティリティ（効用値）の基本概念</h4>
 
@@ -45,7 +45,7 @@
   </table>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>ユーティリティと重要度の違い ― 最も重要な区別</h4>
 
@@ -57,8 +57,8 @@
 <div class="comparison-flow">
     <div class="comparison-item">
         <h5>ユーティリティ（0-1スケール）</h5>
-        <p>健康状態の<strong>「良さ」</strong>を表す。<br>
-        <span class="highlight-num green">1</span> = 完全な健康（最も良い状態）<br>
+        <p>健康状態の<strong>「良さ」</strong>を表す。<br />
+        <span class="highlight-num green">1</span> = 完全な健康（最も良い状態）<br />
         <span class="highlight-num red">0</span> = 死亡（最も悪い状態）</p>
         <div class="callout warning">
             <p><strong>問題点</strong>：ユーティリティが高い（1に近い）ほど「良い状態」だが、それは「重要でない」ことを意味しない。</p>
@@ -67,8 +67,8 @@
     <div class="comparison-arrow">⇔</div>
     <div class="comparison-item">
         <h5>アウトカムの重要度</h5>
-        <p>アウトカムが患者にとって<strong>どれだけ重要か</strong>を表す。<br>
-        死亡（ユーティリティ = 0）→ <strong>極めて重要</strong><br>
+        <p>アウトカムが患者にとって<strong>どれだけ重要か</strong>を表す。<br />
+        死亡（ユーティリティ = 0）→ <strong>極めて重要</strong><br />
         完全な健康（ユーティリティ = 1）→ <strong>極めて重要</strong></p>
         <div class="callout success">
             <p><strong>核心</strong>：0でも1でも、どちらも患者にとって極めて重要。</p>
@@ -80,7 +80,7 @@
   <p><strong>死亡（ユーティリティ = 0）も完全な健康（ユーティリティ = 1）も、どちらも患者にとって極めて重要です。</strong>ユーティリティのスケールは「重要度」を表しているのではなく、「健康状態の良さ」を表しています。したがって、ユーティリティのスケールと重要度のスケールは<strong>本質的に異なるもの</strong>です。</p>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>ユーティリティ = 1 でそのまま計算すると閾値がおかしくなる問題</h4>
 
@@ -124,7 +124,7 @@
     </div>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>Guyatt先生とSchünemann先生のアプローチの違い</h4>
 
@@ -135,8 +135,8 @@
   <tbody>
     <tr>
       <td><strong>基本的なアプローチ</strong></td>
-      <td>パネル調査ベース<br>（Panel Survey Approach）</td>
-      <td>ユーティリティベース<br>（Utility-Based Approach）</td>
+      <td>パネル調査ベース<br />（Panel Survey Approach）</td>
+      <td>ユーティリティベース<br />（Utility-Based Approach）</td>
     </tr>
     <tr>
       <td><strong>閾値の設定方法</strong></td>
@@ -145,28 +145,28 @@
     </tr>
     <tr>
       <td><strong>ユーティリティの使用</strong></td>
-      <td>参考情報として使用<br>直接的な計算には使わない</td>
-      <td>閾値計算の中心的な要素<br>不効用ベースの計算式を使用</td>
+      <td>参考情報として使用<br />直接的な計算には使わない</td>
+      <td>閾値計算の中心的な要素<br />不効用ベースの計算式を使用</td>
     </tr>
     <tr>
       <td><strong>直感の役割</strong></td>
-      <td><strong>大きい</strong><br>パネルの「教育された直感」で判断</td>
-      <td><strong>限定的</strong><br>数学的な計算に基づく</td>
+      <td><strong>大きい</strong><br />パネルの「教育された直感」で判断</td>
+      <td><strong>限定的</strong><br />数学的な計算に基づく</td>
     </tr>
     <tr>
       <td><strong>利点</strong></td>
-      <td>柔軟性が高い<br>臨床的な文脈を直接反映</td>
-      <td>再現性が高い<br>計算過程が明示的</td>
+      <td>柔軟性が高い<br />臨床的な文脈を直接反映</td>
+      <td>再現性が高い<br />計算過程が明示的</td>
     </tr>
     <tr>
       <td><strong>限界</strong></td>
-      <td>パネル構成に依存<br>主観性が入る余地がある</td>
-      <td>ユーティリティ値の不確実性<br>ユーティリティ = 1の問題</td>
+      <td>パネル構成に依存<br />主観性が入る余地がある</td>
+      <td>ユーティリティ値の不確実性<br />ユーティリティ = 1の問題</td>
     </tr>
   </tbody>
 </table>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>閾値の計算方法</h4>
 
@@ -230,7 +230,7 @@
     </div>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>閾値計算ツール</h4>
 
@@ -246,7 +246,7 @@
   </div>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>実践上の推奨</h4>
 
@@ -294,3 +294,4 @@
 </div>
 
 </div>
+</body></html>

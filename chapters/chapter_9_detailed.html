@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="chapter_common.css">
-<div class="chapter-detail">
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="chapter_common.css" />
+</head><body><div class="chapter-detail">
 
 <h3>Chapter 9：不精確さ（Imprecision）</h3>
 
@@ -8,7 +9,7 @@
   <p>不精確さ（Imprecision）は、<strong>効果推定値の信頼区間が広く、臨床的に重要な閾値をまたぐ場合</strong>にグレードダウンの対象となるドメインです。Core GRADEは、従来のOIS（Optimal Information Size）アプローチを廃止し、<strong>MID（最小重要差）に基づく閾値アプローチ</strong>を導入しました。これはCore GRADEにおける最も重要な革新の一つです。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 </div>
 
@@ -40,7 +41,7 @@
   <p>Core GRADEでは、不精確さの評価軸が「サンプルサイズは十分か？」から「<strong>効果の推定値は、臨床的に意味のある差（MID）の閾値をまたいでいるか？</strong>」へと根本的にシフトしました。これにより、より文脈に即した、臨床的に意味のある判断が可能になります。</p>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>MID閾値に基づく不精確さの評価プロセス</h4>
 
@@ -70,7 +71,7 @@
   </div>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>不精確さの判断基準 ― 4つのシナリオ</h4>
 
@@ -117,7 +118,7 @@
   </div>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 <h4>アウトカムの種類と不精確さ</h4>
 
 <div class="grid-2">
@@ -137,7 +138,7 @@
   </div>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <h4>不精確さと不一致性の関係</h4>
 
@@ -146,13 +147,13 @@
   <p>不精確さと不一致性は密接に関連しています。異質性が大きいことで信頼区間が広がっている場合、その問題は主に「不一致性」のドメインで評価し、不精確さで再度グレードダウンする<strong>二重カウントを避ける</strong>べきです。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 <h4>具体例：COVID-19患者に対するニルマトレルビルの不精確さ評価</h4>
 
 <div class="concept-card">
   <div class="card-label"><span class="icon">💡</span> 具体例</div>
-  <p><strong>アウトカム</strong>：入院または死亡（二値アウトカム）<br>
-  <strong>効果推定値</strong>：RR = 0.57（95% CI: 0.36 - 0.89）<br>
+  <p><strong>アウトカム</strong>：入院または死亡（二値アウトカム）<br />
+  <strong>効果推定値</strong>：RR = 0.57（95% CI: 0.36 - 0.89）<br />
   <strong>MID</strong>：RR = 0.75（パネル調査で設定）</p>
   <div class="callout orange">
     <p><strong>判断</strong>：CIの上限（0.89）がMID（0.75）を超えているため、CIがMID閾値をまたいでいると判断し、<strong>1段階グレードダウン</strong>します。</p>
@@ -160,7 +161,7 @@
   <p class="small-text">※絶対効果で評価した場合も同様の結論に至ることが多いです。例えば、高リスク群（ベースラインリスク10%）では1000人あたり43人の入院減少（CI: 11-64）となり、MIDが25人の場合、CIの下限（11）がMIDを下回るため、やはり1段階グレードダウンとなります。</p>
 </div>
 
-<hr class="section-divider">
+<hr class="section-divider" />
 
 <div class="success-card">
   <div class="card-label">✅ Chapter 9のまとめ</div>
@@ -197,3 +198,4 @@
     <p>Core GRADE emphasizes avoiding double counting between imprecision and inconsistency. When heterogeneity is the primary driver of wide confidence intervals, the issue should be addressed primarily under inconsistency rather than imprecision.</p>
   </div>
 </div>
+</body></html>
