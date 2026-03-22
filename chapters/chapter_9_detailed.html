@@ -1,199 +1,387 @@
-<link rel="stylesheet" href="chapter_common.css">
 <div class="chapter-detail">
 
-<h3>Chapter 9：不精確さ（Imprecision）</h3>
+<h3>Chapter 4：介入に関する質問の作成 ― PICO の精密な定式化</h3>
 
-<div class="concept-card">
-  <div class="card-label"><span class="icon">🎯</span> Core Concept</div>
-  <p>不精確さ（Imprecision）は、<strong>効果推定値の信頼区間が広く、臨床的に重要な閾値をまたぐ場合</strong>にグレードダウンの対象となるドメインです。Core GRADEは、従来のOIS（Optimal Information Size）アプローチを廃止し、<strong>MID（最小重要差）に基づく閾値アプローチ</strong>を導入しました。これはCore GRADEにおける最も重要な革新の一つです。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
+<div class="summary-box">
+  <p>GRADEのすべての適用は、<strong>PICO形式</strong>（Population, Intervention, Comparison, Outcome）を用いて臨床的質問を特定することから始まります。Core GRADEは、PICOの各要素を<strong>可能な限り具体的に、曖昧さを避けて明確に指定すること</strong>を強調しています。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
 </div>
 
 <hr class="section-divider">
 
-</div>
+<h4>Core GRADEにおけるPICO ― 「1つの介入 vs 1つの比較対照」</h4>
+<p>Core GRADEの最も重要な特徴の一つは、<strong>単一の介入と単一の比較対照の比較に焦点を当てる</strong>ことです。これは、GRADEが当初から目指してきた「厳密な簡潔さ」という概念を具現化したものです。GRADEが複雑化し、ユーザーにとって扱いにくくなっているという問題への対応として導入されました。</p>
 
-<h4>従来のアプローチ vs Core GRADEアプローチ</h4>
-
-<div class="grid-2">
-  <div class="grid-item gray">
-    <h5>従来のGRADE（OISアプローチ）</h5>
-    <ul>
-      <li><span class="icon">🤔</span> <strong>基本的な考え方:</strong> 十分な情報量（サンプルサイズ）があるか</li>
-      <li><span class="icon">📏</span> <strong>閾値の設定:</strong> RR 0.75 / 1.25（任意の基準）</li>
-      <li><span class="icon">CONTEXT</span> <strong>文脈化:</strong> 大・中・小の効果という文脈</li>
-      <li><span class="icon">0️⃣</span> <strong>null効果の扱い:</strong> CIがnullをまたぐかどうか</li>
-    </ul>
-  </div>
-  <div class="grid-item green">
-    <h5>Core GRADE（閾値アプローチ）</h5>
-    <ul>
-      <li><span class="icon">🎯</span> <strong>基本的な考え方:</strong> 信頼区間がMID閾値をまたぐか</li>
-      <li><span class="icon">📈</span> <strong>閾値の設定:</strong> <strong>MIDに基づく臨床的に意味のある閾値</strong></li>
-      <li><span class="icon">CONTEXT</span> <strong>文脈化:</strong> <strong>廃止</strong>。閾値のみで判断</li>
-      <li><span class="icon">0️⃣</span> <strong>null効果の扱い:</strong> CIがMID閾値をまたぐかどうか（nullは閾値ではない）</li>
-    </ul>
-  </div>
-</div>
-
-<div class="key-message">
-  <div class="key-title">アプローチの核心的変更</div>
-  <p>Core GRADEでは、不精確さの評価軸が「サンプルサイズは十分か？」から「<strong>効果の推定値は、臨床的に意味のある差（MID）の閾値をまたいでいるか？</strong>」へと根本的にシフトしました。これにより、より文脈に即した、臨床的に意味のある判断が可能になります。</p>
-</div>
-
-<hr class="section-divider">
-
-<h4>MID閾値に基づく不精確さの評価プロセス</h4>
-
+<h4>PICO の 4 つの要素</h4>
 <div class="process-diagram">
   <div class="process-step">
-    <div class="highlight-num">1</div>
-    <div class="process-content">
-      <h5>MIDの特定</h5>
-      <p>各アウトカムについて、<strong>利益のためのMID</strong>と<strong>害のためのMID</strong>を事前に特定します。MIDには不確実性が伴うため、「もっともらしいMIDの範囲」として幅を持たせることが推奨されます。</p>
-    </div>
+    <div class="process-label">P</div>
+    <h5>Patient / Population（患者集団）</h5>
+    <p>対象となる患者集団を精密に定義します。単に「COVID-19患者」ではなく、「軽症から中等症のCOVID-19を発症し、重症化リスク因子を有する成人患者」のように詳細化します。WHOの敗血症ガイドラインでは、敗血症の定義が研究間で異なるという問題に直面し、最新のコンセンサス定義を採用することで対処しました。</p>
   </div>
-  <div class="process-arrow">➔</div>
+  <div class="process-arrow">→</div>
   <div class="process-step">
-    <div class="highlight-num">2</div>
-    <div class="process-content">
-      <h5>閾値の設定</h5>
-      <p>MIDに基づき、効果の大きさを判断する閾値を設定します。Core GRADEでは、<strong>null効果は閾値ではありません</strong>。閾値は臨床的に重要な利益または害の境界を示します。</p>
-    </div>
+    <div class="process-label">I</div>
+    <h5>Intervention（介入）</h5>
+    <p>評価したい介入を具体的に定義します。用量、投与経路、期間などを明確にします。例：「ニルマトレルビル・リトナビルの経口投与」のように、投与経路や用量も含めて定義します。</p>
   </div>
-  <div class="process-arrow">➔</div>
+  <div class="process-arrow">→</div>
   <div class="process-step">
-    <div class="highlight-num">3</div>
-    <div class="process-content">
-      <h5>信頼区間と閾値の比較</h5>
-      <p>95%信頼区間（CI）が設定したMID閾値をまたぐかを確認します。CIが閾値をまたぐ場合、不精確さによるグレードダウンを検討します。</p>
-    </div>
+    <div class="process-label">C</div>
+    <h5>Comparison（比較対照）</h5>
+    <p>介入と比較する対照を明確にします。Core GRADEは<strong>単一の介入と単一の比較対照の比較</strong>に焦点を当てます。複数の比較対照がある場合は、それぞれについて個別のPICO質問を立てます。</p>
+  </div>
+  <div class="process-arrow">→</div>
+  <div class="process-step">
+    <div class="process-label">O</div>
+    <h5>Outcome（アウトカム）</h5>
+    <p>患者にとって重要なアウトカムを選択します。9点スケールを用いて重要度を評価します（7-9点：極めて重要、4-6点：重要だが極めて重要ではない、1-3点：重要ではない）。代理アウトカムではなく、患者が直接経験するアウトカムを優先します。</p>
   </div>
 </div>
 
 <hr class="section-divider">
 
-<h4>不精確さの判断基準 ― 4つのシナリオ</h4>
+<h4>相対効果と絶対効果の区別 ― Core GRADEの重要な強調点</h4>
+<p>Core GRADEは、PICOの精密化において<strong>相対効果と絶対効果の明確な区別</strong>を特に重視しています。これは、過去のGRADEユーザーがしばしば混同してきた領域です。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
+
+<table class="styled-table">
+  <thead>
+    <tr><th>項目</th><th>相対効果（Relative Effect）</th><th>絶対効果（Absolute Effect）</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>定義</strong></td><td>リスク比（RR）、オッズ比（OR）など</td><td>リスク差（RD）、1000人あたりのイベント数の差など</td></tr>
+    <tr><td><strong>サブグループ間の変動</strong></td><td>真の違いは<strong>稀</strong></td><td>ベースラインリスクの違いにより<strong>頻繁に変動</strong></td></tr>
+    <tr><td><strong>臨床的意思決定への関連</strong></td><td>間接的</td><td><strong>最も直接的に関連</strong></td></tr>
+    <tr><td><strong>例</strong></td><td>RR = 0.75（25%のリスク減少）</td><td>高リスク群：1000人あたり50人減少<br>低リスク群：1000人あたり5人減少</td></tr>
+  </tbody>
+</table>
+
+<div class="key-message">
+  <div class="key-title">重要なポイント</div>
+  <p>相対効果が同じ（例：RR = 0.75）であっても、ベースラインリスクが異なれば絶対効果は大きく異なります。<strong>患者ケアの決定には、絶対効果が最も関連します。</strong>高リスク群では臨床的に重要な差が生じるが、低リスク群では重要でない場合があります。WHOのCOVID-19ガイドラインでは、この原則に基づき、高リスク患者には強い推奨、低リスク患者には弱い推奨が出されました。</p>
+</div>
+
+<hr class="section-divider">
+
+<h4>サブグループ効果への3つのシナリオ</h4>
+<p>PICO質問を構築する際、治療効果が患者サブグループ間で異なる可能性を考慮する必要があります。Core GRADEは、この問題に対処するために<strong>3つのシナリオ</strong>を明確に提示しています。</p>
+
+<div class="flowchart">
+  <div class="flow-node" style="background-color: #e0f2fe;">
+    <h5>シナリオA：差がないと疑う理由がない</h5>
+    <p>特定のサブグループにおける効果の違いを仮定する根拠がありません。PICO質問は広範な集団を対象とすることができます。これが最も一般的なシナリオです。</p>
+  </div>
+  <div class="flow-connector">↓</div>
+  <div class="flow-node" style="background-color: #fef9c3;">
+    <h5>シナリオB：差があると確信している</h5>
+    <p>特定のサブグループ間で介入の効果が異なるという強力なエビデンスや理論的根拠があります。PICO質問は、これらの特定のサブグループを明確に区別して策定されるべきです。</p>
+  </div>
+  <div class="flow-connector">↓</div>
+  <div class="flow-node" style="background-color: #f3e8ff;">
+    <h5>シナリオC：差を疑う十分な理由はあるが不確実</h5>
+    <p>サブグループ効果の可能性を示す兆候はあるものの、その存在や方向性について確信が持てません。全体のPICOで評価しつつ、サブグループ分析を計画します。<strong>相対効果と絶対効果の両方の仮説</strong>を明確に立てます。</p>
+  </div>
+</div>
+
+<p>相対効果の違いについては、信頼性を損なわないよう、<strong>仮説を立てるサブグループ効果の数を制限し（理想的には3以下）</strong>、その方向性を特定すべきです。対照的に、絶対効果はベースラインリスクの違いにより患者グループ間で頻繁に変動し、患者ケアの決定に最も関連します。</p>
+
+<hr class="section-divider">
+
+<h4>ターゲットPICO と ソースPICO</h4>
+<div class="comparison-flow">
+    <div class="comparison-item">
+        <h5>ターゲットPICO</h5>
+        <p>臨床的質問として設定した理想的なPICO。ガイドラインパネルが答えたい質問を反映します。</p>
+    </div>
+    <div class="comparison-arrow">≠</div>
+    <div class="comparison-item">
+        <h5>ソースPICO</h5>
+        <p>実際に利用可能な研究のPICO。ターゲットPICOと完全に一致しない場合が多く、その不一致の程度が<strong>非直接性（indirectness）</strong>の評価対象となります。</p>
+    </div>
+</div>
+
+<hr class="section-divider">
+
+<h4>null効果に近い場合の扱い</h4>
+<p>Core GRADEのガイダンスでは、介入の効果がnull効果（効果なし）に近い場合に生じる特定の課題に対処するための詳細な考察が提供されています。</p>
 
 <div class="grid-2">
-  <div class="grid-item green">
-    <h5>シナリオ1：グレードダウンなし</h5>
-    <p>CIの上限と下限の両方がMID閾値の同じ側にあり、閾値をまたがない。効果の方向性と大きさについて十分な精度があると判断します。</p>
-    <div class="spectrum-bar">
-      <div class="spectrum-ci" style="left: 5%; width: 30%;"><div class="spectrum-pe" style="left: 60%;"></div></div>
-      <div class="spectrum-threshold" style="left: 50%;"></div>
-      <span class="spectrum-label" style="left: 50%;">MID</span>
-    </div>
-  </div>
-  <div class="grid-item orange">
-    <h5>シナリオ2：1段階グレードダウン</h5>
-    <p>CIが1つのMID閾値をまたぐ。効果が臨床的に重要かどうかについて不確実性があるため、1段階グレードダウンします。</p>
-    <div class="spectrum-bar">
-      <div class="spectrum-ci" style="left: 30%; width: 40%;"><div class="spectrum-pe" style="left: 40%;"></div></div>
-      <div class="spectrum-threshold" style="left: 50%;"></div>
-      <span class="spectrum-label" style="left: 50%;">MID</span>
-    </div>
+  <div class="grid-item red">
+      <h5><span class="highlight-num">1</span> 課題：確実性評価の誤解</h5>
+      <p>点推定値がnull効果に非常に近い場合、「非null効果」の確実性を評価し続けると、実際には効果がほとんどないという正しい推論と矛盾します。</p>
   </div>
   <div class="grid-item red">
-    <h5>シナリオ3：2段階グレードダウン</h5>
-    <p>CIが利益と害の両方のMID閾値をまたぐ。効果が利益をもたらすか害をもたらすかさえ不確実なため、2段階グレードダウンします。</p>
-    <div class="spectrum-bar">
-      <div class="spectrum-ci" style="left: 10%; width: 80%;"><div class="spectrum-pe" style="left: 50%;"></div></div>
-      <div class="spectrum-threshold" style="left: 25%; background: #16a34a;"></div>
-      <span class="spectrum-label" style="left: 25%;">MID(益)</span>
-      <div class="spectrum-threshold" style="left: 75%;"></div>
-      <span class="spectrum-label" style="left: 75%;">MID(害)</span>
+      <h5><span class="highlight-num">2</span> 課題：不精確さの不適切な評価</h5>
+      <p>CIが狭いにもかかわらず、形式的にnullを横断しているために不精確と判断されるという矛盾が生じます。</p>
+  </div>
+</div>
+
+<div class="callout">
+  <div class="callout-title">解決策：確実性評価のターゲットの修正</div>
+  <p>確実性評価のターゲットを「非null効果」から<strong>「ほとんど効果がないか、全く効果がない」</strong>に修正します。これは、<strong>最小重要差（MID）</strong>という概念を導入することで実現されます。</p>
+</div>
+
+<div class="step-flow">
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>MIDの範囲を推定する</h5>
+      <p>利益のためのMIDと害のためのMIDの範囲を推定し、「ほとんど効果がないか、全く効果がない」という範囲を設定します。MIDには不確実性が伴うため、最も大きいMIDから最も小さいMIDまでの「もっともらしいMIDの範囲」を考慮します。</p>
     </div>
   </div>
-  <div class="grid-item purple">
-    <h5>シナリオ4：null効果に近い場合</h5>
-    <p>点推定値がnull効果に近く、CIが両方のMID閾値の内側にある場合、「ほとんど効果がない」と結論付け、グレードダウンしません。</p>
-    <div class="spectrum-bar">
-      <div class="spectrum-ci" style="left: 35%; width: 30%;"><div class="spectrum-pe" style="left: 50%;"></div></div>
-      <div class="spectrum-threshold" style="left: 25%; background: #16a34a;"></div>
-      <span class="spectrum-label" style="left: 25%;">MID(益)</span>
-      <div class="spectrum-threshold" style="left: 75%;"></div>
-      <span class="spectrum-label" style="left: 75%;">MID(害)</span>
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>点推定値とMIDの比較</h5>
+      <p><strong>点推定値がMIDより明らかに大きい場合</strong>：引き続き「非null効果」の確実性を評価。<br><strong>点推定値がMIDより明らかに小さい場合</strong>：ターゲットを「ほとんど効果がないか、全く効果がない」に修正。<br><strong>MIDの不確実性の範囲内にある場合</strong>：レビュー著者の判断に委ねられます。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>ターゲット修正後の不精確さの評価</h5>
+      <p>CIが利益のためのMIDと害のためのMIDという2つの閾値のいずれかと重なるかどうかを判断します。CIが重要な効果を含む場合、不精確さのためにグレードダウンします。</p>
     </div>
   </div>
 </div>
 
 <hr class="section-divider">
-<h4>アウトカムの種類と不精確さ</h4>
 
-<div class="grid-2">
-  <div class="grid-item green">
-    <h5>二値アウトカム</h5>
-    <p>相対効果（RR）と絶対効果（RD）の両方で評価しますが、特に<strong>絶対効果の不精確さ</strong>が推奨策定において最も重要です。</p>
-    <ul class="icon-list">
-      <li><span class="icon">📊</span> ベースラインリスクが異なると、同じRRでも絶対効果の不精確さは変わります。</li>
-    </ul>
-  </div>
-  <div class="grid-item purple">
-    <h5>連続アウトカム</h5>
-    <p>平均差（MD）または標準化平均差（SMD）の信頼区間とMID閾値を比較します。</p>
-    <ul class="icon-list">
-      <li><span class="icon">📏</span> SMDの場合、一般的に<strong>0.5 SD</strong>がMIDの目安とされますが、アウトカム固有のMIDを優先します。</li>
-    </ul>
-  </div>
-</div>
-
-<hr class="section-divider">
-
-<h4>不精確さと不一致性の関係</h4>
-
-<div class="warning-card">
-  <div class="card-label">⚠️ 二重カウントの回避</div>
-  <p>不精確さと不一致性は密接に関連しています。異質性が大きいことで信頼区間が広がっている場合、その問題は主に「不一致性」のドメインで評価し、不精確さで再度グレードダウンする<strong>二重カウントを避ける</strong>べきです。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
-</div>
-
-<hr class="section-divider">
-<h4>具体例：COVID-19患者に対するニルマトレルビルの不精確さ評価</h4>
+<h4>間接的なエビデンスの活用</h4>
+<p>直接的なエビデンスの確実性が「低」または「非常に低」と予想される場合、Core GRADEは<strong>間接的なエビデンスのための特定のPICO</strong>を策定し、事前に準備することを推奨しています。</p>
 
 <div class="concept-card">
-  <div class="card-label"><span class="icon">💡</span> 具体例</div>
-  <p><strong>アウトカム</strong>：入院または死亡（二値アウトカム）<br>
-  <strong>効果推定値</strong>：RR = 0.57（95% CI: 0.36 - 0.89）<br>
-  <strong>MID</strong>：RR = 0.75（パネル調査で設定）</p>
-  <div class="callout orange">
-    <p><strong>判断</strong>：CIの上限（0.89）がMID（0.75）を超えているため、CIがMID閾値をまたいでいると判断し、<strong>1段階グレードダウン</strong>します。</p>
-  </div>
-  <p class="small-text">※絶対効果で評価した場合も同様の結論に至ることが多いです。例えば、高リスク群（ベースラインリスク10%）では1000人あたり43人の入院減少（CI: 11-64）となり、MIDが25人の場合、CIの下限（11）がMIDを下回るため、やはり1段階グレードダウンとなります。</p>
+  <div class="card-label"><span class="icon">💡</span> 具体例：COVID-19パンデミック初期のコルチコステロイド</div>
+  <p>COVID-19パンデミック初期には、重症COVID-19患者へのコルチコステロイド投与に関するRCTエビデンスが不足していました。ガイドライン作成者は、類似の臨床像を呈する<strong>急性呼吸窮迫症候群（ARDS）患者</strong>を対象としたRCTからのエビデンスを検索しました。非直接性による制限はあったものの、ARDS患者におけるコルチコステロイドの利益に関する確実性の高いエビデンスは、重症COVID-19患者への使用に対して条件付き推奨を出すのに十分であると判断されました。</p>
 </div>
+
+<p>間接的なエビデンスを対象とした検索から得られるエビデンスは、ほぼ例外なく非直接性のためにグレードダウンされます。対照的に、直接的なエビデンスの検索を通じて特定された研究に見られるPICOの非直接性の程度は、エビデンスの確実性をグレードダウンすることを正当化するほどのものであることは滅多にありません。</p>
+
+<hr class="section-divider">
+
+<h4>選択的アウトカム報告の2つの形式</h4>
+<p>Core GRADEは、選択的アウトカム報告の評価において、<strong>2つの異なる形式のバイアス</strong>を明確に区別しています。</p>
+
+<table class="styled-table">
+  <thead>
+    <tr><th>形式</th><th>内容</th><th>分類</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>出版バイアスの一種</strong></td>
+      <td>研究者が測定はしたが報告しなかったアウトカム</td>
+      <td>出版バイアス（Publication Bias）</td>
+    </tr>
+    <tr>
+      <td><strong>個々の研究における選択的報告</strong></td>
+      <td>報告はされたが、複数の可能な効果推定値（異なる時点、測定方法、解析アプローチなど）の中から選択されたアウトカム</td>
+      <td>バイアスリスク（Risk of Bias）</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="section-divider">
+
+<h4>GRADE専門家の関与</h4>
+<div class="purple-card">
+  <div class="card-label">実践的なアドバイス</div>
+  <p>Core GRADEは、PICOの設定プロセスにおいて<strong>GRADE専門家を関与させること</strong>を推奨しています。広範な質問を詳細な構造化された質問に変換する「ステアリンググループ」の活用が効果的です。特に以下の点でGRADE専門家の関与が重要です。</p>
+  <ul class="icon-list">
+    <li><span class="icon">🎯</span>対象集団の精密な定義の支援</li>
+    <li><span class="icon">📊</span>相対効果と絶対効果の仮説の明確化</li>
+    <li><span class="icon">🔬</span>サブグループ分析の計画</li>
+    <li><span class="icon">⚖️</span>アウトカムの重要度評価の構造化</li>
+    <li><span class="icon">📏</span>MIDの特定と閾値設定</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<h4>具体例：COVID-19患者に対する抗ウイルス薬のPICO</h4>
+<table class="styled-table">
+  <thead>
+    <tr><th>要素</th><th>具体的な定義</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>P（患者集団）</strong></td>
+      <td>軽症から中等症のCOVID-19を発症し、重症化リスク因子（高齢、基礎疾患、免疫不全）を有する成人患者</td>
+    </tr>
+    <tr>
+      <td><strong>I（介入）</strong></td>
+      <td>ニルマトレルビル・リトナビルの経口投与</td>
+    </tr>
+    <tr>
+      <td><strong>C（比較対照）</strong></td>
+      <td>プラセボまたは標準的な対症療法</td>
+    </tr>
+    <tr>
+      <td><strong>O（アウトカム）</strong></td>
+      <td>
+        <ul class="icon-list" style="padding-left: 0; margin-bottom: 0;">
+            <li><span class="icon">🔴</span><strong>極めて重要</strong>：全死亡率、入院または重症化</li>
+            <li><span class="icon">🟡</span><strong>重要</strong>：症状の持続期間、有害事象</li>
+            <li><span class="icon">⚪️</span><strong>重要ではない</strong>：臨床的に意味のない検査値の変化</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <hr class="section-divider">
 
 <div class="success-card">
-  <div class="card-label">✅ Chapter 9のまとめ</div>
+  <div class="card-label">✅ Chapter 4のまとめ</div>
   <ul class="icon-list">
-    <li><span class="icon">🎯</span> Core GRADEは従来のOISアプローチを廃止し、<strong>MID閾値ベースのアプローチ</strong>を導入しました。</li>
-    <li><span class="icon">🚫</span> <strong>null効果は閾値ではありません</strong>。臨床的に意味のあるMIDを使用します。</li>
-    <li><span class="icon">📉</span> CIが閾値をまたぐ数に応じて、<strong>0, 1, または2段階</strong>のグレードダウンを行います。</li>
-    <li><span class="icon">🔄</span> null効果に近い場合は、確実性評価のターゲットを「ほとんど効果がない」に修正します。
-</li>
-    <li><span class="icon">⚠️</span> 不精確さと不一致性の<strong>二重カウントを避ける</strong>ことが重要です。</li>
-    <li><span class="icon">📈</span> <strong>絶対効果の不精確さ</strong>が、最終的な推奨の策定において最も関連性が高くなります。</li>
+    <li><span class="icon">📌</span>GRADEのすべての適用は<strong>PICO形式</strong>による質問の定式化から始まる。Core GRADEは「1つの介入 vs 1つの比較対照」に焦点を当てる。</li>
+    <li><span class="icon">📌</span><strong>相対効果と絶対効果の区別</strong>が極めて重要。患者ケアの決定には絶対効果が最も関連する。</li>
+    <li><span class="icon">📌</span>サブグループ効果について<strong>3つのシナリオ</strong>を事前に検討する。仮説を立てるサブグループ効果の数は理想的には3以下に制限する。</li>
+    <li><span class="icon">📌</span><strong>ターゲットPICOとソースPICO</strong>の不一致は非直接性として評価される。</li>
+    <li><span class="icon">📌</span>null効果に近い場合は、確実性評価のターゲットを<strong>「ほとんど効果がないか、全く効果がない」</strong>に修正することを検討する。</li>
+    <li><span class="icon">📌</span>直接的なエビデンスが不足する場合は、<strong>間接的なエビデンスのためのPICO</strong>を事前に策定する。</li>
+    <li><span class="icon">📌</span>GRADE専門家の関与とステアリンググループの活用が推奨される。</li>
   </ul>
 </div>
 
 <div class="ref-box">
   <h4>参考文献</h4>
   <ol>
-    <li>Guyatt GH, et al. Core GRADE 2: Imprecision. BMJ. 2025.</li>
-    <li>Guyatt GH, et al. Core GRADE 2: Imprecision Appendix. BMJ. 2025.</li>
-    <li>Guyatt GH, et al. Core GRADE 1: Overview. BMJ. 2025.</li>
-    <li>Guyatt GH, et al. GRADE確実性文脈やめ閾値. 2025.</li>
-    <li>Guyatt GH, et al. Addressing challenges when the point estimate is close to null. J Clin Epidemiol. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 0: Introduction. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 1: Overview of the GRADE approach to rating the certainty of evidence and developing recommendations. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 5: Indirectness. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
+    <li>Guyatt GH, et al. Addressing challenges in certainty of evidence assessment when the point estimate is close to null. J Clin Epidemiol. 2025.</li>
+    <li>Guyatt GH, Oxman AD, Kunz R, et al. GRADE guidelines: 2. Framing the question and deciding on important outcomes. J Clin Epidemiol. 2011;64(4):395-400.</li>
   </ol>
 </div>
 
 <div class="source-references">
   <h4>英文ソース</h4>
-  <div id="ref-1" class="source-ref-item">
-    <span class="ref-label">[1]</span>
-    <p>Core GRADE has abandoned the OIS approach and instead uses MID-based thresholds for assessing imprecision. This represents one of the most significant innovations in Core GRADE.</p>
+  <div class="source-ref-item" id="ref-1">
+    <div class="ref-label">[1]</div>
+    <p>In the past, GRADE users have often lacked precision in how they specify their target PICO. The careful, explicit, and transparent specification of the target PICO represents a key aspect of Core GRADE.</p>
   </div>
-  <div id="ref-2" class="source-ref-item">
-    <span class="ref-label">[2]</span>
-    <p>Core GRADE emphasizes avoiding double counting between imprecision and inconsistency. When heterogeneity is the primary driver of wide confidence intervals, the issue should be addressed primarily under inconsistency rather than imprecision.</p>
+  <div class="source-ref-item" id="ref-2">
+    <div class="ref-label">[2]</div>
+    <p>Core GRADE users will further refine the clinical question, considering the possibility that treatment effects differ across population, intervention, or outcome characteristics. In the past, GRADE users have often shown confusion between relative and absolute effects.</p>
   </div>
+</div>
+
+
+
+<hr class="section-divider">
+<div class="pdf-reference-section" style="margin-top:30px;">
+<h3 style="color:#1a56db;border-bottom:2px solid #1a56db;padding-bottom:8px;">&#x1F4C4; 原文PDF参照</h3>
+<p style="color:#666;font-size:0.9em;margin-bottom:20px;">以下は本チャプターの元となったCore GRADE論文の原文ページです。フローチャートや図表を原文のまま確認できます。</p>
+<details style="margin:15px 0;">
+<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG2 IMPRECISION (7 pages)</summary>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 7</div>
+<img src="images/cg2_imprecision_p01.png" alt="cg2_imprecision page 1" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 7</div>
+<img src="images/cg2_imprecision_p02.png" alt="cg2_imprecision page 2" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 7</div>
+<img src="images/cg2_imprecision_p03.png" alt="cg2_imprecision page 3" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 7</div>
+<img src="images/cg2_imprecision_p04.png" alt="cg2_imprecision page 4" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 7</div>
+<img src="images/cg2_imprecision_p05.png" alt="cg2_imprecision page 5" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 7</div>
+<img src="images/cg2_imprecision_p06.png" alt="cg2_imprecision page 6" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 7</div>
+<img src="images/cg2_imprecision_p07.png" alt="cg2_imprecision page 7" style="width:100%;display:block;" loading="lazy">
+</div>
+</details>
+<details style="margin:15px 0;">
+<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG2 IMPRECISION APPENDIX (19 pages)</summary>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 19</div>
+<img src="images/cg2_imprecision_appendix_p01.png" alt="cg2_imprecision_appendix page 1" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 19</div>
+<img src="images/cg2_imprecision_appendix_p02.png" alt="cg2_imprecision_appendix page 2" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 19</div>
+<img src="images/cg2_imprecision_appendix_p03.png" alt="cg2_imprecision_appendix page 3" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 19</div>
+<img src="images/cg2_imprecision_appendix_p04.png" alt="cg2_imprecision_appendix page 4" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 19</div>
+<img src="images/cg2_imprecision_appendix_p05.png" alt="cg2_imprecision_appendix page 5" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 19</div>
+<img src="images/cg2_imprecision_appendix_p06.png" alt="cg2_imprecision_appendix page 6" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 19</div>
+<img src="images/cg2_imprecision_appendix_p07.png" alt="cg2_imprecision_appendix page 7" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 8 / 19</div>
+<img src="images/cg2_imprecision_appendix_p08.png" alt="cg2_imprecision_appendix page 8" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 9 / 19</div>
+<img src="images/cg2_imprecision_appendix_p09.png" alt="cg2_imprecision_appendix page 9" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 10 / 19</div>
+<img src="images/cg2_imprecision_appendix_p10.png" alt="cg2_imprecision_appendix page 10" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 11 / 19</div>
+<img src="images/cg2_imprecision_appendix_p11.png" alt="cg2_imprecision_appendix page 11" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 12 / 19</div>
+<img src="images/cg2_imprecision_appendix_p12.png" alt="cg2_imprecision_appendix page 12" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 13 / 19</div>
+<img src="images/cg2_imprecision_appendix_p13.png" alt="cg2_imprecision_appendix page 13" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 14 / 19</div>
+<img src="images/cg2_imprecision_appendix_p14.png" alt="cg2_imprecision_appendix page 14" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 15 / 19</div>
+<img src="images/cg2_imprecision_appendix_p15.png" alt="cg2_imprecision_appendix page 15" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 16 / 19</div>
+<img src="images/cg2_imprecision_appendix_p16.png" alt="cg2_imprecision_appendix page 16" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 17 / 19</div>
+<img src="images/cg2_imprecision_appendix_p17.png" alt="cg2_imprecision_appendix page 17" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 18 / 19</div>
+<img src="images/cg2_imprecision_appendix_p18.png" alt="cg2_imprecision_appendix page 18" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 19 / 19</div>
+<img src="images/cg2_imprecision_appendix_p19.png" alt="cg2_imprecision_appendix page 19" style="width:100%;display:block;" loading="lazy">
+</div>
+</details>
+</div>
+
 </div>

@@ -1,141 +1,366 @@
 
+<link rel="stylesheet" href="chapters/chapter_common.css">
 <div class="chapter-detail">
 
-  <h3>Chapter 11：Evidence-to-Decision（EtD）フレームワーク入門</h3>
+<h3>Chapter 6：介入の確実性評価の原則</h3>
 
-  <div class="concept-card">
-    <div class="card-label"><span class="icon">📖</span> Core Concept</div>
-    <p>Evidence-to-Decision（EtD）フレームワークは、<strong>エビデンスの確実性評価から推奨の策定へと移行するための構造化されたプロセス</strong>です。Core GRADEは、EtDフレームワークを大幅に簡素化し、<strong>5つの基準</strong>に基づく意思決定プロセスを提示しています。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
-  </div>
+<div class="concept-card">
+  <div class="card-label"><span class="icon">📖</span> Core Concept</div>
+  <p>GRADEアプローチの中核は、<strong>エビデンスの確実性（certainty of evidence）</strong>を体系的に評価することです。Core GRADEは、確実性評価のプロセスを5つのドメイン（バイアスリスク、不一致性、非直接性、不精確さ、出版バイアス）に基づいて構造化し、RCTエビデンスは「高」から出発し、観察研究は「低」から出発するという原則を維持しています。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
+</div>
 
-  <hr class="section-divider">
+<hr class="section-divider">
 
-  <h4>Core GRADE EtDフレームワークの5つの基準</h4>
-  <p>Core GRADEアプローチでは、以下の5つの主要な基準を考慮して、エビデンスから推奨へと進みます。このプロセスは、システマティックかつ透明性の高い意思決定を促します。</p>
+<h4>確実性の4段階</h4>
+<p>エビデンスの確実性は、真の効果がどの程度推定効果に近いかを示す信頼性のレベルであり、4つの段階に分類されます。</p>
 
-  <div class="process-diagram">
-    <div class="process-step">
-      <div class="highlight-num">1</div>
-      <h5>効果の大きさ</h5>
-      <p>介入の望ましい効果と望ましくない効果の大きさを評価します。絶対効果で表現し、臨床的に意味のある最小差（MID）と比較します。効果は「大きい」「中程度」「小さい」「ほとんどなし」の4段階で評価されます。</p>
+<div class="figure-container">
+  <div class="figure-title">Fig 6-1: エビデンスの確実性の4段階</div>
+  <div class="certainty-bar">
+    <div class="bar-item high">
+      <div class="bar-label">高（High）</div>
+      <div class="bar-desc">真の効果が推定効果に近いという強い確信がある</div>
     </div>
-    <div class="process-arrow">→</div>
-    <div class="process-step">
-      <div class="highlight-num">2</div>
-      <h5>効果のバランス</h5>
-      <p>利益と害の正味のバランスを評価します。利益が害を大きく上回るか、その逆かを判断します。バランスが微妙な場合は、患者の価値観がより重要になります。</p>
+    <div class="bar-item moderate">
+      <div class="bar-label">中（Moderate）</div>
+      <div class="bar-desc">推定効果にある程度の確信があるが、真の効果が大きく異なる可能性がある</div>
     </div>
-    <div class="process-arrow">→</div>
-    <div class="process-step">
-      <div class="highlight-num">3</div>
-      <h5>エビデンスの確実性</h5>
-      <p>エビデンスの確実性が高いほど、推奨は強固になります。確実性が低い場合は、多くの場合、条件付き推奨が適切となります。</p>
+    <div class="bar-item low">
+      <div class="bar-label">低（Low）</div>
+      <div class="bar-desc">推定効果に対する確信は限定的で、真の効果が大きく異なるかもしれない</div>
     </div>
-    <div class="process-arrow">→</div>
-    <div class="process-step">
-      <div class="highlight-num">4</div>
-      <h5>価値観と選好</h5>
-      <p>患者が各アウトカムに置く価値と、その価値観のばらつきを評価します。価値観の変動性が大きい場合、画一的な推奨は難しく、条件付き推奨が妥当です。</p>
-    </div>
-    <div class="process-arrow">→</div>
-    <div class="process-step">
-      <div class="highlight-num">5</div>
-      <h5>資源の利用</h5>
-      <p>介入のコスト、費用対効果、および実行可能性を評価します。資源が限られている状況では、コストが高い、または費用対効果が低い介入は推奨されにくくなります。</p>
+    <div class="bar-item very-low">
+      <div class="bar-label">非常に低（Very Low）</div>
+      <div class="bar-desc">推定効果にほとんど確信がなく、真の効果は大きく異なる可能性が高い</div>
     </div>
   </div>
+  <div class="figure-caption">確実性が高いほど、推奨を支持する信頼性が高まります。</div>
+</div>
 
-  <hr class="section-divider">
 
-  <h4>推奨の方向性と強さ</h4>
-  <p>EtDフレームワークの評価に基づき、推奨は「方向性（賛成または反対）」と「強さ（強いまたは条件付き）」で決定されます。</p>
-
-  <div class="grid-2">
-    <div class="grid-item green">
-      <h5><span class="icon">👍</span> 強い推奨 (Strong Recommendation)</h5>
-      <p><strong>ほぼすべての患者</strong>がその介入を受けるべき（または受けるべきでない）状況。利益と害のバランスが明確で、エビデンスの確実性が高く、患者の価値観の変動性が小さい場合に策定されます。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
-    </div>
-    <div class="grid-item orange">
-      <h5><span class="icon">🤔</span> 条件付き推奨 (Conditional Recommendation)</h5>
-      <p><strong>多くの患者</strong>はその介入を選択するが、一部の患者は異なる選択をする可能性がある状況。利益と害のバランスが微妙、エビデンスの確実性が低い、または価値観の変動性が大きい場合に策定されます。<a class="source-inline-ref" href="#ref-3">[3]</a></p>
-    </div>
+<h4>出発点の原則</h4>
+<p>研究デザインの種類によって、確実性評価の出発点が異なります。</p>
+<div class="grid-2">
+  <div class="grid-item green">
+    <h5><span class="icon">🔬</span>RCT（ランダム化比較試験）</h5>
+    <p>確実性の出発点は<strong>「高」</strong>です。ランダム化により交絡因子が均等に分布するため、因果推論の基盤が強固です。ここから5つのドメインに基づいてグレードダウンされる可能性があります。</p>
   </div>
-
-  <div class="key-message">
-    <div class="key-title">推奨の表現</div>
-    <p>強い推奨は「我々は～を推奨する (we recommend)」と表現され、条件付き推奨は「我々は～を提案する (we suggest)」と表現されるのが一般的です。この言葉遣いの違いが、推奨の強さのニュアンスを伝えます。</p>
+  <div class="grid-item orange">
+    <h5><span class="icon">🩺</span>観察研究（Observational Studies）</h5>
+    <p>確実性の出発点は<strong>「低」</strong>です。交絡因子の影響を完全に排除できないため、因果推論の基盤が弱いです。ただし、大きな効果量など特定の条件でグレードアップされる可能性があります。</p>
   </div>
+</div>
 
-  <hr class="section-divider">
+<hr class="section-divider">
 
-  <h4>SoFテーブル（Summary of Findings Table）</h4>
-  <p>Core GRADEでは、エビデンスの要約を<strong>SoFテーブル</strong>として提示することを推奨しています。これにより、意思決定に必要な情報が構造化され、透明性が確保されます。</p>
+<h3>グレードダウンの5つのドメイン</h3>
+<p>出発点から確実性を引き下げる可能性のある5つの要因を評価します。</p>
 
-  <div class="figure-container">
-    <div class="figure-title">Table 1: Summary of Findings テーブルの主要構成要素</div>
-    <table class="styled-table">
-      <thead>
-        <tr><th>要素</th><th>内容</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>アウトカム</strong></td><td>評価対象のアウトカムの名称と定義</td></tr>
-        <tr><td><strong>比較対照群のリスク</strong></td><td>比較対照群におけるアウトカムの発生率（ベースラインリスク）</td></tr>
-        <tr><td><strong>介入群のリスク</strong></td><td>介入群におけるアウトカムの推定発生率</td></tr>
-        <tr><td><strong>相対効果</strong></td><td>RR、OR、HRなどの相対効果指標と95%信頼区間</td></tr>
-        <tr><td><strong>絶対効果</strong></td><td>1000人あたりのイベント数の差と95%信頼区間</td></tr>
-        <tr><td><strong>エビデンスの確実性</strong></td><td>GRADEの4段階評価（高・中・低・非常に低）と、その視覚的表現</td></tr>
-        <tr><td><strong>コメント</strong></td><td>グレードダウンの理由やその他の重要な注記</td></tr>
-      </tbody>
-    </table>
-    <div class="figure-caption">SoFテーブルは、利用可能な最良のエビデンスを簡潔にまとめたもので、EtDプロセスの中心的な要素です。</div>
-  </div>
-
-  <hr class="section-divider">
-
-  <h4>EtDフレームワークの実践例</h4>
-  <p>具体的な事例を通して、EtDフレームワークがどのように適用されるかを見てみましょう。</p>
-
-  <div class="concept-card">
-    <div class="card-label"><span class="icon">💡</span> 具体例：重症COVID-19患者に対するコルチコステロイド</div>
-    <ul class="icon-list">
-        <li><span class="icon">🎯</span> <strong>効果の大きさ</strong>：死亡率の相対リスク減少が約30%と大きく、高リスク群では1000人あたり30人の死亡を減少させる絶対効果がある。</li>
-        <li><span class="icon">⚖️</span> <strong>効果のバランス</strong>：利益（死亡率の低下）が、害（感染リスクの軽度増加など）を明らかに上回る。</li>
-        <li><span class="icon">🔍</span> <strong>エビデンスの確実性</strong>：中程度。ランダム化試験に基づいているが、不精確さ（imprecision）のため1段階グレードダウン。</li>
-        <li><span class="icon">❤️</span> <strong>価値観と選好</strong>：ほぼすべての患者が、生存期間の延長や死亡リスクの減少を非常に重要と考える。</li>
-        <li><span class="icon">💰</span> <strong>資源の利用</strong>：コルチコステロイドは安価で広く利用可能であり、資源の障壁は低い。</li>
-    </ul>
-    <div class="callout">
-      <strong>結論</strong>：上記の評価に基づき、重症COVID-19患者に対するコルチコステロイドの使用については<strong>強い推奨</strong>が策定される。 
+<div class="process-diagram">
+  <div class="process-step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>バイアスリスク（Risk of Bias）</h5>
+      <p>研究のデザインや実施における系統的な偏りの可能性。ランダム化の不備、盲検化の欠如、不完全なアウトカムデータ、選択的報告などが含まれます。Core GRADEでは、<strong>ROBUST-RCTツール</strong>を用いた評価が推奨されています。</p>
     </div>
   </div>
-
-  <hr class="section-divider">
-
-  <div class="success-card">
-    <div class="card-label">✅ Chapter 11のまとめ</div>
-    <ul class="icon-list">
-      <li><span class="icon">📌</span> EtDフレームワークは<strong>5つの基準</strong>（効果の大きさ、バランス、確実性、価値観、資源）に基づく構造化された意思決定プロセスです。</li>
-      <li><span class="icon">📌</span> 推奨は、その強さに応じて<strong>強い推奨</strong>と<strong>条件付き推奨</strong>の2種類に分類されます。</li>
-      <li><span class="icon">📌</span> <strong>SoFテーブル</strong>は、エビデンスを構造化して提示し、透明性のある意思決定を支援する重要なツールです。</li>
-      <li><span class="icon">📌</span> 利益と害の<strong>正味のバランス</strong>が、推奨の方向性を決定する上で中心的な役割を果たします。</li>
-      <li><span class="icon">📌</span> エビデンスの確実性が低い場合や、患者の価値観に大きなばらつきがある場合は、<strong>条件付き推奨</strong>がより適切となります。</li>
-    </ul>
-  </div>
-
-  <div id="source-references" class="source-references">
-    <h4>参考文献</h4>
-    <div id="ref-1" class="source-ref-item">
-      <div class="ref-label">[1]</div>
-      <div class="ref-content">The EtD framework provides a structured and transparent approach for moving from evidence to decisions. Core GRADE has simplified the EtD framework to focus on five key criteria.</div>
-    </div>
-    <div id="ref-2" class="source-ref-item">
-      <div class="ref-label">[2]</div>
-      <div class="ref-content">"We recommend..." — All or almost all informed patients would choose the intervention.</div>
-    </div>
-    <div id="ref-3" class="source-ref-item">
-      <div class="ref-label">[3]</div>
-      <div class="ref-content">"We suggest..." — Most informed patients would choose the intervention, but a substantial minority would not.</div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>不一致性（Inconsistency）</h5>
+      <p>研究間での効果推定値の異質性。I²統計量、予測区間、視覚的なフォレストプロットの検査により評価します。Core GRADEは、<strong>予測区間（prediction interval）</strong>を特に重視しています。</p>
     </div>
   </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>非直接性（Indirectness）</h5>
+      <p>利用可能なエビデンスのPICOとターゲットPICOとの不一致。患者集団、介入、比較対照、アウトカムのいずれかが異なる場合に生じます。Core GRADEは、<strong>ターゲットPICOとソースPICOの明確な区別</strong>を強調しています。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h5>不精確さ（Imprecision）</h5>
+      <p>効果推定値の信頼区間が広く、臨床的に重要な閾値をまたぐ場合。Core GRADEは、<strong>MID（最小重要差）に基づく閾値</strong>を用いた評価を導入し、従来のOIS（最適情報量）アプローチを廃止しました。</p>
+    </div>
+  </div>
+  <div class="process-arrow">↓</div>
+  <div class="process-step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h5>出版バイアス（Publication Bias）</h5>
+      <p>否定的な結果の研究が出版されにくいことによる系統的な偏り。ファンネルプロット等により評価しますが、Core GRADEは統計的検定の限界を認識し、<strong>総合的な判断</strong>を重視しています。</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<h3>グレードアップの3つの条件</h3>
+<p>観察研究のエビデンスは、以下の3つの条件のいずれかが満たされる場合にグレードアップされる可能性があります。</p>
+
+<div class="figure-container">
+  <div class="figure-title">Table 6-1: 観察研究におけるグレードアップの条件</div>
+  <table class="styled-table">
+    <thead>
+      <tr><th>条件</th><th>説明</th><th>例</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="highlight-num">1</span> <strong>大きな効果量</strong></td>
+        <td>RR &gt; 2 または RR &lt; 0.5（1段階アップ）<br>RR &gt; 5 または RR &lt; 0.2（2段階アップ）</td>
+        <td>喫煙と肺がんの関連（RR ≈ 15-30）</td>
+      </tr>
+      <tr>
+        <td><span class="highlight-num">2</span> <strong>用量反応関係</strong></td>
+        <td>介入の用量が増加するにつれて効果が増大する明確なパターン</td>
+        <td>放射線量と甲状腺がんリスクの関係</td>
+      </tr>
+      <tr>
+        <td><span class="highlight-num">3</span> <strong>もっともらしい交絡因子</strong></td>
+        <td>残存する交絡因子が効果を過小評価する方向に作用している場合</td>
+        <td>健康な労働者効果（healthy worker effect）</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="section-divider">
+
+<h3>Core GRADEの革新 ― 「文脈化」から「閾値」へ</h3>
+
+<div class="callout warning">
+  <div class="callout-title">重要な変更点</div>
+  <p>Core GRADEは、従来の「文脈化アプローチ（contextualized approach）」を廃止し、<strong>閾値ベースのアプローチ</strong>を導入しました。従来のアプローチでは、「大きな効果」「中程度の効果」「小さな効果」という文脈に基づいて確実性を評価していましたが、Core GRADEでは<strong>MIDに基づく明確な閾値</strong>を設定し、信頼区間がその閾値をまたぐかどうかで判断します。<a class="source-inline-ref" href="#ref-2">[2]</a></p>
+</div>
+
+
+<h4>確実性評価における「直感（Gestalt）」の役割</h4>
+
+<div class="summary-box">
+  <div class="summary-title"><span class="icon">💡</span> Guyatt先生の見解</div>
+  <p>確実性評価の最終段階では、5つのドメインの個別評価を統合して全体的な確実性を決定します。この統合プロセスにおいて、Core GRADEは<strong>「教育された直感（educated gestalt）」</strong>の役割を明確に認めています。これは恣意的な主観ではなく、構造化されたプロセスの上に成り立つ総合的判断です。</p>
+</div>
+
+<hr class="section-divider">
+
+<h3>確実性評価のプロセス全体像</h3>
+<p>Core GRADEにおける確実性評価の全体的な流れは、以下のステップで構成されます。</p>
+
+<div class="flowchart">
+    <div class="flow-node start">1. 出発点の決定<br><small>(RCT→高, 観察研究→低)</small></div>
+    <div class="flow-connector"></div>
+    <div class="flow-node process">2. グレードダウン評価<br><small>(5ドメインを評価、不精確さにMID閾値導入)</small></div>
+    <div class="flow-connector"></div>
+    <div class="flow-node process">3. グレードアップ検討<br><small>(大きな効果、用量反応、交絡因子)</small></div>
+    <div class="flow-connector"></div>
+    <div class="flow-node process">4. 全体的な確実性の決定<br><small>(教育された直感の役割を明示)</small></div>
+    <div class="flow-connector"></div>
+    <div class="flow-node end">5. 推奨への移行<br><small>(EtDフレームワークと閾値ベースの意思決定)</small></div>
+</div>
+
+
+<div class="success-card">
+  <div class="card-label">✅ Chapter 6のまとめ</div>
+  <ul class="icon-list">
+    <li><span class="icon">📊</span>確実性は<strong>4段階</strong>（高・中・低・非常に低）で評価される。</li>
+    <li><span class="icon">🏁</span>RCTは「高」、観察研究は「低」から出発する。</li>
+    <li><span class="icon">📉</span><strong>5つのドメイン</strong>（バイアスリスク、不一致性、非直接性、不精確さ、出版バイアス）でグレードダウンを評価。</li>
+    <li><span class="icon">📈</span><strong>3つの条件</strong>（大きな効果量、用量反応、交絡因子）でグレードアップの可能性。</li>
+    <li><span class="icon">🎯</span>Core GRADEは「文脈化」から<strong>「閾値ベース」</strong>のアプローチに移行。</li>
+    <li><span class="icon">🧠</span>確実性評価の統合において<strong>「教育された直感」</strong>の役割を明確に認めている。</li>
+  </ul>
+</div>
+
+<hr class="section-divider">
+
+<div class="source-references">
+  <h4>参考文献</h4>
+  <div id="ref-1" class="source-ref-item">
+    <div class="ref-label">[1]</div>
+    <div class="ref-content">The certainty of evidence reflects the extent to which our confidence in an estimate of the effect is adequate to support a particular decision or recommendation.</div>
+  </div>
+  <div id="ref-2" class="source-ref-item">
+    <div class="ref-label">[2]</div>
+    <div class="ref-content">Core GRADE has moved away from the contextualized approach and instead uses threshold-based assessment. This represents a fundamental shift in how imprecision is evaluated.</div>
+  </div>
+  
+  <h5>関連文献一覧</h5>
+  <ol>
+    <li>Guyatt GH, et al. Core GRADE 1: Overview of the GRADE approach. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 2: Imprecision. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 3: Inconsistency. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 4: Risk of Bias. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 5: Indirectness. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
+    <li>Guyatt GH, et al. GRADE確実性文脈やめ閾値. 2025.</li>
+  </ol>
+</div>
+
+
+
+<hr class="section-divider">
+<div class="pdf-reference-section" style="margin-top:30px;">
+<h3 style="color:#1a56db;border-bottom:2px solid #1a56db;padding-bottom:8px;">&#x1F4C4; 原文PDF参照</h3>
+<p style="color:#666;font-size:0.9em;margin-bottom:20px;">以下は本チャプターの元となったCore GRADE論文の原文ページです。フローチャートや図表を原文のまま確認できます。</p>
+<details style="margin:15px 0;">
+<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG7 ETD (12 pages)</summary>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 12</div>
+<img src="images/cg7_etd_p01.png" alt="cg7_etd page 1" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 12</div>
+<img src="images/cg7_etd_p02.png" alt="cg7_etd page 2" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 12</div>
+<img src="images/cg7_etd_p03.png" alt="cg7_etd page 3" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 12</div>
+<img src="images/cg7_etd_p04.png" alt="cg7_etd page 4" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 12</div>
+<img src="images/cg7_etd_p05.png" alt="cg7_etd page 5" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 12</div>
+<img src="images/cg7_etd_p06.png" alt="cg7_etd page 6" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 12</div>
+<img src="images/cg7_etd_p07.png" alt="cg7_etd page 7" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 8 / 12</div>
+<img src="images/cg7_etd_p08.png" alt="cg7_etd page 8" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 9 / 12</div>
+<img src="images/cg7_etd_p09.png" alt="cg7_etd page 9" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 10 / 12</div>
+<img src="images/cg7_etd_p10.png" alt="cg7_etd page 10" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 11 / 12</div>
+<img src="images/cg7_etd_p11.png" alt="cg7_etd page 11" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 12 / 12</div>
+<img src="images/cg7_etd_p12.png" alt="cg7_etd page 12" style="width:100%;display:block;" loading="lazy">
+</div>
+</details>
+<details style="margin:15px 0;">
+<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG7 ETD APPENDIX (25 pages)</summary>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 25</div>
+<img src="images/cg7_etd_appendix_p01.png" alt="cg7_etd_appendix page 1" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 25</div>
+<img src="images/cg7_etd_appendix_p02.png" alt="cg7_etd_appendix page 2" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 25</div>
+<img src="images/cg7_etd_appendix_p03.png" alt="cg7_etd_appendix page 3" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 25</div>
+<img src="images/cg7_etd_appendix_p04.png" alt="cg7_etd_appendix page 4" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 25</div>
+<img src="images/cg7_etd_appendix_p05.png" alt="cg7_etd_appendix page 5" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 25</div>
+<img src="images/cg7_etd_appendix_p06.png" alt="cg7_etd_appendix page 6" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 25</div>
+<img src="images/cg7_etd_appendix_p07.png" alt="cg7_etd_appendix page 7" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 8 / 25</div>
+<img src="images/cg7_etd_appendix_p08.png" alt="cg7_etd_appendix page 8" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 9 / 25</div>
+<img src="images/cg7_etd_appendix_p09.png" alt="cg7_etd_appendix page 9" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 10 / 25</div>
+<img src="images/cg7_etd_appendix_p10.png" alt="cg7_etd_appendix page 10" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 11 / 25</div>
+<img src="images/cg7_etd_appendix_p11.png" alt="cg7_etd_appendix page 11" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 12 / 25</div>
+<img src="images/cg7_etd_appendix_p12.png" alt="cg7_etd_appendix page 12" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 13 / 25</div>
+<img src="images/cg7_etd_appendix_p13.png" alt="cg7_etd_appendix page 13" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 14 / 25</div>
+<img src="images/cg7_etd_appendix_p14.png" alt="cg7_etd_appendix page 14" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 15 / 25</div>
+<img src="images/cg7_etd_appendix_p15.png" alt="cg7_etd_appendix page 15" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 16 / 25</div>
+<img src="images/cg7_etd_appendix_p16.png" alt="cg7_etd_appendix page 16" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 17 / 25</div>
+<img src="images/cg7_etd_appendix_p17.png" alt="cg7_etd_appendix page 17" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 18 / 25</div>
+<img src="images/cg7_etd_appendix_p18.png" alt="cg7_etd_appendix page 18" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 19 / 25</div>
+<img src="images/cg7_etd_appendix_p19.png" alt="cg7_etd_appendix page 19" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 20 / 25</div>
+<img src="images/cg7_etd_appendix_p20.png" alt="cg7_etd_appendix page 20" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 21 / 25</div>
+<img src="images/cg7_etd_appendix_p21.png" alt="cg7_etd_appendix page 21" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 22 / 25</div>
+<img src="images/cg7_etd_appendix_p22.png" alt="cg7_etd_appendix page 22" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 23 / 25</div>
+<img src="images/cg7_etd_appendix_p23.png" alt="cg7_etd_appendix page 23" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 24 / 25</div>
+<img src="images/cg7_etd_appendix_p24.png" alt="cg7_etd_appendix page 24" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 25 / 25</div>
+<img src="images/cg7_etd_appendix_p25.png" alt="cg7_etd_appendix page 25" style="width:100%;display:block;" loading="lazy">
+</div>
+</details>
+</div>
 
 </div>

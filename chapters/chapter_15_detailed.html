@@ -1,296 +1,309 @@
-
-<link rel="stylesheet" href="chapters/chapter_common.css">
+<link rel="stylesheet" href="../chapter_common.css">
+<style>
+.funnel-plot-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+.funnel-plot {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.funnel-y-axis-label, .funnel-x-axis-label {
+  text-align: center;
+  font-size: 0.85em;
+  color: #64748b;
+  font-weight: 600;
+}
+.funnel-y-axis-label {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -60px;
+  top: 50%;
+  transform-origin: center;
+  width: 250px;
+}
+.funnel-guideline-x {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: #cbd5e1;
+}
+.funnel-guideline-y {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  background: #94a3b8;
+  transform: translateX(-50%);
+}
+.funnel-shape {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 100%;
+  transform: translateX(-50%);
+  clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0);
+  background: rgba(2, 132, 199, 0.05);
+  border-left: 2px dashed rgba(2, 132, 199, 0.4);
+  border-right: 2px dashed rgba(2, 132, 199, 0.4);
+}
+.funnel-point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #0284c7;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+}
+.funnel-point.red-point {
+  background: #ef4444;
+}
+</style>
 <div class="chapter-detail">
 
-<h3>Chapter 15：閾値とユーティリティ（Thresholds and Utility）</h3>
+<h3>Chapter 10：出版バイアス（Publication Bias / Dissemination Bias）</h3>
 
 <div class="concept-card">
-  <div class="card-label"><span class="icon">📖</span> Core Concept</div>
-  <p>閾値（Threshold）は、<strong>介入の効果が「臨床的に重要」と判断される境界値</strong>です。Core GRADEは、不精確さの評価とEtDフレームワークの両方で閾値を中心的な概念として位置づけています。閾値の計算には<strong>ユーティリティ（効用値）</strong>が用いられますが、ユーティリティの概念には重要な注意点があります。</p>
+  <div class="card-label"><span class="icon">&#x1f4d6;</span> Core Concept</div>
+  <p>出版バイアス（Publication Bias）は、<strong>研究結果の方向性や統計的有意性に基づいて、研究の出版や報告が選択的に行われること</strong>により生じる系統的な偏りです。否定的な結果や統計的に有意でない結果の研究は出版されにくく、その結果、利用可能なエビデンスが介入の効果を過大評価する傾向があります。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
 </div>
 
 <hr class="section-divider">
 
-<h4>閾値の種類</h4>
+<h3>出版バイアスの形態</h3>
 
-<div class="grid-3">
-  <div class="grid-item blue">
-    <h5>利益の閾値<br>（Benefit Threshold）</h5>
-    <p>介入の効果が<strong>臨床的に重要な利益</strong>と判断される最小の効果量。MID（最小重要差）に基づいて設定されます。</p>
-  </div>
+<div class="grid-4">
   <div class="grid-item red">
-    <h5>害の閾値<br>（Harm Threshold）</h5>
-    <p>介入の副作用が<strong>臨床的に重要な害</strong>と判断される最小の効果量。害のMIDに基づいて設定されます。</p>
+    <h5>研究全体の非出版</h5>
+    <p>否定的な結果の研究が全く出版されないケース。最も深刻な形態であり、検出が最も困難です。製薬企業がスポンサーの研究で特に懸念されます。</p>
+  </div>
+  <div class="grid-item orange">
+    <h5>選択的アウトカム報告</h5>
+    <p>研究は出版されるが、特定のアウトカムの結果が報告されないケース。Core GRADEでは、これを<strong>出版バイアスのドメイン</strong>で評価します（研究者が測定はしたが報告しなかったアウトカム）。</p>
+  </div>
+  <div class="grid-item blue">
+    <h5>選択的分析報告</h5>
+    <p>複数の分析方法の中から、最も好ましい結果を示す分析のみが報告されるケース。Core GRADEでは、これを<strong>バイアスリスクのドメイン</strong>で評価します。</p>
   </div>
   <div class="grid-item purple">
-    <h5>正味の閾値<br>（Net Threshold）</h5>
-    <p>利益と害を<strong>ユーティリティで重み付け</strong>して統合した閾値。EtDフレームワークで使用されます。</p>
+    <h5>時間的バイアス（Time-lag bias）</h5>
+    <p>肯定的な結果の研究がより早く出版される傾向。システマティックレビューの時点で、否定的な結果の研究がまだ出版されていない可能性があります。</p>
   </div>
 </div>
 
 <hr class="section-divider">
 
-<h4>ユーティリティ（効用値）の基本概念</h4>
+<h3>出版バイアスの検出方法</h3>
 
-<div class="concept-card">
-  <div class="card-label"><span class="icon">💡</span> ユーティリティとは</div>
-  <p>ユーティリティは、<strong>健康状態に対する個人の選好を0から1のスケールで表現した値</strong>です。</p>
-  <table class="styled-table" style="margin-top: 15px;">
-    <thead><tr><th>値</th><th>意味</th><th>例</th></tr></thead>
-    <tbody>
-      <tr><td><span class="highlight-num green">1.0</span></td><td><strong>完全な健康</strong></td><td>健康な成人の通常の状態</td></tr>
-      <tr><td><span class="highlight-num orange">0.5</span></td><td>中程度の健康障害</td><td>中等度の慢性疼痛、軽度の脳卒中後遺症</td></tr>
-      <tr><td><span class="highlight-num red">0.0</span></td><td><strong>死亡</strong></td><td>―</td></tr>
-    </tbody>
-  </table>
+<div class="step-flow">
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h5>ファンネルプロット</h5>
+      <p>各研究の効果推定値（横軸）と精度の指標（縦軸、通常は標準誤差）をプロットします。出版バイアスがない場合、プロットは逆漏斗型の対称的な形状を示します。非対称性は出版バイアスの存在を示唆しますが、他の原因（異質性、小規模研究効果など）でも非対称性が生じ得ます。</p>
+      <div class="figure-container">
+        <div class="figure-title">Fig 10-1: ファンネルプロットの概念図</div>
+        <div class="funnel-plot-container">
+          <div class="funnel-y-axis-label">研究の精度（サンプルサイズ大）</div>
+          <div class="funnel-plot">
+            <div class="funnel-guideline-y"></div>
+            <div class="funnel-guideline-x"></div>
+            <div class="funnel-shape"></div>
+            <div class="funnel-point" style="bottom: 85%; left: 48%;"></div>
+            <div class="funnel-point" style="bottom: 80%; left: 52%;"></div>
+            <div class="funnel-point" style="bottom: 75%; left: 45%;"></div>
+            <div class="funnel-point" style="bottom: 60%; left: 55%;"></div>
+            <div class="funnel-point" style="bottom: 55%; left: 38%;"></div>
+            <div class="funnel-point" style="bottom: 40%; left: 65%;"></div>
+            <div class="funnel-point" style="bottom: 35%; left: 25%;"></div>
+            <div class="funnel-point" style="bottom: 20%; left: 75%;"></div>
+            <div class="funnel-point" style="bottom: 15%; left: 15%;"></div>
+            <div class="funnel-point red-point" style="bottom: 10%; left: 85%;"></div>
+            <div class="funnel-point red-point" style="bottom: 25%; left: 80%;"></div>
+            <div class="funnel-point red-point" style="bottom: 5%; left: 90%;"></div>
+          </div>
+          <div class="funnel-x-axis-label">効果推定値（例：オッズ比）</div>
+        </div>
+        <div class="figure-caption">出版バイアスがない場合、研究は効果推定値を中心に左右対称に分布する（逆漏斗型）。小規模で効果が小さい研究（右下の赤点部分）が欠けている場合、非対称な形状となり出版バイアスが示唆される。</div>
+      </div>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h5>統計的検定</h5>
+      <p>Egger's test、Begg's test、Peters' testなどの統計的検定が利用可能です。ただし、<strong>研究数が少ない場合（10未満）は検出力が非常に低い</strong>ため、結果の解釈には注意が必要です。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h5>試験登録との照合</h5>
+      <p>ClinicalTrials.govなどの試験登録データベースと照合し、登録されたが出版されていない研究を特定します。これは出版バイアスの最も直接的な証拠を提供します。</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h5>総合的な判断</h5>
+      <p>上記の方法はいずれも限界があるため、Core GRADEは<strong>総合的な判断</strong>を重視しています。研究のスポンサー、研究分野の特性、効果の大きさのパターンなどを考慮します。</p>
+    </div>
+  </div>
 </div>
 
 <hr class="section-divider">
 
-<h4>ユーティリティと重要度の違い ― 最も重要な区別</h4>
-
-<div class="danger-card">
-  <div class="card-label">❌ 混同してはいけない2つの概念</div>
-  <p>ユーティリティ（0-1スケール）と<strong>アウトカムの重要度</strong>は、しばしば混同されますが、<strong>本質的に異なる概念</strong>です。</p>
-</div>
-
-<div class="comparison-flow">
-    <div class="comparison-item">
-        <h5>ユーティリティ（0-1スケール）</h5>
-        <p>健康状態の<strong>「良さ」</strong>を表す。<br>
-        <span class="highlight-num green">1</span> = 完全な健康（最も良い状態）<br>
-        <span class="highlight-num red">0</span> = 死亡（最も悪い状態）</p>
-        <div class="callout warning">
-            <p><strong>問題点</strong>：ユーティリティが高い（1に近い）ほど「良い状態」だが、それは「重要でない」ことを意味しない。</p>
-        </div>
-    </div>
-    <div class="comparison-arrow">⇔</div>
-    <div class="comparison-item">
-        <h5>アウトカムの重要度</h5>
-        <p>アウトカムが患者にとって<strong>どれだけ重要か</strong>を表す。<br>
-        死亡（ユーティリティ = 0）→ <strong>極めて重要</strong><br>
-        完全な健康（ユーティリティ = 1）→ <strong>極めて重要</strong></p>
-        <div class="callout success">
-            <p><strong>核心</strong>：0でも1でも、どちらも患者にとって極めて重要。</p>
-        </div>
-    </div>
-</div>
-
-<div class="key-message">
-  <p><strong>死亡（ユーティリティ = 0）も完全な健康（ユーティリティ = 1）も、どちらも患者にとって極めて重要です。</strong>ユーティリティのスケールは「重要度」を表しているのではなく、「健康状態の良さ」を表しています。したがって、ユーティリティのスケールと重要度のスケールは<strong>本質的に異なるもの</strong>です。</p>
-</div>
-
-<hr class="section-divider">
-
-<h4>ユーティリティ = 1 でそのまま計算すると閾値がおかしくなる問題</h4>
-
-<div class="danger-card">
-  <div class="card-label">🚨 重大な計算上の問題</div>
-  <p>閾値の計算において、<strong>完全な健康状態（ユーティリティ = 1）をそのまま使用すると、閾値の位置がおかしくなります</strong>。これは、ユーティリティベースの閾値計算の根本的な問題です。<a class="source-inline-ref" href="#ref-1">[1]</a></p>
-</div>
-
-<div class="process-diagram">
-    <div class="process-step">
-        <div class="process-content">
-            <h5>なぜ問題が生じるのか</h5>
-            <p>閾値計算では、アウトカムの<strong>不効用（disutility）</strong>を使用します。不効用は「完全な健康からの距離」、すなわち<strong>1 - ユーティリティ</strong>で計算されます。</p>
-        </div>
-    </div>
-    <div class="process-arrow">▼</div>
-    <div class="process-step">
-        <div class="process-content">
-            <table class="styled-table">
-                <thead><tr><th>健康状態</th><th>ユーティリティ</th><th>不効用（1 - U）</th><th>問題</th></tr></thead>
-                <tbody>
-                  <tr><td>死亡</td><td>0.0</td><td><strong>1.0</strong></td><td>不効用が最大 → 閾値計算は正常に機能</td></tr>
-                  <tr><td>重度の障害</td><td>0.3</td><td><strong>0.7</strong></td><td>不効用が大きい → 閾値計算は正常に機能</td></tr>
-                  <tr><td>軽度の不快感</td><td>0.9</td><td><strong>0.1</strong></td><td>不効用が小さい → 閾値が大きくなる</td></tr>
-                  <tr class="danger-row">
-                    <td><strong>完全な健康</strong></td>
-                    <td><strong>1.0</strong></td>
-                    <td><strong>0.0</strong></td>
-                    <td><strong>不効用がゼロ → 閾値が無限大に！</strong></td>
-                  </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="process-arrow">▼</div>
-    <div class="process-step">
-        <div class="process-content">
-            <p>完全な健康状態のユーティリティは1.0ですが、不効用は0.0です。閾値計算式の分母に不効用が入る場合、<strong>分母がゼロになり、閾値が無限大（計算不能）</strong>になってしまいます。</p>
-            <p>これは、「完全な健康を維持すること」の重要性は非常に高いにもかかわらず、ユーティリティベースの計算ではその重要性を適切に反映できないことを意味します。</p>
-        </div>
-    </div>
-</div>
-
-<hr class="section-divider">
-
-<h4>Guyatt先生とSchünemann先生のアプローチの違い</h4>
+<h3>出版バイアスの疑いを高める要因</h3>
 
 <table class="styled-table">
   <thead>
-    <tr><th>特徴</th><th>Guyatt先生（Core GRADE）</th><th>Schünemann先生（Guidance 42）</th></tr>
+    <tr><th>要因</th><th>説明</th></tr>
   </thead>
   <tbody>
-    <tr>
-      <td><strong>基本的なアプローチ</strong></td>
-      <td>パネル調査ベース<br>（Panel Survey Approach）</td>
-      <td>ユーティリティベース<br>（Utility-Based Approach）</td>
-    </tr>
-    <tr>
-      <td><strong>閾値の設定方法</strong></td>
-      <td>パネルメンバーが直接MIDを設定</td>
-      <td>ユーティリティ値から数学的に閾値を計算</td>
-    </tr>
-    <tr>
-      <td><strong>ユーティリティの使用</strong></td>
-      <td>参考情報として使用<br>直接的な計算には使わない</td>
-      <td>閾値計算の中心的な要素<br>不効用ベースの計算式を使用</td>
-    </tr>
-    <tr>
-      <td><strong>直感の役割</strong></td>
-      <td><strong>大きい</strong><br>パネルの「教育された直感」で判断</td>
-      <td><strong>限定的</strong><br>数学的な計算に基づく</td>
-    </tr>
-    <tr>
-      <td><strong>利点</strong></td>
-      <td>柔軟性が高い<br>臨床的な文脈を直接反映</td>
-      <td>再現性が高い<br>計算過程が明示的</td>
-    </tr>
-    <tr>
-      <td><strong>限界</strong></td>
-      <td>パネル構成に依存<br>主観性が入る余地がある</td>
-      <td>ユーティリティ値の不確実性<br>ユーティリティ = 1の問題</td>
-    </tr>
+    <tr><td><strong>製薬企業のスポンサー</strong></td><td>企業がスポンサーの研究は、否定的な結果を出版しない傾向がある</td></tr>
+    <tr><td><strong>小規模研究のみ</strong></td><td>大規模な確認研究がない場合、初期の小規模研究の肯定的な結果が過大評価されている可能性</td></tr>
+    <tr><td><strong>ファンネルプロットの非対称性</strong></td><td>小規模研究が大きな効果を示し、大規模研究が小さな効果を示すパターン</td></tr>
+    <tr><td><strong>試験登録との不一致</strong></td><td>登録された研究のうち、出版されていないものが多い</td></tr>
+    <tr><td><strong>研究分野の特性</strong></td><td>競争が激しい分野や、肯定的な結果が出版に有利な分野</td></tr>
   </tbody>
 </table>
 
 <hr class="section-divider">
 
-<h4>閾値の計算方法</h4>
+<h3>出版バイアスへの対処</h3>
 
-<div class="step-flow">
-    <div class="step-item">
-        <div class="step-num">1</div>
-        <div class="step-body">
-            <h5>不効用ベースのアプローチ（Schünemann先生）</h5>
-            <div class="concept-card">
-              <div class="card-label"><span class="icon">🧮</span> 計算式</div>
-              <p>Guidance 42では、以下の計算式を使用します：</p>
-              <div class="formula-box">
-                <strong>閾値 = ベースラインリスク × (不効用<sub>アウトカム</sub> / 不効用<sub>基準</sub>)</strong>
-              </div>
-              <p><strong>不効用（Disutility）</strong> = 1 - ユーティリティ</p>
-              <p>例：死亡のMIDを計算する場合</p>
-              <ul class="icon-list">
-                <li><span class="li-icon">➡️</span>死亡の不効用 = 1 - 0 = <strong>1.0</strong></li>
-                <li><span class="li-icon">➡️</span>基準アウトカム（例：入院）の不効用 = 1 - 0.6 = <strong>0.4</strong></li>
-                <li><span class="li-icon">➡️</span>比率 = 1.0 / 0.4 = <strong>2.5</strong></li>
-              </ul>
-              <p>つまり、死亡は入院の<strong>2.5倍</strong>の重みを持つことになります。</p>
-            </div>
-        </div>
-    </div>
-    <div class="step-item">
-        <div class="step-num">2</div>
-        <div class="step-body">
-            <h5>パネル調査アプローチ（Guyatt先生）</h5>
-            <div class="concept-card">
-              <div class="card-label"><span class="icon">👥</span> プロセス</div>
-              <p>Core GRADEでは、以下のプロセスでMIDを設定します：</p>
-              <ol class="icon-list">
-                <li><span class="li-icon">1️⃣</span>パネルメンバーに対して、各アウトカムの<strong>MIDの範囲</strong>を提示</li>
-                <li><span class="li-icon">2️⃣</span>パネルメンバーが、臨床経験と患者の視点を考慮して<strong>MIDを直接設定</strong></li>
-                <li><span class="li-icon">3️⃣</span>パネル全体で討議し、<strong>コンセンサス</strong>を形成</li>
-                <li><span class="li-icon">4️⃣</span>MIDの不確実性を「もっともらしい範囲」として表現</li>
-              </ol>
-            </div>
-        </div>
-    </div>
-    <div class="step-item">
-        <div class="step-num">3</div>
-        <div class="step-body">
-            <h5>Generic Coefficients（汎用係数）</h5>
-            <div class="concept-card">
-              <div class="card-label"><span class="icon">📊</span> 汎用係数の例</div>
-              <p>Guidance 42では、一般的なアウトカムに対する<strong>汎用係数（generic coefficients）</strong>を提供しています。これにより、個別のユーティリティ測定が利用できない場合でも閾値を推定できます。</p>
-              <table class="styled-table" style="margin-top: 15px;">
-                <thead><tr><th>アウトカム</th><th>ユーティリティ</th><th>不効用</th><th>汎用係数</th></tr></thead>
-                <tbody>
-                  <tr><td>死亡</td><td>0.00</td><td>1.00</td><td>1.00</td></tr>
-                  <tr><td>重度の脳卒中</td><td>0.20</td><td>0.80</td><td>0.80</td></tr>
-                  <tr><td>心筋梗塞</td><td>0.40</td><td>0.60</td><td>0.60</td></tr>
-                  <tr><td>入院</td><td>0.60</td><td>0.40</td><td>0.40</td></tr>
-                  <tr><td>軽度の副作用</td><td>0.90</td><td>0.10</td><td>0.10</td></tr>
-                </tbody>
-              </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-<hr class="section-divider">
-
-<h4>閾値計算ツール</h4>
-
-<div class="summary-box">
-  <div class="summary-icon">🔗</div>
-  <div class="summary-content">
-    <h5>オンラインツール</h5>
-    <p>Guidance 42の閾値計算を実行するためのShinyアプリが公開されています：</p>
-    <p style="text-align: center; margin: 15px 0;">
-      <a href="https://fmup.shinyapps.io/dt_calc" target="_blank" class="button-link">閾値計算ツール（Shiny App）を開く →</a>
-    </p>
-    <p>このツールでは、ベースラインリスク、ユーティリティ値、アウトカムの数を入力することで、自動的に閾値が計算されます。</p>
-  </div>
-</div>
-
-<hr class="section-divider">
-
-<h4>実践上の推奨</h4>
-
-<div class="warning-card">
-  <div class="card-label">⚠️ どちらのアプローチを使うべきか</div>
-  <p>Guyatt先生とSchünemann先生のアプローチはいずれも有効ですが、以下の点を考慮して選択してください：</p>
-  <ul class="icon-list">
-    <li><span class="li-icon">✅</span><strong>ユーティリティ値が利用可能で信頼できる場合</strong>：Schünemann先生のアプローチが再現性が高い</li>
-    <li><span class="li-icon">🤔</span><strong>ユーティリティ値が不確実な場合</strong>：Guyatt先生のパネル調査アプローチが柔軟性が高い</li>
-    <li><span class="li-icon">📈</span><strong>完全な健康に近いアウトカムの場合</strong>：ユーティリティ = 1の問題があるため、パネル調査アプローチが推奨</li>
-    <li><span class="li-icon">🎯</span><strong>いずれの場合も</strong>：閾値の不確実性を認識し、「もっともらしい範囲」として幅を持たせる</li>
+<div class="concept-card">
+  <div class="card-label">&#x1f6e0;&#xfe0f; Core GRADEにおける対処法</div>
+  <p>出版バイアスの完全な排除は不可能ですが、以下の対策により影響を軽減できます：</p>
+  <ul>
+    <li><strong>包括的な文献検索</strong>：灰色文献（grey literature）、学会抄録、試験登録データベースを含む</li>
+    <li><strong>言語制限の回避</strong>：英語以外の文献も検索対象に含める</li>
+    <li><strong>試験登録の照合</strong>：登録されたが出版されていない研究の著者に連絡</li>
+    <li><strong>感度分析</strong>：出版バイアスの影響を推定するための統計的手法（trim-and-fill法など）</li>
   </ul>
 </div>
+
+<hr class="section-divider">
 
 <div class="success-card">
-  <div class="card-label">✅ Chapter 15のまとめ</div>
+  <div class="card-label">&#x2705; Chapter 10のまとめ</div>
   <ul class="icon-list">
-    <li><span class="li-icon">1️⃣</span>閾値は<strong>利益の閾値、害の閾値、正味の閾値</strong>の3種類。</li>
-    <li><span class="li-icon">2️⃣</span>ユーティリティは<strong>0（死亡）から1（完全な健康）</strong>のスケールで健康状態の「良さ」を表す。</li>
-    <li><span class="li-icon">3️⃣</span><strong>ユーティリティと重要度は異なる概念</strong>：0（死亡）も1（完全な健康）もどちらも極めて重要。</li>
-    <li><span class="li-icon">4️⃣</span><strong>ユーティリティ = 1でそのまま計算すると閾値がおかしくなる</strong>：不効用がゼロになり、閾値が無限大に。</li>
-    <li><span class="li-icon">5️⃣</span>Guyatt先生は<strong>パネル調査ベース</strong>、Schünemann先生は<strong>ユーティリティベース</strong>のアプローチ。</li>
-    <li><span class="li-icon">6️⃣</span>閾値の不確実性を認識し、<strong>「もっともらしい範囲」</strong>として幅を持たせることが重要。</li>
+    <li><span class="li-icon">&#x1f50e;</span>出版バイアスは<strong>否定的な結果の研究が出版されにくい</strong>ことにより生じる系統的な偏り。</li>
+    <li><span class="li-icon">&#x270f;&#xfe0f;</span>Core GRADEは、選択的アウトカム報告を<strong>出版バイアス</strong>、選択的分析報告を<strong>バイアスリスク</strong>として区別。</li>
+    <li><span class="li-icon">&#x1f4ca;</span>ファンネルプロットや統計的検定は参考指標であり、<strong>総合的な判断</strong>が重要。</li>
+    <li><span class="li-icon">&#x1f4c9;</span>研究数が少ない場合（10未満）は統計的検定の検出力が非常に低い。</li>
+    <li><span class="li-icon">&#x1f517;</span>試験登録データベースとの照合が最も直接的な証拠を提供。</li>
+    <li><span class="li-icon">&#x1f4dd;</span>包括的な文献検索と感度分析により影響を軽減。</li>
   </ul>
-</div>
-
-<div class="source-references">
-  <h4>英文ソース</h4>
-  <div class="source-ref-item" id="ref-1">
-    <div class="ref-label">[1]</div>
-    <div class="ref-content">Thresholds represent the boundary values at which an intervention's effect becomes "clinically important." Core GRADE uses utility-based approaches to calculate these thresholds.</div>
-  </div>
 </div>
 
 <div class="ref-box">
   <h4>参考文献</h4>
   <ol>
-    <li>Schünemann HJ, et al. GRADE Guidance 42: Thresholds for imprecision and Evidence to Decision. J Clin Epidemiol. 2025.</li>
-    <li>Guyatt GH, et al. Core GRADE 2: Imprecision. BMJ. 2025.</li>
-    <li>Guyatt GH, et al. Core GRADE 7: Evidence-to-Decision. BMJ. 2025.</li>
     <li>Guyatt GH, et al. Core GRADE 1: Overview. BMJ. 2025.</li>
-    <li>Guyatt GH, et al. GRADE確実性文脈やめ閾値. 2025.</li>
-    <li>Guyatt GH. Core GRADE Unpacked. Evidence Synthesis Ireland Webinar. December 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE 4: Risk of Bias. BMJ. 2025.</li>
+    <li>Guyatt GH, et al. Core GRADE Unpacked. Evidence Synthesis Ireland. 2025.</li>
+    <li>Guyatt GH, Oxman AD, Montori V, et al. GRADE guidelines: 5. Rating the quality of evidence—publication bias. J Clin Epidemiol. 2011;64(12):1277-1282.</li>
   </ol>
+</div>
+
+<hr class="section-divider">
+
+<div class="source-references">
+  <h4>英文ソース</h4>
+  <div class="source-ref-item" id="ref-1">
+    <span class="ref-label">[1]</span>
+    <p>Publication bias occurs when the publication or non-publication of research findings is influenced by the nature and direction of the results. Studies with positive or statistically significant results are more likely to be published.</p>
+  </div>
+</div>
+
+
+
+<hr class="section-divider">
+<div class="pdf-reference-section" style="margin-top:30px;">
+<h3 style="color:#1a56db;border-bottom:2px solid #1a56db;padding-bottom:8px;">&#x1F4C4; 原文PDF参照</h3>
+<p style="color:#666;font-size:0.9em;margin-bottom:20px;">以下は本チャプターの元となったCore GRADE論文の原文ページです。フローチャートや図表を原文のまま確認できます。</p>
+<details style="margin:15px 0;">
+<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG2 IMPRECISION (7 pages)</summary>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 7</div>
+<img src="images/cg2_imprecision_p01.png" alt="cg2_imprecision page 1" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 7</div>
+<img src="images/cg2_imprecision_p02.png" alt="cg2_imprecision page 2" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 7</div>
+<img src="images/cg2_imprecision_p03.png" alt="cg2_imprecision page 3" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 7</div>
+<img src="images/cg2_imprecision_p04.png" alt="cg2_imprecision page 4" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 7</div>
+<img src="images/cg2_imprecision_p05.png" alt="cg2_imprecision page 5" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 7</div>
+<img src="images/cg2_imprecision_p06.png" alt="cg2_imprecision page 6" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 7</div>
+<img src="images/cg2_imprecision_p07.png" alt="cg2_imprecision page 7" style="width:100%;display:block;" loading="lazy">
+</div>
+</details>
+<details style="margin:15px 0;">
+<summary style="cursor:pointer;font-weight:bold;padding:10px;background:#f0f4ff;border-radius:8px;border:1px solid #d0d8f0;">CG5 INDIRECTNESS (9 pages)</summary>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 1 / 9</div>
+<img src="images/cg5_indirectness_p01.png" alt="cg5_indirectness page 1" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 2 / 9</div>
+<img src="images/cg5_indirectness_p02.png" alt="cg5_indirectness page 2" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 3 / 9</div>
+<img src="images/cg5_indirectness_p03.png" alt="cg5_indirectness page 3" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 4 / 9</div>
+<img src="images/cg5_indirectness_p04.png" alt="cg5_indirectness page 4" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 5 / 9</div>
+<img src="images/cg5_indirectness_p05.png" alt="cg5_indirectness page 5" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 6 / 9</div>
+<img src="images/cg5_indirectness_p06.png" alt="cg5_indirectness page 6" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 7 / 9</div>
+<img src="images/cg5_indirectness_p07.png" alt="cg5_indirectness page 7" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 8 / 9</div>
+<img src="images/cg5_indirectness_p08.png" alt="cg5_indirectness page 8" style="width:100%;display:block;" loading="lazy">
+</div>
+<div style="margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
+<div style="background:#f3f4f6;padding:4px 12px;font-size:0.8em;color:#6b7280;">Page 9 / 9</div>
+<img src="images/cg5_indirectness_p09.png" alt="cg5_indirectness page 9" style="width:100%;display:block;" loading="lazy">
+</div>
+</details>
 </div>
 
 </div>
