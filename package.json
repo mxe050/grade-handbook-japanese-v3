@@ -1,0 +1,26 @@
+{
+  "name": "grade-handbook-japanese-v3",
+  "version": "1.0.0",
+  "description": "GRADEアプローチ ハンドブック（日本語版）v3",
+  "main": "scrape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mxe050/grade-handbook-japanese-v3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mxe050/grade-handbook-japanese-v3/issues"
+  },
+  "homepage": "https://github.com/mxe050/grade-handbook-japanese-v3#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "puppeteer": "^24.40.0"
+  }
+}
